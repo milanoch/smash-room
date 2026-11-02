@@ -1,0 +1,968 @@
+{
+    "lighting": {
+        "ambientColor": {
+            "x": 1.0,
+            "y": 0.98,
+            "z": 0.95,
+            "w": 1.0
+        },
+        "ambientIntensity": 0.3,
+        "environmentMap": 0,
+        "environmentIntensity": 1.0
+    },
+    "graphics": {
+        "shadows": {
+            "enabled": true,
+            "cascadeCount": 2,
+            "tileSize": 1024,
+            "distance": 30.0,
+            "strength": 0.65,
+            "slopeBias": 2.0,
+            "normalOffset": 1.0,
+            "receiverBias": 0.5
+        },
+        "occlusion": {
+            "enabled": false
+        }
+    },
+    "entities": [
+        {
+            "id": 416814741,
+            "tagComponent": {
+                "tag": "LivingRoom_Prototype"
+            },
+            "relationshipComponent": {
+                "parent": 0,
+                "children": [
+                    2397838945,
+                    1847564609,
+                    3357827402,
+                    949699181,
+                    492168991,
+                    1360313422,
+                    235700843,
+                    549155480,
+                    3410038867,
+                    3974066165,
+                    3667390977,
+                    409156532,
+                    3526426806,
+                    377050501
+                ]
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            }
+        },
+        {
+            "id": 2397838945,
+            "tagComponent": {
+                "tag": "Floor"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": -0.1,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 8.0,
+                    "y": 0.2,
+                    "z": 6.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 1010621630
+            },
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.0,
+                "friction": 0.8,
+                "restitution": 0.02,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "isStatic": true
+        },
+        {
+            "id": 1847564609,
+            "tagComponent": {
+                "tag": "Wall_Back"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 1.5,
+                    "z": -3.1
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 8.4,
+                    "y": 3.0,
+                    "z": 0.2
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 3411035640
+            },
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.0,
+                "friction": 0.7,
+                "restitution": 0.02,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "isStatic": true
+        },
+        {
+            "id": 3357827402,
+            "tagComponent": {
+                "tag": "Wall_Left"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": -4.1,
+                    "y": 1.5,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.2,
+                    "y": 3.0,
+                    "z": 6.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 3411035640
+            },
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.0,
+                "friction": 0.7,
+                "restitution": 0.02,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "isStatic": true
+        },
+        {
+            "id": 949699181,
+            "tagComponent": {
+                "tag": "Wall_Right"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 4.1,
+                    "y": 1.5,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.2,
+                    "y": 3.0,
+                    "z": 6.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 3411035640
+            },
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.0,
+                "friction": 0.7,
+                "restitution": 0.02,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            },
+            "isStatic": true
+        },
+        {
+            "id": 492168991,
+            "tagComponent": {
+                "tag": "Cube_Red"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": -1.8,
+                    "y": 0.405,
+                    "z": -0.4
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.8,
+                    "y": 0.8,
+                    "z": 0.8
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 164269971
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.0,
+                "friction": 0.65,
+                "restitution": 0.06,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        },
+        {
+            "id": 1360313422,
+            "tagComponent": {
+                "tag": "Cube_Blue"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": -1.78,
+                    "y": 1.24,
+                    "z": -0.4
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.8,
+                    "y": 0.8,
+                    "z": 0.8
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 746146398
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.0,
+                "friction": 0.65,
+                "restitution": 0.06,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        },
+        {
+            "id": 235700843,
+            "tagComponent": {
+                "tag": "Cube_Green"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": -1.72,
+                    "y": 2.1,
+                    "z": -0.4
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.65,
+                    "y": 0.65,
+                    "z": 0.65
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 1021637020
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.0,
+                "friction": 0.65,
+                "restitution": 0.06,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        },
+        {
+            "id": 549155480,
+            "tagComponent": {
+                "tag": "Cube_Yellow"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.25,
+                    "y": 1.6,
+                    "z": -1.45
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.65,
+                    "y": 0.65,
+                    "z": 0.65
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 2279934916
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.0,
+                "friction": 0.65,
+                "restitution": 0.06,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        },
+        {
+            "id": 3410038867,
+            "tagComponent": {
+                "tag": "Cube_Purple"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 2.1,
+                    "y": 0.355,
+                    "z": -1.5
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.7,
+                    "y": 0.7,
+                    "z": 0.7
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 1979706725
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.0,
+                "friction": 0.65,
+                "restitution": 0.06,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        },
+        {
+            "id": 3974066165,
+            "tagComponent": {
+                "tag": "Crate_Wood"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 1.9,
+                    "y": 0.48,
+                    "z": 0.65
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.95,
+                    "y": 0.95,
+                    "z": 0.95
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 226124506
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 0.65,
+                "friction": 0.8,
+                "restitution": 0.06,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        },
+        {
+            "id": 3667390977,
+            "tagComponent": {
+                "tag": "Sphere_Small"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": -2.6,
+                    "y": 0.9,
+                    "z": 1.25
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.55,
+                    "y": 0.55,
+                    "z": 0.55
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 1,
+                "material": 746146398
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "sphereCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 0.9,
+                "friction": 0.7,
+                "restitution": 0.25,
+                "radius": 0.5
+            }
+        },
+        {
+            "id": 409156532,
+            "tagComponent": {
+                "tag": "Sphere_Large"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": -0.3,
+                    "y": 0.505,
+                    "z": 1.1
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 1,
+                "material": 2279934916
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "sphereCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.1,
+                "friction": 0.7,
+                "restitution": 0.18,
+                "radius": 0.5
+            }
+        },
+        {
+            "id": 3526426806,
+            "tagComponent": {
+                "tag": "Platform"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.25,
+                    "y": 0.115,
+                    "z": -0.4
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.5,
+                    "y": 0.22,
+                    "z": 0.7
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 0,
+                "material": 1010621630
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 1.2,
+                "friction": 0.8,
+                "restitution": 0.03,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        },
+        {
+            "id": 377050501,
+            "tagComponent": {
+                "tag": "Cylinder_BoxCollider"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 2.85,
+                    "y": 1.35,
+                    "z": -0.05
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 0.6,
+                    "y": 0.8,
+                    "z": 0.6
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "primitiveMeshComponent": {
+                "kind": 4,
+                "material": 1979706725
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "density": 0.8,
+                "friction": 0.75,
+                "restitution": 0.06,
+                "size": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                }
+            }
+        },
+        {
+            "id": 3324298046,
+            "tagComponent": {
+                "tag": "Camera_Orbit"
+            },
+            "relationshipComponent": {
+                "parent": 0,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 2.4496157972531916,
+                    "y": 6.644037402629092,
+                    "z": 11.524536236411434
+                },
+                "rotation": {
+                    "x": -0.21525393508649943,
+                    "y": 0.1020507213185927,
+                    "z": 0.022624100235194084,
+                    "w": 0.9709477554413933
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": [
+                    {
+                        "name": "OrbitCameraController",
+                        "scriptFields": []
+                    }
+                ]
+            },
+            "cameraComponent": {
+                "isPrimary": true,
+                "camera": {
+                    "projectionType": 0,
+                    "fieldOfView": 58.0,
+                    "orthoSize": 1.0,
+                    "zNear": 0.1,
+                    "zFar": 80.0
+                },
+                "postprocessing": 0,
+                "postprocessingEnabled": false,
+                "bloomEnabled": false,
+                "autoExposureEnabled": false
+            }
+        },
+        {
+            "id": 565694298,
+            "tagComponent": {
+                "tag": "Sun_SoftNeutral"
+            },
+            "relationshipComponent": {
+                "parent": 0,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": -0.3303661048412323,
+                    "y": -0.24321037530899048,
+                    "z": -0.0885213315486908,
+                    "w": 0.9076734781265259
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "directionalLightComponent": {
+                "color": {
+                    "x": 1.0,
+                    "y": 0.98,
+                    "z": 0.95,
+                    "w": 1.0
+                },
+                "intensity": 1.0,
+                "isEnabled": true,
+                "castShadows": true
+            }
+        },
+        {
+            "id": 1528564611,
+            "tagComponent": {
+                "tag": "Sky_Calm"
+            },
+            "relationshipComponent": {
+                "parent": 0,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": -0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "cubeMapComponent": {
+                "material": 0
+            }
+        }
+    ]
+}

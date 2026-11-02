@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(SMASH LAB CXX)
+project(SmashLab LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -155,14 +155,14 @@ endif()
 # Engine/runtime implementation is pre-compiled in PandaSDK.
 if(PLATFORM_MACOS)
     set(APPLE_RESOURCES native/OSX/AssetsOSX.xcassets)
-    add_executable(SMASH LAB MACOSX_BUNDLE ${APP_SOURCES} ${APPLE_RESOURCES})
-    set_target_properties(SMASH LAB PROPERTIES
+    add_executable(SmashLab MACOSX_BUNDLE ${APP_SOURCES} ${APPLE_RESOURCES})
+    set_target_properties(SmashLab PROPERTIES
         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/native/OSX/Info.plist"
         XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "com.company.SMASH LAB"
         XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon"
         RESOURCE "${APPLE_RESOURCES}"
     )
-    target_compile_definitions(SMASH LAB PUBLIC GL_SILENCE_DEPRECATION)
+    target_compile_definitions(SmashLab PUBLIC GL_SILENCE_DEPRECATION)
 elseif(PLATFORM_IOS)
     set(APPLE_RESOURCES)
     if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/native/IOS/LaunchScreen.storyboard")
@@ -171,8 +171,8 @@ elseif(PLATFORM_IOS)
     if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/native/IOS/Assets.xcassets")
         list(APPEND APPLE_RESOURCES native/IOS/Assets.xcassets)
     endif()
-    add_executable(SMASH LAB MACOSX_BUNDLE ${APP_SOURCES} ${APPLE_RESOURCES})
-    set_target_properties(SMASH LAB PROPERTIES
+    add_executable(SmashLab MACOSX_BUNDLE ${APP_SOURCES} ${APPLE_RESOURCES})
+    set_target_properties(SmashLab PROPERTIES
         MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/native/IOS/Info.plist"
         XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "com.company.SMASH LAB"
         RESOURCE "${APPLE_RESOURCES}"
@@ -180,25 +180,28 @@ elseif(PLATFORM_IOS)
         BUILD_RPATH "@executable_path"
     )
     if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/native/IOS/Assets.xcassets")
-        set_target_properties(SMASH LAB PROPERTIES XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon")
+        set_target_properties(SmashLab PROPERTIES XCODE_ATTRIBUTE_ASSETCATALOG_COMPILER_APPICON_NAME "AppIcon")
     endif()
-    target_compile_definitions(SMASH LAB PUBLIC GL_SILENCE_DEPRECATION GLES_SILENCE_DEPRECATION)
+    target_compile_definitions(SmashLab PUBLIC GL_SILENCE_DEPRECATION GLES_SILENCE_DEPRECATION)
 elseif(PLATFORM_LINUX)
-    add_executable(SMASH LAB ${APP_SOURCES})
+    add_executable(SmashLab ${APP_SOURCES})
 elseif(PLATFORM_WIN32)
     # The WINDOWS subsystem (no console), but the entry point is the ordinary main()
     # from EntryPoint/Desktop/main.cpp, not WinMain.
-    add_executable(SMASH LAB WIN32 ${APP_SOURCES})
-    target_link_options(SMASH LAB PRIVATE "/ENTRY:mainCRTStartup")
+    add_executable(SmashLab WIN32 ${APP_SOURCES})
+    target_link_options(SmashLab PRIVATE "/ENTRY:mainCRTStartup")
 elseif(PLATFORM_ANDROID)
-    add_library(SMASH LAB SHARED ${APP_SOURCES})
+    add_library(SmashLab SHARED ${APP_SOURCES})
 endif()
+
+# Keep the game name independent of the internal CMake target.
+set_target_properties(SmashLab PROPERTIES OUTPUT_NAME "SMASH LAB")
 
 # Link against pre-compiled runtime. Entry point remains in generated app sources.
 # Module libraries go first: their engine references resolve against the runtime libraries.
-target_link_libraries(SMASH LAB ${PANDA_STATIC_MODULE_TARGETS} PandaSDK::PandaRuntime)
+target_link_libraries(SmashLab ${PANDA_STATIC_MODULE_TARGETS} PandaSDK::PandaRuntime)
 if(EXISTS "${GAME_SCRIPT_DIR}")
-    target_include_directories(SMASH LAB PRIVATE "${GAME_SCRIPT_DIR}")
+    target_include_directories(SmashLab PRIVATE "${GAME_SCRIPT_DIR}")
 endif()
 
 if(NOT EXISTS "${PANDA_GAME_RUNTIME_DATA_DIR}/project.bin")
@@ -214,15 +217,15 @@ add_custom_target(PandaCheckRuntimeData
     COMMAND ${CMAKE_COMMAND} -P "${PANDA_CHECK_RUNTIME_DATA_SCRIPT}"
     COMMENT "Checking cooked runtime data"
 )
-add_dependencies(SMASH LAB PandaCheckRuntimeData)
+add_dependencies(SmashLab PandaCheckRuntimeData)
 
 # Copy engine resources and cooked game runtime data into fixed runtime locations
 if(PLATFORM_MACOS)
-    set(APP_RESOURCES_OUTPUT_DIR "$<TARGET_FILE_DIR:SMASH LAB>/../Resources")
+    set(APP_RESOURCES_OUTPUT_DIR "$<TARGET_FILE_DIR:SmashLab>/../Resources")
 elseif(PLATFORM_IOS)
-    set(APP_RESOURCES_OUTPUT_DIR "$<TARGET_FILE_DIR:SMASH LAB>")
+    set(APP_RESOURCES_OUTPUT_DIR "$<TARGET_FILE_DIR:SmashLab>")
 elseif(PLATFORM_LINUX OR PLATFORM_WIN32)
-    set(APP_RESOURCES_OUTPUT_DIR "$<TARGET_FILE_DIR:SMASH LAB>")
+    set(APP_RESOURCES_OUTPUT_DIR "$<TARGET_FILE_DIR:SmashLab>")
 endif()
 
 if(PLATFORM_MACOS OR PLATFORM_IOS OR PLATFORM_LINUX OR PLATFORM_WIN32)
@@ -241,7 +244,7 @@ if(PLATFORM_MACOS OR PLATFORM_IOS OR PLATFORM_LINUX OR PLATFORM_WIN32)
         list(APPEND PANDA_UNLISTED_MODULE_RESOURCE_COMMANDS
             COMMAND ${CMAKE_COMMAND} -E remove_directory "${APP_RESOURCES_OUTPUT_DIR}/${_PANDA_FOLDER}")
     endforeach()
-    add_custom_command(TARGET SMASH LAB POST_BUILD
+    add_custom_command(TARGET SmashLab POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E remove_directory
             "${APP_RESOURCES_OUTPUT_DIR}/Content"
         COMMAND ${CMAKE_COMMAND} -E remove_directory
@@ -263,8 +266,8 @@ if(PLATFORM_MACOS OR PLATFORM_IOS OR PLATFORM_LINUX OR PLATFORM_WIN32)
 endif()
 
 if(APPLE)
-    add_custom_command(TARGET SMASH LAB POST_BUILD
-        COMMAND /usr/bin/xattr -cr "$<TARGET_BUNDLE_DIR:SMASH LAB>"
+    add_custom_command(TARGET SmashLab POST_BUILD
+        COMMAND /usr/bin/xattr -cr "$<TARGET_BUNDLE_DIR:SmashLab>"
         COMMENT "Removing extended attributes from app bundle"
     )
 endif()
