@@ -1,0 +1,12 @@
+.DS_Store
+.ShaderCache
+.idea
+bin
+cmake-build-*
+.Panda/Shaders
+.Panda/Textures
+.Panda/Cooked
+.Panda/ScriptCache
+.Panda/session.json
+Export/build
+*.pdb

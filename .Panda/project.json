@@ -1,0 +1,8 @@
+{
+    "world": {
+        "startWorld": "Assets/world.world"
+    },
+    "modules": {
+        "entries": []
+    }
+}

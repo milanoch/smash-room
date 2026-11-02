@@ -1,0 +1,3 @@
+LIBRARY SMASH LAB
+EXPORTS
+    pandaLoadPlugin
