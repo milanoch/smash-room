@@ -10,9 +10,25 @@
 // and bounds stay local to this small prototype controller.
 class OrbitCameraController final : public Bamboo::Script {
 public:
+    struct PointerSample {
+        Bamboo::Vec2 position;
+        Bamboo::Vec2 viewport;
+    };
+
+    // Matches cameraComponent.camera.fieldOfView in LivingRoom_Prototype.world.
+    // This SDK exposes no Bamboo camera-projection getter. If the scene's FOV
+    // changes, update this value with it; viewport dimensions are always live.
+    static constexpr float kVerticalFovDegrees = 58.f;
+
     void start() override;
     void update(float deltaTime) override;
     void shutdown() override;
+
+    bool getScenePointer(PointerSample &sample) const;
+    bool takeImpactClick(PointerSample &sample);
+    void clearImpactClicks();
+    void showInteractionMarker(bool available);
+    bool acceptsSceneKeyboard() const;
 
 private:
     struct ScrollInput;

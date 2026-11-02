@@ -5,6 +5,10 @@
             "scriptFields": []
         },
         {
+            "name": "PhysicsInteractionController",
+            "scriptFields": []
+        },
+        {
             "name": "SampleScript",
             "scriptFields": [
                 {

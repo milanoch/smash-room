@@ -47,7 +47,17 @@
                     3667390977,
                     409156532,
                     3526426806,
-                    377050501
+                    377050501,
+                    1915109488,
+                    2196939355,
+                    838106737,
+                    895852332,
+                    492621164,
+                    407659866,
+                    1805538946,
+                    4218214558,
+                    3260386324,
+                    556643371
                 ]
             },
             "transformComponent": {
@@ -548,7 +558,7 @@
             },
             "primitiveMeshComponent": {
                 "kind": 0,
-                "material": 1979706725
+                "material": 26835769
             },
             "rigidbody3dComponent": {
                 "type": 1,
@@ -562,8 +572,8 @@
                     "z": 0.0
                 },
                 "density": 1.0,
-                "friction": 0.65,
-                "restitution": 0.06,
+                "friction": 0.5,
+                "restitution": 0.0,
                 "size": {
                     "x": 0.5,
                     "y": 0.5,
@@ -870,6 +880,10 @@
                     {
                         "name": "OrbitCameraController",
                         "scriptFields": []
+                    },
+                    {
+                        "name": "PhysicsInteractionController",
+                        "scriptFields": []
                     }
                 ]
             },
@@ -962,6 +976,356 @@
             },
             "cubeMapComponent": {
                 "material": 0
+            }
+        },
+        {
+            "id": 1915109488,
+            "tagComponent": {
+                "tag": "Glass_Fragment_00"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            }
+        },
+        {
+            "id": 2196939355,
+            "tagComponent": {
+                "tag": "Glass_Fragment_01"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            }
+        },
+        {
+            "id": 838106737,
+            "tagComponent": {
+                "tag": "Glass_Fragment_02"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            }
+        },
+        {
+            "id": 895852332,
+            "tagComponent": {
+                "tag": "Glass_Fragment_03"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            }
+        },
+        {
+            "id": 492621164,
+            "tagComponent": {
+                "tag": "Glass_Fragment_04"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            }
+        },
+        {
+            "id": 407659866,
+            "tagComponent": {
+                "tag": "Glass_Fragment_05"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            }
+        },
+        {
+            "id": 1805538946,
+            "tagComponent": {
+                "tag": "Glass_Fragment_06"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            }
+        },
+        {
+            "id": 4218214558,
+            "tagComponent": {
+                "tag": "Glass_Fragment_07"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            }
+        },
+        {
+            "id": 3260386324,
+            "tagComponent": {
+                "tag": "Glass_Fragment_08"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            }
+        },
+        {
+            "id": 556643371,
+            "tagComponent": {
+                "tag": "Glass_Fragment_09"
+            },
+            "relationshipComponent": {
+                "parent": 416814741,
+                "children": []
+            },
+            "transformComponent": {
+                "position": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "rotation": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "scale": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0
+                }
+            },
+            "scriptListComponent": {
+                "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
             }
         }
     ]
