@@ -31,12 +31,11 @@ private:
     struct ImpactRay {
         Bamboo::Vec3 origin;
         Bamboo::Vec3 direction;
+        float strength;
     };
 
     static constexpr size_t kObjectCount = 10;
     static constexpr size_t kMaxPendingImpacts = 16;
-    // Configure the visible push as delta-v (m/s), then multiply by body mass.
-    static constexpr float kImpactDeltaVelocity = 2.5f;
     static constexpr float kRayDistance = 80.f;
 
     bool restoreRoom();

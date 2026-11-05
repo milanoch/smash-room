@@ -9,10 +9,10 @@
             "name": "baseColorFactor",
             "type": 2,
             "value": {
-                "x": 0.5,
-                "y": 0.82,
+                "x": 0.62,
+                "y": 0.9,
                 "z": 0.98,
-                "w": 0.78
+                "w": 0.36
             }
         },
         {
@@ -23,12 +23,12 @@
         {
             "name": "metallicFactor",
             "type": 0,
-            "value": 0.08
+            "value": 0.0
         },
         {
             "name": "roughnessFactor",
             "type": 0,
-            "value": 0.19
+            "value": 0.2375
         },
         {
             "name": "normalTexture",
@@ -78,7 +78,17 @@
         {
             "name": "doubleSided",
             "type": 1,
-            "value": 0
+            "value": 1
+        },
+        {
+            "name": "glassEnvironmentMap",
+            "type": 3,
+            "value": 3863782859
+        },
+        {
+            "name": "glassEnvironmentIntensity",
+            "type": 0,
+            "value": 1.0
         }
     ]
 }

@@ -68,7 +68,7 @@ void PhysicsInteractionController::start() {
     }
 }
 
-void PhysicsInteractionController::lateUpdate(float) {
+void PhysicsInteractionController::lateUpdate(float deltaTime) {
     // Resolve lazily so registration/start ordering cannot select an unstarted
     // peer. This script and OrbitCameraController are on the same camera entity.
     if (!m_camera) {
@@ -88,6 +88,8 @@ void PhysicsInteractionController::lateUpdate(float) {
 
     const Bamboo::Vec3 origin = Bamboo::TransformComponentAPI::getPosition(getEntity());
     const Bamboo::Quat rotation = Bamboo::TransformComponentAPI::getRotation(getEntity());
+    m_destruction.updateVisuals(deltaTime, origin, rotation,
+                              m_camera->getSceneViewportSize().y, OrbitCameraController::kVerticalFovDegrees);
     auto rayFor = [&](const OrbitCameraController::PointerSample &sample, Bamboo::Vec3 &direction) {
         return SmashLab::makeCursorRay(
             sample.position, sample.viewport, origin, rotation, OrbitCameraController::kVerticalFovDegrees, direction
@@ -108,12 +110,12 @@ void PhysicsInteractionController::lateUpdate(float) {
     while (m_camera->takeImpactClick(pointer)) {
         if (m_pendingImpacts.size() >= kMaxPendingImpacts) { continue; }
         if (rayFor(pointer, direction) && hitDynamic(origin, direction, kRayDistance, hit)) {
-            m_pendingImpacts.push_back({origin, direction});
+            m_pendingImpacts.push_back({origin, direction, pointer.impactStrength});
         }
     }
 }
 
-void PhysicsInteractionController::fixedUpdate(float) {
+void PhysicsInteractionController::fixedUpdate(float stepTime) {
     if (!m_ready) { return; }
     if (!m_camera) { m_camera = Bamboo::EntityAPI::getScript<OrbitCameraController>(getEntity()); }
     // Input retains an edge until exactly one fixed step sees it, even across
@@ -129,15 +131,17 @@ void PhysicsInteractionController::fixedUpdate(float) {
         return; // A reset always wins over any impact in this fixed step.
     }
 
+    m_destruction.fixedUpdate(stepTime);
+
     // Consume first, even when no ray hits: later fixed steps must never repeat
     // the same click. Recast against exact solver poses at the physics boundary.
     auto impacts = std::exchange(m_pendingImpacts, {});
     for (const ImpactRay &ray : impacts) {
         Bamboo::Physics3DAPI::RaycastHit hit;
         if (!hitDynamic(ray.origin, ray.direction, kRayDistance, hit)) { continue; }
-        if (m_destruction.impact(hit.entity, hit.point, ray.direction, kImpactDeltaVelocity)) { continue; }
+        if (m_destruction.impact(hit.entity, hit.point, ray.direction, ray.strength)) { continue; }
         const float mass = Bamboo::Rigidbody3DComponentAPI::getMass(hit.entity);
-        const float magnitude = mass * kImpactDeltaVelocity;
+        const float magnitude = mass * ray.strength;
         if (!std::isfinite(magnitude)) { continue; }
         const Bamboo::Vec3 impulse(
             ray.direction.x * magnitude, ray.direction.y * magnitude, ray.direction.z * magnitude

@@ -8,8 +8,11 @@
 // has/remove calls. These are real, exported PandaSDK function-pointer variables;
 // their signatures come from the published host ABI. No engine library is
 // linked into the game bundle, and no address lookup or memory offset is used.
-// This narrow compatibility adapter intentionally targets the installed ABI 32.
-static_assert(Panda::Scripting::SCRIPT_ABI_VERSION == 32,
+// Validated against ABI 32 and 33. Version 33 adds application focus/pause
+// callbacks; these two SDK-declared functions and exported variables are
+// unchanged. We never index into a host table or assume its binary offsets.
+static_assert(Panda::Scripting::SCRIPT_ABI_VERSION == 32 ||
+              Panda::Scripting::SCRIPT_ABI_VERSION == 33,
               "Review SdkComponentAccess against the new PandaSDK host ABI.");
 
 namespace Panda::ExternalCalls {
