@@ -16,10 +16,10 @@
 
 namespace {
 
-constexpr std::array<const char *, 11> kObjectTags = {
+constexpr std::array<const char *, 15> kObjectTags = {
     "Cube_Red", "Cube_Blue", "Cube_Green", "Cube_Yellow", "Cube_Purple",
     "Crate_Wood", "Sphere_Small", "Sphere_Large", "Platform", "Cylinder_BoxCollider",
-    "CoffeeTable"
+    "CoffeeTable", "Bowl_CoffeeTable", "CoffeeTable_Book_01", "CoffeeTable_Book_02", "Vase_CoffeeTable"
 };
 
 bool isDynamic(Bamboo::EntityHandle entity) {

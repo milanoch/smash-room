@@ -34,7 +34,7 @@ private:
         float strength;
     };
 
-    static constexpr size_t kObjectCount = 11;
+    static constexpr size_t kObjectCount = 15;
     static constexpr size_t kMaxPendingImpacts = 16;
     static constexpr float kRayDistance = 80.f;
 
