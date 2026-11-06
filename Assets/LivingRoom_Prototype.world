@@ -2,11 +2,11 @@
     "lighting": {
         "ambientColor": {
             "x": 1.0,
-            "y": 0.9800000190734863,
-            "z": 0.949999988079071,
+            "y": 0.9300000071525574,
+            "z": 0.8399999737739563,
             "w": 1.0
         },
-        "ambientIntensity": 0.30000001192092896,
+        "ambientIntensity": 0.23999999463558197,
         "environmentMap": 3863782859,
         "environmentIntensity": 1.0
     },
@@ -16,7 +16,7 @@
             "cascadeCount": 2,
             "tileSize": 1024,
             "distance": 30.0,
-            "strength": 0.6499999761581421,
+            "strength": 0.800000011920929,
             "slopeBias": 2.0,
             "normalOffset": 1.0,
             "receiverBias": 0.5
@@ -84,11 +84,11 @@
             "pointLightComponent": {
                 "color": {
                     "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0,
+                    "y": 0.800000011920929,
+                    "z": 0.5799999833106995,
                     "w": 1.0
                 },
-                "intensity": 2.0,
+                "intensity": 1.0,
                 "radius": 10.0,
                 "isEnabled": true
             },
@@ -160,11 +160,11 @@
             "directionalLightComponent": {
                 "color": {
                     "x": 1.0,
-                    "y": 1.0,
-                    "z": 1.0,
+                    "y": 0.8399999737739563,
+                    "z": 0.6499999761581421,
                     "w": 1.0
                 },
-                "intensity": 3.0,
+                "intensity": 0.8999999761581421,
                 "isEnabled": true,
                 "castShadows": true
             },
@@ -183,13 +183,13 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 2.449615716934204,
-                    "y": 6.644037246704102,
-                    "z": 11.5245361328125
+                    "x": 1.223036289215088,
+                    "y": 3.7152955532073975,
+                    "z": 5.753474235534668
                 },
                 "rotation": {
                     "x": -0.21525393426418304,
-                    "y": 0.10205072164535522,
+                    "y": 0.10205071419477463,
                     "z": 0.022624099627137184,
                     "w": 0.9709477424621582
                 },
@@ -203,8 +203,8 @@
                 "isPrimary": true,
                 "camera": {
                     "projectionType": 0,
-                    "fieldOfView": 58.0,
-                    "orthoSize": 1.0,
+                    "fieldOfView": 60.0,
+                    "orthoSize": 7.0,
                     "zNear": 0.10000000149011612,
                     "zFar": 80.0
                 },
@@ -239,18 +239,66 @@
                 "children": [
                     1509658580,
                     3241300160,
+                    2587445610,
+                    2896199106,
+                    3012236372,
+                    327542646,
+                    2825710425,
+                    1036044925,
+                    3780799394,
+                    3448251644,
+                    3439510085,
+                    60335854,
+                    3439160903,
+                    3072989569,
+                    77218428,
+                    886936536,
+                    4135244206,
+                    2725067282,
+                    3470400512,
+                    4068098750,
+                    945360416,
+                    630754892,
+                    3276618845,
+                    1535375416,
+                    4214302326,
+                    3421880626,
+                    3601179652,
+                    3894568695,
+                    3051280119,
+                    1758999051,
+                    3416506201,
+                    358274693,
+                    2970978741,
                     1249861171,
+                    2139215205,
+                    2934480483,
+                    4268267073,
+                    1398536948,
+                    1703530890,
                     3822029489,
                     3347948745,
+                    2466100746,
+                    1248146496,
                     1736292605,
                     2770614908,
                     3796776430,
                     3466927225,
                     1694000377,
+                    1364225773,
                     4164128471,
                     2874455055,
+                    47820504,
+                    1420110686,
+                    3642734681,
+                    3341097478,
+                    1519129179,
+                    4048587262,
                     1889934600,
+                    2635261051,
                     1512836012,
+                    3903893581,
+                    2904050463,
                     3949094229
                 ]
             },
@@ -481,6 +529,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -551,6 +612,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -621,6 +695,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -691,6 +778,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -761,6 +861,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -831,6 +944,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -901,6 +1027,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -971,6 +1110,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1041,6 +1193,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1154,6 +1319,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1224,6 +1402,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1294,6 +1485,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1364,6 +1568,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1434,6 +1651,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1504,6 +1734,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1574,6 +1817,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1644,6 +1900,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1714,6 +1983,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1784,6 +2066,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1854,6 +2149,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1862,37 +2170,6 @@
                 "parent": 2472198000,
                 "children": [
                     429626303,
-                    2587445610,
-                    2896199106,
-                    3012236372,
-                    327542646,
-                    2825710425,
-                    1036044925,
-                    3780799394,
-                    3448251644,
-                    3439510085,
-                    60335854,
-                    3439160903,
-                    3072989569,
-                    77218428,
-                    886936536,
-                    4135244206,
-                    2725067282,
-                    3470400512,
-                    4068098750,
-                    945360416,
-                    630754892,
-                    3276618845,
-                    1535375416,
-                    4214302326,
-                    3421880626,
-                    3601179652,
-                    3894568695,
-                    3051280119,
-                    1758999051,
-                    3416506201,
-                    358274693,
-                    2970978741,
                     690981465,
                     2340356383,
                     2425118289,
@@ -1900,11 +2177,7 @@
                     2789761714,
                     1293124994,
                     2345870796,
-                    3962526413,
-                    2139215205,
-                    2934480483,
-                    4268267073,
-                    1398536948
+                    3962526413
                 ]
             },
             "tagComponent": {
@@ -1930,6 +2203,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.061250001192092896,
+                    "z": -0.0012499848380684853
+                },
+                "size": {
+                    "x": 0.6424999237060547,
+                    "y": 0.061250001192092896,
+                    "z": 0.17124998569488525
+                },
+                "density": 148.38510131835938,
+                "friction": 0.75,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -1963,6 +2256,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.5894999504089355,
+                    "y": 1.0695000886917114,
+                    "z": 0.017000000923871994
+                },
+                "density": 93.30104064941406,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 3241300160,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -2005,7 +2337,7 @@
         {
             "id": 2587445610,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     350739692
                 ]
@@ -2015,9 +2347,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.4787452220916748,
+                    "x": 2.3012547492980957,
                     "y": 0.7085753083229065,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2033,6 +2365,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.02455471269786358,
+                    "y": 0.15287533402442932,
+                    "z": 0.11322617530822754
+                },
+                "density": 623.762939453125,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2075,7 +2427,7 @@
         {
             "id": 2896199106,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     3592342972
                 ]
@@ -2085,9 +2437,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.42410802841186523,
+                    "x": 2.3558919429779053,
                     "y": 0.7153341770172119,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2103,6 +2455,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.017261287197470665,
+                    "y": 0.15963415801525116,
+                    "z": 0.09762667119503021
+                },
+                "density": 631.5657958984375,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2145,7 +2517,7 @@
         {
             "id": 3012236372,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2135556238
                 ]
@@ -2155,9 +2527,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.36722493171691895,
+                    "x": 2.4127750396728516,
                     "y": 0.6800833940505981,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2173,6 +2545,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.026800690218806267,
+                    "y": 0.12438341975212097,
+                    "z": 0.11204203963279724
+                },
+                "density": 623.0042114257813,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2215,7 +2607,7 @@
         {
             "id": 327542646,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2236913502
                 ]
@@ -2225,9 +2617,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.31026124954223633,
+                    "x": 2.469738721847534,
                     "y": 0.7204796671867371,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2243,6 +2635,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.017328964546322823,
+                    "y": 0.1647796779870987,
+                    "z": 0.10362496227025986
+                },
+                "density": 631.1234130859375,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2285,7 +2697,7 @@
         {
             "id": 2825710425,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2160151285
                 ]
@@ -2295,9 +2707,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.2529773712158203,
+                    "x": 2.52702260017395,
                     "y": 0.7126148343086243,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2313,6 +2725,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.02712082304060459,
+                    "y": 0.1569148302078247,
+                    "z": 0.10780423879623413
+                },
+                "density": 622.2462768554688,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2355,7 +2787,7 @@
         {
             "id": 1036044925,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     62404178
                 ]
@@ -2365,9 +2797,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.18325495719909668,
+                    "x": 2.596745014190674,
                     "y": 0.6706656813621521,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2383,6 +2815,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.02920152060687542,
+                    "y": 0.11496569961309433,
+                    "z": 0.1136607751250267
+                },
+                "density": 621.9304809570313,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2425,7 +2877,7 @@
         {
             "id": 3780799394,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2570852646
                 ]
@@ -2435,9 +2887,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.12143874168395996,
+                    "x": 2.6585612297058105,
                     "y": 0.703684389591217,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2453,6 +2905,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.01938832737505436,
+                    "y": 0.14798441529273987,
+                    "z": 0.09774581342935562
+                },
+                "density": 629.076171875,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2495,7 +2967,7 @@
         {
             "id": 3448251644,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2804579748
                 ]
@@ -2505,9 +2977,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.06351685523986816,
+                    "x": 2.7164831161499023,
                     "y": 0.6988328695297241,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2523,6 +2995,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.025307336822152138,
+                    "y": 0.14313285052776337,
+                    "z": 0.09176845848560333
+                },
+                "density": 624.3378295898438,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2565,7 +3057,7 @@
         {
             "id": 3439510085,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     244582171
                 ]
@@ -2575,9 +3067,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.004931926727294922,
+                    "x": 2.7750680446624756,
                     "y": 0.7112175822257996,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2593,6 +3085,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.019945086911320686,
+                    "y": 0.1555176079273224,
+                    "z": 0.11258067190647125
+                },
+                "density": 627.7322387695313,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2635,7 +3147,7 @@
         {
             "id": 60335854,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     3434449717
                 ]
@@ -2645,9 +3157,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.05130720138549805,
+                    "x": 2.8313071727752686,
                     "y": 0.679360032081604,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2663,6 +3175,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.022961534559726715,
+                    "y": 0.12366002798080444,
+                    "z": 0.10698848217725754
+                },
+                "density": 625.859619140625,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2705,7 +3237,7 @@
         {
             "id": 3439160903,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     3173798833
                 ]
@@ -2715,15 +3247,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.47403645515441895,
+                    "x": 2.3059635162353516,
                     "y": 1.1195100545883179,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.012123480439186096,
-                    "w": 0.9999265670776367
+                    "z": 0.01212348137050867,
+                    "w": 0.9999265074729919
                 },
                 "scale": {
                     "x": 1.0,
@@ -2733,6 +3265,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.02926349826157093,
+                    "y": 0.12381001561880112,
+                    "z": 0.11350595951080322
+                },
+                "density": 621.635986328125,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2775,7 +3327,7 @@
         {
             "id": 3072989569,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2828081064
                 ]
@@ -2785,9 +3337,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.4050469398498535,
+                    "x": 2.374953031539917,
                     "y": 1.1290496587753296,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2803,6 +3355,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.026326097548007965,
+                    "y": 0.13334965705871582,
+                    "z": 0.10365191102027893
+                },
+                "density": 623.3687133789063,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2845,7 +3417,7 @@
         {
             "id": 77218428,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     1765957999
                 ]
@@ -2855,9 +3427,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.3453638553619385,
+                    "x": 2.434636116027832,
                     "y": 1.1340726613998413,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -2873,6 +3445,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.020011769607663155,
+                    "y": 0.13837267458438873,
+                    "z": 0.10969502478837967
+                },
+                "density": 628.1118774414063,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2915,7 +3507,7 @@
         {
             "id": 886936536,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     1961381575
                 ]
@@ -2925,15 +3517,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.2913343906402588,
+                    "x": 2.4886655807495117,
                     "y": 1.1529788970947266,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.003565081162378192,
-                    "w": 0.9999936819076538
+                    "z": 0.003565081860870123,
+                    "w": 0.9999937415122986
                 },
                 "scale": {
                     "x": 1.0,
@@ -2943,6 +3535,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.020672598853707314,
+                    "y": 0.157278910279274,
+                    "z": 0.09374271333217621
+                },
+                "density": 627.7302856445313,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -2985,7 +3597,7 @@
         {
             "id": 4135244206,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2765313208
                 ]
@@ -2995,15 +3607,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.23448967933654785,
+                    "x": 2.5455102920532227,
                     "y": 1.1384543180465698,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": -0.006610709708184004,
-                    "w": 0.9999781847000122
+                    "z": -0.006610711105167866,
+                    "w": 0.999978244304657
                 },
                 "scale": {
                     "x": 1.0,
@@ -3013,6 +3625,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.022772159427404404,
+                    "y": 0.14275436103343964,
+                    "z": 0.09354889392852783
+                },
+                "density": 626.12646484375,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3055,7 +3687,7 @@
         {
             "id": 2725067282,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     3206416459
                 ]
@@ -3065,9 +3697,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.17591428756713867,
+                    "x": 2.604085683822632,
                     "y": 1.1150295734405518,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3083,6 +3715,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.022403335198760033,
+                    "y": 0.11932963132858276,
+                    "z": 0.0977591872215271
+                },
+                "density": 626.8333740234375,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3125,7 +3777,7 @@
         {
             "id": 3470400512,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2678285968
                 ]
@@ -3135,9 +3787,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.11967039108276367,
+                    "x": 2.660329580307007,
                     "y": 1.116287112236023,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3153,6 +3805,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.02044048346579075,
+                    "y": 0.12058714032173157,
+                    "z": 0.0956587940454483
+                },
+                "density": 628.717041015625,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3195,7 +3867,7 @@
         {
             "id": 4068098750,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     3362385859
                 ]
@@ -3205,15 +3877,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.06072115898132324,
+                    "x": 2.7192788124084473,
                     "y": 1.1264901161193848,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": -0.0003304766723886132,
-                    "w": 1.0
+                    "z": -0.0003304767014924437,
+                    "w": 0.9999999403953552
                 },
                 "scale": {
                     "x": 1.0,
@@ -3223,6 +3895,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.02510880120098591,
+                    "y": 0.13079006969928741,
+                    "z": 0.10088635236024857
+                },
+                "density": 624.3300170898438,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3265,7 +3957,7 @@
         {
             "id": 945360416,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2308357123
                 ]
@@ -3275,9 +3967,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.47959113121032715,
+                    "x": 2.3004088401794434,
                     "y": 1.5998820066452026,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3293,6 +3985,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.023708976805210114,
+                    "y": 0.16418202221393585,
+                    "z": 0.09471500664949417
+                },
+                "density": 624.9332275390625,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3335,7 +4047,7 @@
         {
             "id": 630754892,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     340012148
                 ]
@@ -3345,9 +4057,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.41919946670532227,
+                    "x": 2.3608005046844482,
                     "y": 1.5991992950439453,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3363,6 +4075,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.023282663896679878,
+                    "y": 0.16349925100803375,
+                    "z": 0.10642778128385544
+                },
+                "density": 624.7676391601563,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3405,7 +4137,7 @@
         {
             "id": 3276618845,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2648742128
                 ]
@@ -3415,9 +4147,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.36594057083129883,
+                    "x": 2.4140594005584717,
                     "y": 1.5938427448272705,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3433,6 +4165,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.01717201992869377,
+                    "y": 0.15814273059368134,
+                    "z": 0.09670402109622955
+                },
+                "density": 631.7626953125,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3475,7 +4227,7 @@
         {
             "id": 1535375416,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     1369220196
                 ]
@@ -3485,9 +4237,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.31885361671447754,
+                    "x": 2.461146354675293,
                     "y": 1.5809184312820435,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3503,6 +4255,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.017621075734496117,
+                    "y": 0.14521843194961548,
+                    "z": 0.09956608712673187
+                },
+                "density": 631.2492065429688,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3545,7 +4317,7 @@
         {
             "id": 4214302326,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     663920093
                 ]
@@ -3555,9 +4327,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.27249574661254883,
+                    "x": 2.5075042247772217,
                     "y": 1.599265217781067,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3573,6 +4345,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.016559341922402382,
+                    "y": 0.1635652333498001,
+                    "z": 0.11039938032627106
+                },
+                "density": 632.0217895507813,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3615,7 +4407,7 @@
         {
             "id": 3421880626,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     543434185
                 ]
@@ -3625,15 +4417,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.21906566619873047,
+                    "x": 2.56093430519104,
                     "y": 1.5624773502349854,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": -0.008447431027889252,
-                    "w": 0.9999643564224243
+                    "z": -0.008447431959211826,
+                    "w": 0.9999644160270691
                 },
                 "scale": {
                     "x": 1.0,
@@ -3643,6 +4435,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.024183310568332672,
+                    "y": 0.12677732110023499,
+                    "z": 0.09409540146589279
+                },
+                "density": 625.3942260742188,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3685,7 +4497,7 @@
         {
             "id": 3601179652,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     3315422997
                 ]
@@ -3695,9 +4507,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.16123604774475098,
+                    "x": 2.6187639236450195,
                     "y": 1.5711029767990112,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3713,6 +4525,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.020254891365766525,
+                    "y": 0.13540294766426086,
+                    "z": 0.11130014061927795
+                },
+                "density": 627.8689575195313,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3755,7 +4587,7 @@
         {
             "id": 3894568695,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     214877248
                 ]
@@ -3765,9 +4597,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.4740934371948242,
+                    "x": 2.3059065341949463,
                     "y": 2.0000903606414795,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3783,6 +4615,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.029206620529294014,
+                    "y": 0.12439048290252686,
+                    "z": 0.11058949679136276
+                },
+                "density": 621.7484130859375,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3825,7 +4677,7 @@
         {
             "id": 3051280119,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     3665842917
                 ]
@@ -3835,9 +4687,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.4138340950012207,
-                    "y": 2.015430212020874,
-                    "z": 0.03500008583068848
+                    "x": 2.36616587638855,
+                    "y": 2.015000104904175,
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3847,12 +4699,32 @@
                 },
                 "scale": {
                     "x": 1.0,
-                    "y": 1.0,
+                    "y": 0.9904077053070068,
                     "z": 1.0
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.01807619445025921,
+                    "y": 0.1397302895784378,
+                    "z": 0.10991130024194717
+                },
+                "density": 630.3463134765625,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3895,7 +4767,7 @@
         {
             "id": 1758999051,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     232725306
                 ]
@@ -3905,9 +4777,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.3589508533477783,
-                    "y": 2.0370700359344482,
-                    "z": 0.03500008583068848
+                    "x": 2.421049118041992,
+                    "y": 2.015000104904175,
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -3917,12 +4789,32 @@
                 },
                 "scale": {
                     "x": 1.0,
-                    "y": 1.0,
+                    "y": 0.8606588840484619,
                     "z": 1.0
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.023830778896808624,
+                    "y": 0.1613701432943344,
+                    "z": 0.09005922079086304
+                },
+                "density": 625.1248168945313,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -3965,7 +4857,7 @@
         {
             "id": 3416506201,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     1389374606
                 ]
@@ -3975,24 +4867,44 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.30170416831970215,
-                    "y": 2.015709161758423,
-                    "z": 0.03500008583068848
+                    "x": 2.4782958030700684,
+                    "y": 2.015000104904175,
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
                     "y": 0.0,
-                    "z": 0.001570885069668293,
-                    "w": 0.9999988079071045
+                    "z": 0.0015708854189142585,
+                    "w": 0.9999988675117493
                 },
                 "scale": {
                     "x": 1.0,
-                    "y": 1.0,
+                    "y": 0.9908597469329834,
                     "z": 1.0
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.020061351358890533,
+                    "y": 0.14000917971134186,
+                    "z": 0.11007936298847198
+                },
+                "density": 628.008544921875,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -4035,7 +4947,7 @@
         {
             "id": 358274693,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     2769404001
                 ]
@@ -4045,9 +4957,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.2483844757080078,
+                    "x": 2.5316154956817627,
                     "y": 2.001190662384033,
-                    "z": 0.03500008583068848
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -4063,6 +4975,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.01996716856956482,
+                    "y": 0.12549065053462982,
+                    "z": 0.10972273349761963
+                },
+                "density": 628.4828491210938,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -4105,7 +5037,7 @@
         {
             "id": 2970978741,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     1508559089
                 ]
@@ -4115,9 +5047,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.1896226406097412,
-                    "y": 2.0447587966918945,
-                    "z": 0.03500008583068848
+                    "x": 2.5903773307800293,
+                    "y": 2.015000104904175,
+                    "z": -2.6050000190734863
                 },
                 "rotation": {
                     "x": 0.0,
@@ -4127,12 +5059,32 @@
                 },
                 "scale": {
                     "x": 1.0,
-                    "y": 1.0,
+                    "y": 0.8183558583259583,
                     "z": 1.0
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.025457903742790222,
+                    "y": 0.16905878484249115,
+                    "z": 0.1065940409898758
+                },
+                "density": 623.1157836914063,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -4273,6 +5225,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.016750015318393707
+                },
+                "size": {
+                    "x": 0.575999915599823,
+                    "y": 0.02200000174343586,
+                    "z": 0.15274998545646667
+                },
+                "density": 129.15574645996094,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 3241300160,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -4343,6 +5334,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.016750015318393707
+                },
+                "size": {
+                    "x": 0.575999915599823,
+                    "y": 0.02200000174343586,
+                    "z": 0.15274998545646667
+                },
+                "density": 129.15574645996094,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 3241300160,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -4413,6 +5443,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.016750015318393707
+                },
+                "size": {
+                    "x": 0.575999915599823,
+                    "y": 0.02200000174343586,
+                    "z": 0.15274998545646667
+                },
+                "density": 129.15574645996094,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 3241300160,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -4483,6 +5552,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.016750015318393707
+                },
+                "size": {
+                    "x": 0.575999915599823,
+                    "y": 0.02200000174343586,
+                    "z": 0.15274998545646667
+                },
+                "density": 129.15574645996094,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 3241300160,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -4553,6 +5661,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.016750015318393707
+                },
+                "size": {
+                    "x": 0.575999915599823,
+                    "y": 0.02200000174343586,
+                    "z": 0.15274998545646667
+                },
+                "density": 129.15574645996094,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 3241300160,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -4623,6 +5770,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.016750015318393707
+                },
+                "size": {
+                    "x": 0.03199999779462814,
+                    "y": 1.099500060081482,
+                    "z": 0.15274998545646667
+                },
+                "density": 116.29301452636719,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 3241300160,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -4693,6 +5879,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.016750015318393707
+                },
+                "size": {
+                    "x": 0.03199999779462814,
+                    "y": 1.099500060081482,
+                    "z": 0.15274998545646667
+                },
+                "density": 116.29301452636719,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 3241300160,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -4735,7 +5960,7 @@
         {
             "id": 2139215205,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     1170477070
                 ]
@@ -4745,9 +5970,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.3599998950958252,
+                    "x": 3.1399998664855957,
                     "y": 1.1150000095367432,
-                    "z": 0.0
+                    "z": -2.640000104904175
                 },
                 "rotation": {
                     "x": 0.0,
@@ -4763,6 +5988,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.13950000703334808,
+                    "y": 0.11949999630451202,
+                    "z": 0.12449999898672104
+                },
+                "density": 84.31922149658203,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -4805,7 +6050,7 @@
         {
             "id": 2934480483,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     4102936464
                 ]
@@ -4815,9 +6060,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.3599998950958252,
+                    "x": 3.1399998664855957,
                     "y": 1.9950000047683716,
-                    "z": 0.0
+                    "z": -2.640000104904175
                 },
                 "rotation": {
                     "x": 0.0,
@@ -4833,6 +6078,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.13950000703334808,
+                    "y": 0.11949999630451202,
+                    "z": 0.12449999898672104
+                },
+                "density": 84.31922149658203,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -4875,7 +6140,7 @@
         {
             "id": 4268267073,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     1435803364
                 ]
@@ -4885,9 +6150,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.3900001049041748,
+                    "x": 3.1700000762939453,
                     "y": 0.5550000071525574,
-                    "z": 0.015000104904174805
+                    "z": -2.625
                 },
                 "rotation": {
                     "x": 0.0,
@@ -4903,6 +6168,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.125,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.09449999779462814,
+                    "y": 0.12449999898672104,
+                    "z": 0.09449999779462814
+                },
+                "density": 89.94293212890625,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -4945,7 +6230,7 @@
         {
             "id": 1398536948,
             "relationshipComponent": {
-                "parent": 3241300160,
+                "parent": 2472198000,
                 "children": [
                     234598384
                 ]
@@ -4955,9 +6240,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.3900001049041748,
+                    "x": 3.1700000762939453,
                     "y": 1.434999942779541,
-                    "z": 0.015000104904174805
+                    "z": -2.625
                 },
                 "rotation": {
                     "x": 0.0,
@@ -4973,6 +6258,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.125,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.09449999779462814,
+                    "y": 0.12449999898672104,
+                    "z": 0.09449999779462814
+                },
+                "density": 89.94293212890625,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -5043,6 +6348,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.13950000703334808,
+                    "y": 0.021150635555386543,
+                    "z": 0.13950000703334808
+                },
+                "density": 91.10861206054688,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -5187,6 +6512,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -5257,6 +6595,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -5327,6 +6678,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -5397,6 +6761,19 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "isStatic": true,
+            "rigidbody3dComponent": {
+                "type": 0,
+                "fixedRotation": false
+            },
+            "meshCollider3dComponent": {
+                "isSensor": false,
+                "mesh": 0,
+                "convex": false,
+                "density": 1.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -5435,22 +6812,12 @@
             "relationshipComponent": {
                 "parent": 2472198000,
                 "children": [
-                    1703530890,
-                    2466100746,
-                    1248146496,
                     742286657,
                     4076804497,
                     3900207689,
                     2806769533,
                     1425569398,
-                    3167718671,
-                    214357419,
-                    619953384,
-                    3017008675,
-                    3903893581,
-                    1089115838,
-                    3783318525,
-                    3743002801
+                    3167718671
                 ]
             },
             "tagComponent": {
@@ -5501,7 +6868,7 @@
         {
             "id": 1703530890,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 2472198000,
                 "children": [
                     2497921212
                 ]
@@ -5511,24 +6878,44 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.050000011920928955,
+                    "x": -1.3171356916427612,
                     "y": 0.4399999976158142,
-                    "z": 0.20000000298023224
+                    "z": -0.40571027994155884
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.0,
+                    "y": 0.7194843888282776,
                     "z": 0.0,
-                    "w": 1.0
+                    "w": 0.6945086121559143
                 },
                 "scale": {
-                    "x": 1.0,
+                    "x": 1.0000041723251343,
                     "y": 1.0,
-                    "z": 1.0
+                    "z": 1.0000041723251343
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.03750000149011612,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.15000000596046448,
+                    "y": 0.03750000149011612,
+                    "z": 0.14772115647792816
+                },
+                "density": 100.0,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -5571,7 +6958,7 @@
         {
             "id": 2466100746,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 2472198000,
                 "children": [
                     1445414768
                 ]
@@ -5581,24 +6968,44 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.3100000023841858,
+                    "x": -1.4143539667129517,
                     "y": 0.46799999475479126,
-                    "z": 0.09000000357627869
+                    "z": -0.042048607021570206
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.029995499178767204,
+                    "y": 0.7399927973747253,
                     "z": 0.0,
-                    "w": 0.9995500445365906
+                    "w": 0.6726148128509521
                 },
                 "scale": {
-                    "x": 1.0,
+                    "x": 1.0000041723251343,
                     "y": 1.0,
-                    "z": 1.0
+                    "z": 1.0000041723251343
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.17000000178813934,
+                    "y": 0.02250000089406967,
+                    "z": 0.125
+                },
+                "density": 200.0,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -5641,7 +7048,7 @@
         {
             "id": 1248146496,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 2472198000,
                 "children": [
                     388399154
                 ]
@@ -5651,24 +7058,44 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.30000001192092896,
+                    "x": -1.4247008562088013,
                     "y": 0.5080000162124634,
-                    "z": 0.07999999821186066
+                    "z": -0.05168924480676651
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": -0.017499109730124474,
+                    "y": 0.7072209715843201,
                     "z": 0.0,
-                    "w": 0.9998469948768616
+                    "w": 0.7069926261901855
                 },
                 "scale": {
-                    "x": 1.0,
+                    "x": 1.0000041723251343,
                     "y": 1.0,
-                    "z": 1.0
+                    "z": 1.0000041723251343
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.14499999582767487,
+                    "y": 0.01600000075995922,
+                    "z": 0.10999999940395355
+                },
+                "density": 200.0,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -5682,20 +7109,20 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 1.1920928955078125e-7,
-                    "y": 1.1920928955078125e-7,
+                    "x": 1.2293457984924316e-7,
+                    "y": -5.364418029785156e-7,
                     "z": 0.0
                 },
                 "rotation": {
-                    "x": 0.00024229526752606034,
-                    "y": -0.0012322026304900646,
-                    "z": -0.0017696708673611283,
+                    "x": 0.00024229567497968674,
+                    "y": -0.0012321900576353073,
+                    "z": -0.0017696779686957598,
                     "w": 0.999997615814209
                 },
                 "scale": {
-                    "x": 1.0,
+                    "x": 0.9999986886978149,
                     "y": 1.0,
-                    "z": 1.0
+                    "z": 0.9999999403953552
                 }
             },
             "importedSubmeshComponent": {
@@ -6103,8 +7530,8 @@
             "transformComponent": {
                 "position": {
                     "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
+                    "y": -2.9802322387695313e-8,
+                    "z": 1.1920928955078125e-7
                 },
                 "rotation": {
                     "x": 0.0,
@@ -6113,9 +7540,9 @@
                     "w": 1.0
                 },
                 "scale": {
-                    "x": 1.0,
+                    "x": 1.000000238418579,
                     "y": 1.0,
-                    "z": 1.0
+                    "z": 1.000000238418579
                 }
             },
             "importedSubmeshComponent": {
@@ -6131,7 +7558,7 @@
         {
             "id": 214357419,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 3903893581,
                 "children": [
                     2602462374
                 ]
@@ -6141,9 +7568,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.24500000476837158,
-                    "y": 0.8050000071525574,
-                    "z": -0.10999999940395355
+                    "x": -0.04499998688697815,
+                    "y": 0.36500000953674316,
+                    "z": 0.0
                 },
                 "rotation": {
                     "x": 0.11326596140861511,
@@ -6201,7 +7628,7 @@
         {
             "id": 619953384,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 3903893581,
                 "children": [
                     2148624600
                 ]
@@ -6211,9 +7638,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.28999999165534973,
-                    "y": 0.8174999952316284,
-                    "z": -0.13499999046325684
+                    "x": 0.0,
+                    "y": 0.3774999976158142,
+                    "z": -0.024999991059303284
                 },
                 "rotation": {
                     "x": 0.0,
@@ -6271,7 +7698,7 @@
         {
             "id": 3017008675,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 3903893581,
                 "children": [
                     2980317152
                 ]
@@ -6281,9 +7708,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.3349999785423279,
-                    "y": 0.8300000429153442,
-                    "z": -0.10999999940395355
+                    "x": 0.04499998688697815,
+                    "y": 0.39000004529953003,
+                    "z": 0.0
                 },
                 "rotation": {
                     "x": 0.09662947803735733,
@@ -6341,8 +7768,14 @@
         {
             "id": 3903893581,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 2472198000,
                 "children": [
+                    214357419,
+                    619953384,
+                    3017008675,
+                    1089115838,
+                    3783318525,
+                    3743002801,
                     1950176259
                 ]
             },
@@ -6351,24 +7784,44 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.28999999165534973,
+                    "x": -1.635419487953186,
                     "y": 0.4399999976158142,
-                    "z": -0.10999999940395355
+                    "z": -0.6346136927604675
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.0,
+                    "y": 0.7194843888282776,
                     "z": 0.0,
-                    "w": 1.0
+                    "w": 0.6945086121559143
                 },
                 "scale": {
-                    "x": 1.0,
+                    "x": 1.0000041723251343,
                     "y": 1.0,
-                    "z": 1.0
+                    "z": 1.0000041723251343
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.14499999582767487,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.11500000208616257,
+                    "y": 0.14499999582767487,
+                    "z": 0.11325289309024811
+                },
+                "density": 80.0,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -6411,7 +7864,7 @@
         {
             "id": 1089115838,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 3903893581,
                 "children": [
                     3967139873
                 ]
@@ -6421,9 +7874,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.19999998807907104,
-                    "y": 0.8600000143051147,
-                    "z": -0.10999999940395355
+                    "x": -0.09000000357627869,
+                    "y": 0.42000001668930054,
+                    "z": 0.0
                 },
                 "rotation": {
                     "x": 0.0,
@@ -6481,7 +7934,7 @@
         {
             "id": 3783318525,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 3903893581,
                 "children": [
                     4127237575
                 ]
@@ -6491,9 +7944,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.28999999165534973,
-                    "y": 0.8849999904632568,
-                    "z": -0.1599999964237213
+                    "x": 0.0,
+                    "y": 0.4449999928474426,
+                    "z": -0.04999999701976776
                 },
                 "rotation": {
                     "x": 0.0,
@@ -6551,7 +8004,7 @@
         {
             "id": 3743002801,
             "relationshipComponent": {
-                "parent": 3347948745,
+                "parent": 3903893581,
                 "children": [
                     440745941
                 ]
@@ -6561,9 +8014,9 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.3799999952316284,
-                    "y": 0.9100000262260437,
-                    "z": -0.10999999940395355
+                    "x": 0.09000000357627869,
+                    "y": 0.4700000286102295,
+                    "z": 0.0
                 },
                 "rotation": {
                     "x": 0.0,
@@ -6653,6 +8106,39 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.02500000037252903,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.1899999976158142,
+                    "y": 0.02500000037252903,
+                    "z": 0.1899999976158142
+                },
+                "density": 1108.033203125,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
+            },
+            "capsuleCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.7950000166893005,
+                    "z": 0.0
+                },
+                "radius": 0.017999999225139618,
+                "halfHeight": 0.7269999980926514,
+                "density": 265.883056640625,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -6826,6 +8312,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.17000000178813934,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.24899999797344208,
+                    "y": 0.16899999976158142,
+                    "z": 0.24899999797344208
+                },
+                "density": 7.157739162445068,
+                "friction": 0.5,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 1736292605,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -7001,6 +8526,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": -1.210719347000122e-8,
+                    "z": 0.004250037483870983
+                },
+                "size": {
+                    "x": 0.3995000123977661,
+                    "y": 0.4895000159740448,
+                    "z": 0.031250037252902985
+                },
+                "density": 51.13637924194336,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 1697732047,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.49000000953674316,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 1.0
+                },
+                "enableLimit": true,
+                "lowerAngle": -12.0,
+                "upperAngle": 12.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -7388,6 +8952,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": -1.210719347000122e-8,
+                    "z": 0.0042500365525484085
+                },
+                "size": {
+                    "x": 0.3895000219345093,
+                    "y": 0.4895000159740448,
+                    "z": 0.031250037252902985
+                },
+                "density": 52.44925308227539,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 1515875921,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.49000000953674316,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 1.0
+                },
+                "enableLimit": true,
+                "lowerAngle": -12.0,
+                "upperAngle": 12.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -7775,6 +9378,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 2.9802322387695313e-8,
+                    "y": -1.210719347000122e-8,
+                    "z": 0.00425005704164505
+                },
+                "size": {
+                    "x": 0.38950005173683167,
+                    "y": 0.4895000159740448,
+                    "z": 0.03125005587935448
+                },
+                "density": 52.449214935302734,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 1515875921,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.49000000953674316,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 1.0
+                },
+                "enableLimit": true,
+                "lowerAngle": -12.0,
+                "upperAngle": 12.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -8178,7 +9820,7 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.8999999761581421,
+                    "x": 1.0299999713897705,
                     "y": 0.0,
                     "z": -2.430000066757202
                 },
@@ -8196,6 +9838,39 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.19949999451637268,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.24150000512599945,
+                    "y": 0.19949999451637268,
+                    "z": 0.23783107101917267
+                },
+                "density": 130.9069366455078,
+                "friction": 0.75,
+                "restitution": 0.019999999552965164
+            },
+            "capsuleCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.8769999742507935,
+                    "z": 0.0
+                },
+                "radius": 0.017000000923871994,
+                "halfHeight": 0.492000013589859,
+                "density": 87.5299301147461,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -11007,8 +12682,6 @@
                     2468860588,
                     2224227133,
                     699858807,
-                    47820504,
-                    1420110686,
                     1254256036,
                     1072428451,
                     159733786,
@@ -11016,11 +12689,7 @@
                     1547473867,
                     3469103332,
                     1143668223,
-                    3228147428,
-                    3642734681,
-                    3341097478,
-                    1519129179,
-                    4048587262
+                    3228147428
                 ]
             },
             "tagComponent": {
@@ -11046,6 +12715,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.14350000023841858,
+                    "z": 0.012426632456481457
+                },
+                "size": {
+                    "x": 1.1749999523162842,
+                    "y": 0.14350000023841858,
+                    "z": 0.4300000071525574
+                },
+                "density": 120.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.0
             }
         },
         {
@@ -11219,6 +12908,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.03200000151991844
+                },
+                "size": {
+                    "x": 0.07999999821186066,
+                    "y": 0.20200000703334808,
+                    "z": 0.30799999833106995
+                },
+                "density": 250.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.0
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 2874455055,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -11289,6 +13017,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.03200000151991844
+                },
+                "size": {
+                    "x": 0.07999999821186066,
+                    "y": 0.20200000703334808,
+                    "z": 0.30799999833106995
+                },
+                "density": 250.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.0
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 2874455055,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -11331,7 +13098,7 @@
         {
             "id": 47820504,
             "relationshipComponent": {
-                "parent": 2874455055,
+                "parent": 2472198000,
                 "children": [
                     1744280721
                 ]
@@ -11341,15 +13108,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.5221320390701294,
+                    "x": -3.414705514907837,
                     "y": 0.6129176616668701,
-                    "z": -0.14470553398132324
+                    "z": 0.12213212251663208
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.0,
+                    "y": 0.7071068286895752,
                     "z": 0.0,
-                    "w": 1.0
+                    "w": 0.7071068286895752
                 },
                 "scale": {
                     "x": 1.0,
@@ -11359,6 +13126,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.45899999141693115,
+                    "y": 0.18000000715255737,
+                    "z": 0.10000000149011612
+                },
+                "density": 25.0,
+                "friction": 0.75,
+                "restitution": 0.0
             }
         },
         {
@@ -11401,7 +13188,7 @@
         {
             "id": 1420110686,
             "relationshipComponent": {
-                "parent": 2874455055,
+                "parent": 2472198000,
                 "children": [
                     3714121644
                 ]
@@ -11411,15 +13198,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.5221320390701294,
+                    "x": -3.414705514907837,
                     "y": 0.6129176616668701,
-                    "z": -0.14470548927783966
+                    "z": -0.9221320748329163
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.0,
+                    "y": 0.7071068286895752,
                     "z": 0.0,
-                    "w": 1.0
+                    "w": 0.7071068286895752
                 },
                 "scale": {
                     "x": 1.0,
@@ -11429,6 +13216,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.45899999141693115,
+                    "y": 0.18000000715255737,
+                    "z": 0.10000000149011612
+                },
+                "density": 25.0,
+                "friction": 0.75,
+                "restitution": 0.0
             }
         },
         {
@@ -11499,6 +13306,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": -0.05000000074505806
+                },
+                "size": {
+                    "x": 1.1417800188064575,
+                    "y": 0.2732999920845032,
+                    "z": 0.09000000357627869
+                },
+                "density": 80.0,
+                "friction": 0.699999988079071,
+                "restitution": 0.0
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 2874455055,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -12031,7 +13877,7 @@
         {
             "id": 3642734681,
             "relationshipComponent": {
-                "parent": 2874455055,
+                "parent": 2472198000,
                 "children": [
                     740653491
                 ]
@@ -12041,15 +13887,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.5221320390701294,
+                    "x": -3.2018473148345947,
                     "y": 0.3571470379829407,
-                    "z": 0.06815265864133835
+                    "z": 0.12213209271430969
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.0,
+                    "y": 0.7071068286895752,
                     "z": 0.0,
-                    "w": 1.0
+                    "w": 0.7071068286895752
                 },
                 "scale": {
                     "x": 1.0,
@@ -12059,6 +13905,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.45899999141693115,
+                    "y": 0.07000000029802322,
+                    "z": 0.31700000166893005
+                },
+                "density": 25.0,
+                "friction": 0.75,
+                "restitution": 0.0
             }
         },
         {
@@ -12101,7 +13967,7 @@
         {
             "id": 3341097478,
             "relationshipComponent": {
-                "parent": 2874455055,
+                "parent": 2472198000,
                 "children": [
                     3973221300
                 ]
@@ -12111,15 +13977,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.5221319794654846,
+                    "x": -3.2018473148345947,
                     "y": 0.3571470379829407,
-                    "z": 0.06815270334482193
+                    "z": -0.9221320748329163
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.0,
+                    "y": 0.7071068286895752,
                     "z": 0.0,
-                    "w": 1.0
+                    "w": 0.7071068286895752
                 },
                 "scale": {
                     "x": 1.0,
@@ -12129,6 +13995,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.45899999141693115,
+                    "y": 0.07000000029802322,
+                    "z": 0.31700000166893005
+                },
+                "density": 25.0,
+                "friction": 0.75,
+                "restitution": 0.0
             }
         },
         {
@@ -12171,7 +14057,7 @@
         {
             "id": 1519129179,
             "relationshipComponent": {
-                "parent": 2874455055,
+                "parent": 2472198000,
                 "children": [
                     66257924
                 ]
@@ -12181,15 +14067,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.7300000190734863,
+                    "x": -3.2249999046325684,
                     "y": 0.6100000143051147,
-                    "z": 0.04500006139278412
+                    "z": 0.330000102519989
                 },
                 "rotation": {
-                    "x": 0.10434036701917648,
-                    "y": -0.05963551625609398,
-                    "z": 0.006267945282161236,
-                    "w": 0.9927322864532471
+                    "x": 0.07821189612150192,
+                    "y": 0.6597990989685059,
+                    "z": -0.06934767961502075,
+                    "w": 0.7441364526748657
                 },
                 "scale": {
                     "x": 1.0,
@@ -12199,6 +14085,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.02500000037252903
+                },
+                "size": {
+                    "x": 0.1899999976158142,
+                    "y": 0.16500000655651093,
+                    "z": 0.05000000074505806
+                },
+                "density": 25.0,
+                "friction": 0.75,
+                "restitution": 0.0
             }
         },
         {
@@ -12241,7 +14147,7 @@
         {
             "id": 4048587262,
             "relationshipComponent": {
-                "parent": 2874455055,
+                "parent": 2472198000,
                 "children": [
                     3495754273
                 ]
@@ -12251,15 +14157,15 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.7399999499320984,
+                    "x": -3.2249999046325684,
                     "y": 0.6100000143051147,
-                    "z": 0.04500012472271919
+                    "z": -1.1400001049041748
                 },
                 "rotation": {
-                    "x": 0.10423462092876434,
-                    "y": 0.07451923936605453,
-                    "z": -0.00783228687942028,
-                    "w": 0.9917261600494385
+                    "x": 0.06816674023866653,
+                    "y": 0.7539493441581726,
+                    "z": -0.0792432650923729,
+                    "w": 0.6485632061958313
                 },
                 "scale": {
                     "x": 1.0,
@@ -12269,6 +14175,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.02500000037252903
+                },
+                "size": {
+                    "x": 0.1899999976158142,
+                    "y": 0.16500000655651093,
+                    "z": 0.05000000074505806
+                },
+                "density": 25.0,
+                "friction": 0.75,
+                "restitution": 0.0
             }
         },
         {
@@ -12374,6 +14300,26 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 1.090000033378601,
+                    "z": 0.00524997478350997
+                },
+                "size": {
+                    "x": 0.699999988079071,
+                    "y": 0.4050000011920929,
+                    "z": 0.03774997219443321
+                },
+                "density": 93.439453125,
+                "friction": 0.550000011920929,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -12407,6 +14353,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.017999999225139618,
+                    "y": 0.062343891710042953,
+                    "z": 0.017999999225139618
+                },
+                "density": 1856.489013671875,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 1512836012,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -12477,6 +14462,45 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.017999999225139618,
+                    "y": 0.062343891710042953,
+                    "z": 0.017999999225139618
+                },
+                "density": 1856.489013671875,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
+            },
+            "revoluteJoint3dComponent": {
+                "connectedEntity": 1512836012,
+                "anchor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "axis": {
+                    "x": 1.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "enableLimit": true,
+                "lowerAngle": 0.0,
+                "upperAngle": 0.0,
+                "enableMotor": false,
+                "motorSpeed": 0.0,
+                "maxMotorTorque": 0.0
             }
         },
         {
@@ -12731,9 +14755,7 @@
             "relationshipComponent": {
                 "parent": 2472198000,
                 "children": [
-                    1364225773,
                     1178522572,
-                    2635261051,
                     264536273,
                     440941560,
                     4242353298,
@@ -12746,8 +14768,7 @@
                     3316506310,
                     4175228630,
                     2281272156,
-                    1443303267,
-                    2904050463
+                    1443303267
                 ]
             },
             "tagComponent": {
@@ -12773,12 +14794,32 @@
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.3037499785423279,
+                    "z": 0.004999999888241291
+                },
+                "size": {
+                    "x": 0.9599999785423279,
+                    "y": 0.3037499785423279,
+                    "z": 0.23499999940395355
+                },
+                "density": 54.7237548828125,
+                "friction": 0.699999988079071,
+                "restitution": 0.019999999552965164
             }
         },
         {
             "id": 1364225773,
             "relationshipComponent": {
-                "parent": 1889934600,
+                "parent": 2472198000,
                 "children": [
                     3847859130,
                     4010034347,
@@ -12804,24 +14845,57 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": 0.6599999666213989,
+                    "x": 3.569999933242798,
                     "y": 0.6100000143051147,
-                    "z": -0.020000003278255463
+                    "z": 0.6800001263618469
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.0,
+                    "y": -0.7071068286895752,
                     "z": 0.0,
-                    "w": 1.0
+                    "w": 0.7071067094802856
                 },
                 "scale": {
-                    "x": 1.0,
+                    "x": 1.0000001192092896,
                     "y": 1.0,
-                    "z": 1.0
+                    "z": 1.0000001192092896
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.07980000227689743,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.09610000252723694,
+                    "y": 0.07930000126361847,
+                    "z": 0.09463242441415787
+                },
+                "density": 190.66281127929688,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
+            },
+            "capsuleCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.35100001096725464,
+                    "z": 0.0
+                },
+                "radius": 0.007000000216066837,
+                "halfHeight": 0.19699999690055847,
+                "density": 322.1216735839844,
+                "friction": 0.6000000238418579,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -14087,7 +16161,7 @@
         {
             "id": 2635261051,
             "relationshipComponent": {
-                "parent": 1889934600,
+                "parent": 2472198000,
                 "children": [
                     2204843717
                 ]
@@ -14097,24 +16171,44 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.35999998450279236,
+                    "x": 3.309999942779541,
                     "y": 0.6349999904632568,
-                    "z": 0.020000003278255463
+                    "z": -0.15000003576278687
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.03998932987451553,
+                    "y": -0.6782644987106323,
                     "z": 0.0,
-                    "w": 0.9992001056671143
+                    "w": 0.7348178625106812
                 },
                 "scale": {
-                    "x": 1.0,
+                    "x": 1.0000001192092896,
                     "y": 1.0,
-                    "z": 1.0
+                    "z": 1.0000001192092896
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.13950000703334808,
+                    "y": 0.024500001221895218,
+                    "z": 0.09950000047683716
+                },
+                "density": 238.92404174804688,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {
@@ -15067,7 +17161,7 @@
         {
             "id": 2904050463,
             "relationshipComponent": {
-                "parent": 1889934600,
+                "parent": 2472198000,
                 "children": [
                     155159036
                 ]
@@ -15077,24 +17171,44 @@
             },
             "transformComponent": {
                 "position": {
-                    "x": -0.7000000476837158,
+                    "x": 3.440000057220459,
                     "y": 0.6100000143051147,
-                    "z": 0.020000018179416656
+                    "z": -0.9800001382827759
                 },
                 "rotation": {
                     "x": 0.0,
-                    "y": 0.0,
+                    "y": -0.7071068286895752,
                     "z": 0.0,
-                    "w": 1.0
+                    "w": 0.7071067094802856
                 },
                 "scale": {
-                    "x": 1.0,
+                    "x": 1.0000001192092896,
                     "y": 1.0,
-                    "z": 1.0
+                    "z": 1.0000001192092896
                 }
             },
             "scriptListComponent": {
                 "scripts": []
+            },
+            "rigidbody3dComponent": {
+                "type": 1,
+                "fixedRotation": false
+            },
+            "boxCollider3dComponent": {
+                "isSensor": false,
+                "offset": {
+                    "x": 0.0,
+                    "y": 0.13500000536441803,
+                    "z": 0.0
+                },
+                "size": {
+                    "x": 0.09950000047683716,
+                    "y": 0.13450001180171967,
+                    "z": 0.09950000047683716
+                },
+                "density": 84.48583984375,
+                "friction": 0.6499999761581421,
+                "restitution": 0.019999999552965164
             }
         },
         {

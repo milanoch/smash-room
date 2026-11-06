@@ -786,6 +786,34 @@
                 "alphaCutoff": 0.5,
                 "doubleSided": true,
                 "materialAssetId": 3015121950
+            },
+            {
+                "name": "Terracotta cushion fabric",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.47999998927116394,
+                    "y": 0.23999999463558197,
+                    "z": 0.15000000596046448,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.9399999976158142,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 4277963170
             }
         ],
         "primitiveMaterials": [
@@ -1607,7 +1635,7 @@
             {
                 "submeshIndex": 163,
                 "primitiveIndex": 0,
-                "materialIndex": 15
+                "materialIndex": 28
             },
             {
                 "submeshIndex": 164,

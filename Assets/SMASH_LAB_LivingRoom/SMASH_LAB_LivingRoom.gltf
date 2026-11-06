@@ -3965,6 +3965,23 @@
 				"metallicFactor":0.05999999865889549,
 				"roughnessFactor":0.18000000715255737
 			}
+		},
+		{
+			"doubleSided":true,
+			"extras":{
+				"uv_metres_per_tile":1.0
+			},
+			"name":"Terracotta cushion fabric",
+			"pbrMetallicRoughness":{
+				"baseColorFactor":[
+					0.47999998927116394,
+					0.23999999463558197,
+					0.15000000596046448,
+					1
+				],
+				"metallicFactor":0,
+				"roughnessFactor":0.94
+			}
 		}
 	],
 	"meshes":[
@@ -6260,7 +6277,7 @@
 						"TEXCOORD_0":545
 					},
 					"indices":542,
-					"material":15
+					"material":28
 				}
 			]
 		},

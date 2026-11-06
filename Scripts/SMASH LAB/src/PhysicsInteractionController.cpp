@@ -11,16 +11,40 @@
 #include <Bamboo/Physics3DAPI.hpp>
 #include <Bamboo/WorldAPI.hpp>
 
+#include <algorithm>
 #include <cmath>
+#include <string_view>
 #include <utility>
 
 namespace {
 
-constexpr std::array<const char *, 15> kObjectTags = {
-    "Cube_Red", "Cube_Blue", "Cube_Green", "Cube_Yellow", "Cube_Purple",
-    "Crate_Wood", "Sphere_Small", "Sphere_Large", "Platform", "Cylinder_BoxCollider",
-    "CoffeeTable", "Bowl_CoffeeTable", "CoffeeTable_Book_01", "CoffeeTable_Book_02", "Vase_CoffeeTable"
+constexpr size_t kExistingObjectCount = 25;
+constexpr std::array<const char *, 83> kObjectTags = {
+    "Cube_Red", "Cube_Blue", "Cube_Green", "Cube_Yellow", "Cube_Purple", "Crate_Wood", "Sphere_Small",
+    "Sphere_Large", "Platform", "Cylinder_BoxCollider", "CoffeeTable", "Bowl_CoffeeTable",
+    "CoffeeTable_Book_01", "CoffeeTable_Book_02", "Vase_CoffeeTable", "Sofa", "Sofa_BackFrame",
+    "Sofa_Arm_Left", "Sofa_Arm_Right", "Sofa_SeatCushion_01", "Sofa_SeatCushion_02", "Sofa_BackCushion_01",
+    "Sofa_BackCushion_02", "Sofa_ThrowPillow_Sage", "Sofa_ThrowPillow_Terracotta", "Bookshelf",
+    "Bookshelf_Back", "Bookshelf_Side_Left", "Bookshelf_Side_Right", "Bookshelf_Shelf_02",
+    "Bookshelf_Shelf_03", "Bookshelf_Shelf_04", "Bookshelf_Shelf_05", "Bookshelf_Shelf_06",
+    "Bookshelf_Book_01", "Bookshelf_Book_02", "Bookshelf_Book_03", "Bookshelf_Book_04", "Bookshelf_Book_05",
+    "Bookshelf_Book_06", "Bookshelf_Book_07", "Bookshelf_Book_08", "Bookshelf_Book_09", "Bookshelf_Book_10",
+    "Bookshelf_Book_11", "Bookshelf_Book_12", "Bookshelf_Book_13", "Bookshelf_Book_14", "Bookshelf_Book_15",
+    "Bookshelf_Book_16", "Bookshelf_Book_17", "Bookshelf_Book_18", "Bookshelf_Book_19", "Bookshelf_Book_20",
+    "Bookshelf_Book_21", "Bookshelf_Book_22", "Bookshelf_Book_23", "Bookshelf_Book_24", "Bookshelf_Book_25",
+    "Bookshelf_Book_26", "Bookshelf_Book_27", "Bookshelf_Book_28", "Bookshelf_Book_29", "Bookshelf_Book_30",
+    "Bookshelf_Book_31", "Bookshelf_StorageBox_1", "Bookshelf_StorageBox_3", "Bookshelf_Vase_1",
+    "Bookshelf_Vase_2", "Bookshelf_Decor_Ring", "TVStand", "TVStand_Book", "Vase_TVStand", "Plant_TVStand",
+    "Television", "Television_Foot_L", "Television_Foot_R", "FloorLamp", "FloorLamp_Shade", "Plant_Large",
+    "Painting_Back", "Painting_Left_01", "Painting_Left_02"
 };
+
+bool isSofaFrame(Bamboo::EntityHandle entity) {
+    const char *name = Bamboo::EntityAPI::getName(entity);
+    if (!name) { return false; }
+    const std::string_view tag(name);
+    return tag == "Sofa" || tag == "Sofa_BackFrame" || tag == "Sofa_Arm_Left" || tag == "Sofa_Arm_Right";
+}
 
 bool isDynamic(Bamboo::EntityHandle entity) {
     if (!entity.isValid()) { return false; }
@@ -57,6 +81,7 @@ void PhysicsInteractionController::start() {
             continue;
         }
         const Bamboo::EntityHandle entity = matches.front();
+        LOG_INFO("Impact Tool: %s mass %.3f", kObjectTags[i], Bamboo::Rigidbody3DComponentAPI::getMass(entity));
         m_initialStates[i] = {
             entity,
             Bamboo::TransformComponentAPI::getPosition(entity),
@@ -147,10 +172,34 @@ void PhysicsInteractionController::fixedUpdate(float stepTime) {
     auto impacts = std::exchange(m_pendingImpacts, {});
     for (const ImpactRay &ray : impacts) {
         Bamboo::Physics3DAPI::RaycastHit hit;
-        if (!hitDynamic(ray.origin, ray.direction, kRayDistance, hit)) { continue; }
+        if (!Bamboo::Physics3DAPI::raycast(ray.origin, ray.direction, kRayDistance, hit)) {
+            LOG_INFO("Impact Tool: raycast returned no hit");
+            continue;
+        }
+        LOG_INFO("Impact Tool: raycast entity=%u mass=%.3f", hit.entity.id,
+                 Bamboo::Rigidbody3DComponentAPI::getMass(hit.entity));
+        if (!isDynamic(hit.entity)) { continue; }
         if (m_destruction.impact(hit.entity, hit.point, ray.direction, ray.strength)) { continue; }
         const float mass = Bamboo::Rigidbody3DComponentAPI::getMass(hit.entity);
-        const float magnitude = mass * ray.strength;
+        // One impulse budget for the whole heavy sofa assembly, regardless of
+        // which frame piece was hit. Other objects retain their existing response.
+        float impulseMass = isSofaFrame(hit.entity) ? 30.f : mass;
+        // Keep the existing table/sofa response. New heavy props get a bounded
+        // impulse rather than mass-scaled acceleration identical to a book's.
+        for (size_t i = kExistingObjectCount; i < kObjectTags.size(); ++i) {
+            if (m_initialStates[i].entity.id != hit.entity.id) { continue; }
+            const std::string_view tag(kObjectTags[i]);
+            if (tag == "Bookshelf" || tag == "Bookshelf_Back" ||
+                tag.starts_with("Bookshelf_Side_") || tag.starts_with("Bookshelf_Shelf_")) {
+                impulseMass = 8.f; // One budget for the joined bookshelf frame.
+            } else if (tag == "TVStand") {
+                impulseMass = 12.f;
+            } else {
+                impulseMass = std::min(mass, 2.f);
+            }
+            break;
+        }
+        const float magnitude = impulseMass * ray.strength;
         if (!std::isfinite(magnitude)) { continue; }
         const Bamboo::Vec3 impulse(
             ray.direction.x * magnitude, ray.direction.y * magnitude, ray.direction.z * magnitude
@@ -174,10 +223,12 @@ bool PhysicsInteractionController::restoreRoom() {
     if (!m_destruction.restore()) { return false; }
     for (const InitialState &state : m_initialStates) {
         if (state.entity.id == 0 || m_destruction.isSource(state.entity)) { continue; }
-        // Scale changes rebuild the body/shapes in the existing Physics module.
-        // Pose setters teleport, clear velocity and reset interpolation history.
-        // This scene has no joints; no entity or input handler is recreated.
-        Bamboo::TransformComponentAPI::setScale(state.entity, state.scale);
+        // Rebuilding an unchanged body would destroy the sofa's Box3D joints.
+        // Pose setters teleport in place, clear velocity and keep those joints.
+        const auto scale = Bamboo::TransformComponentAPI::getScale(state.entity);
+        if (scale.x != state.scale.x || scale.y != state.scale.y || scale.z != state.scale.z) {
+            Bamboo::TransformComponentAPI::setScale(state.entity, state.scale);
+        }
         Bamboo::TransformComponentAPI::setPosition(state.entity, state.position);
         Bamboo::TransformComponentAPI::setRotation(state.entity, state.rotation);
         Bamboo::Rigidbody3DComponentAPI::setLinearVelocity(state.entity, {0.f, 0.f, 0.f});
