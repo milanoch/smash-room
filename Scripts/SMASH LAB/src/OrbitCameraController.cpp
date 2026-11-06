@@ -7,6 +7,9 @@
 #include <Bamboo/Physics3DAPI.hpp>
 #include <PandaUI/Runtime/Window.hpp>
 #include <PandaUI/Runtime/ModalManager.hpp>
+#include <PandaUI/Core/Animation.hpp>
+#include <PandaUI/Elements/Button.hpp>
+#include <PandaUI/Elements/StackView.hpp>
 #include <PandaUI/Elements/Label.hpp>
 
 #include <algorithm>
@@ -48,6 +51,155 @@ constexpr std::array<Bamboo::Key, 13> kCameraKeys = {
     Bamboo::Key::UP, Bamboo::Key::DOWN, Bamboo::Key::Q, Bamboo::Key::E, Bamboo::Key::C
 };
 
+class ToolbarButton final : public PandaUI::Button {
+public:
+    explicit ToolbarButton(std::string text) : PandaUI::Button(std::move(text)) {
+        m_hoverAnimation.reset(.94f);
+        m_pressAnimation.reset(0.f);
+        setOpacity(.94f);
+    }
+
+    void update(double deltaTime) override {
+        PandaUI::Button::update(deltaTime);
+        const float hoverTarget = isHovered() ? 1.f : .94f;
+        if (hoverTarget != m_hoverTarget) {
+            m_hoverAnimation.start(m_hoverAnimation.value(), hoverTarget, .14f);
+            m_hoverTarget = hoverTarget;
+        }
+        const float pressTarget = isPressed() ? 1.f : 0.f;
+        if (pressTarget != m_pressTarget) {
+            m_pressAnimation.start(m_pressAnimation.value(), pressTarget, .08f);
+            m_pressTarget = pressTarget;
+        }
+        const bool hoverAdvanced = m_hoverAnimation.advance(deltaTime);
+        const bool pressAdvanced = m_pressAnimation.advance(deltaTime);
+        if (hoverAdvanced || pressAdvanced) {
+            setOpacity(m_hoverAnimation.value() * (1.f - .06f * m_pressAnimation.value()));
+            setFrameOffset({0.f, m_pressAnimation.value()});
+        }
+    }
+
+private:
+    PandaUI::Animation m_hoverAnimation;
+    PandaUI::Animation m_pressAnimation;
+    float m_hoverTarget = .94f;
+    float m_pressTarget = 0.f;
+};
+
+class ToolbarGroup final : public PandaUI::StackView {
+public:
+    using PandaUI::StackView::StackView;
+
+    PandaUI::View *hitTest(PandaUI::Point point) override {
+        PandaUI::View *hit = PandaUI::StackView::hitTest(point);
+        return hit == this ? nullptr : hit; // gaps between buttons belong to the scene
+    }
+};
+
+enum class VectorIcon {
+    Menu,
+    Camera,
+    Eye,
+    Gravity,
+    History,
+    Bomb,
+    Bullets,
+    Leaf,
+    Gamepad,
+};
+
+std::shared_ptr<PandaUI::View> makeVectorIcon(VectorIcon icon, float size) {
+    const float scale = size / 32.f;
+    const PandaUI::Color white(1.f, 1.f, 1.f, .96f);
+    const PandaUI::Color clear(0.f, 0.f, 0.f, 0.f);
+    auto root = std::make_shared<PandaUI::View>();
+    root->layoutSetAbsolute();
+    root->layoutSetSize({size, size});
+    root->setUserInteractionEnabled(false);
+    root->surface().setBackgroundColor(clear);
+
+    auto shape = [&](float x, float y, float width, float height, float radius,
+                     bool filled = true, float stroke = 0.f) {
+        auto view = std::make_shared<PandaUI::View>();
+        view->layoutSetAbsolute();
+        view->layoutSetOrigin({x * scale, y * scale});
+        view->layoutSetSize({width * scale, height * scale});
+        view->setUserInteractionEnabled(false);
+        view->surface().setBackgroundColor(filled ? white : clear);
+        view->surface().setBorderColor(white);
+        view->surface().setBorderWidth(filled ? 0.f : stroke * scale);
+        view->surface().setCornerRadius(radius * scale);
+        root->addSubview(view);
+        return view;
+    };
+
+    switch (icon) {
+    case VectorIcon::Menu:
+        shape(7.f, 8.f, 18.f, 2.4f, 1.2f);
+        shape(7.f, 15.f, 18.f, 2.4f, 1.2f);
+        shape(7.f, 22.f, 18.f, 2.4f, 1.2f);
+        break;
+    case VectorIcon::Camera:
+        shape(4.f, 9.f, 24.f, 17.f, 4.f, false, 2.f);
+        shape(9.f, 5.f, 14.f, 6.f, 2.f);
+        shape(11.5f, 13.f, 10.f, 10.f, 5.f, false, 2.f);
+        shape(22.f, 12.f, 2.5f, 2.5f, 1.25f);
+        break;
+    case VectorIcon::Eye:
+        shape(3.f, 8.f, 26.f, 16.f, 8.f, false, 2.f);
+        shape(12.5f, 12.5f, 7.f, 7.f, 3.5f);
+        break;
+    case VectorIcon::Gravity:
+        for (const float x : {7.f, 19.f}) {
+            shape(x + 2.f, 1.f, 2.f, 7.f, 1.f);
+            shape(x, 6.f, 6.f, 2.f, 1.f);
+            shape(x + 1.f, 8.f, 4.f, 2.f, 1.f);
+            shape(x + 2.f, 10.f, 2.f, 2.f, 1.f);
+        }
+        shape(5.f, 17.f, 11.f, 11.f, 5.5f);
+        shape(17.f, 17.f, 10.f, 10.f, 5.f);
+        shape(11.f, 13.f, 2.f, 6.f, 1.f);
+        shape(22.f, 13.f, 2.f, 6.f, 1.f);
+        break;
+    case VectorIcon::History:
+        shape(4.f, 4.f, 24.f, 24.f, 12.f, false, 2.f);
+        shape(15.f, 9.f, 2.f, 8.f, 1.f);
+        shape(15.f, 15.f, 7.f, 2.f, 1.f);
+        shape(3.f, 3.f, 8.f, 2.f, 1.f);
+        shape(3.f, 3.f, 2.f, 8.f, 1.f);
+        break;
+    case VectorIcon::Bomb:
+        shape(4.f, 10.f, 20.f, 20.f, 10.f);
+        shape(18.f, 6.f, 3.f, 7.f, 1.5f);
+        shape(20.f, 4.f, 7.f, 3.f, 1.5f);
+        shape(27.f, 0.f, 2.f, 6.f, 1.f);
+        shape(25.f, 2.f, 6.f, 2.f, 1.f);
+        break;
+    case VectorIcon::Bullets:
+        for (const float x : {4.f, 13.f, 22.f}) {
+            shape(x, 5.f, 6.f, 22.f, 3.f, false, 1.8f);
+            shape(x, 24.f, 6.f, 2.f, 1.f);
+        }
+        break;
+    case VectorIcon::Leaf: {
+        auto left = shape(6.f, 4.f, 12.f, 18.f, 0.f);
+        left->surface().setCornerRadii(PandaUI::CornerRadii(12.f * scale, 0.f, 12.f * scale, 0.f));
+        auto right = shape(15.f, 10.f, 11.f, 16.f, 0.f);
+        right->surface().setCornerRadii(PandaUI::CornerRadii(0.f, 11.f * scale, 0.f, 11.f * scale));
+        shape(15.f, 18.f, 2.f, 11.f, 1.f);
+        break;
+    }
+    case VectorIcon::Gamepad:
+        shape(3.f, 9.f, 26.f, 16.f, 8.f, false, 2.f);
+        shape(8.f, 16.f, 7.f, 2.f, 1.f);
+        shape(10.5f, 13.5f, 2.f, 7.f, 1.f);
+        shape(21.f, 13.f, 3.f, 3.f, 1.5f);
+        shape(24.f, 17.f, 3.f, 3.f, 1.5f);
+        break;
+    }
+    return root;
+}
+
 } // namespace
 
 // The packaged Bamboo Input header declares getMouseScrollY(), but this SDK's
@@ -65,12 +217,121 @@ struct OrbitCameraController::ScrollInput final : PandaUI::View {
     bool shortcutModifiersDown = false;
     std::deque<PointerSample> clicks;
     std::shared_ptr<PandaUI::View> marker;
-    std::shared_ptr<PandaUI::Label> impactLabel;
     std::array<bool, 3> powerKeyDown{};
 
     ScrollInput() {
         surface().setBackgroundColor(PandaUI::Color(0.f, 0.f, 0.f, 0.f));
         setFocusable(true);
+    }
+
+    void installToolbar() {
+        auto state = [](PandaUI::Color background, PandaUI::Color border, PandaUI::Color text) {
+            PandaUI::ButtonAppearance::State result;
+            result.surface = PandaUI::SurfaceStyle(background, border);
+            result.text = text;
+            return result;
+        };
+        const PandaUI::Color white(1.f, 1.f, 1.f, 1.f);
+
+        auto makeButton = [&](float size, const char *tooltip) {
+            auto button = std::make_shared<ToolbarButton>("");
+            PandaUI::ButtonAppearance appearance =
+                PandaUI::Button::defaultAppearance(PandaUI::ButtonStyle::Neutral);
+            appearance.normal = state({.12f, .12f, .12f, .62f}, {1.f, 1.f, 1.f, .22f}, white);
+            appearance.hovered = state({.16f, .16f, .16f, .72f}, {1.f, 1.f, 1.f, .42f}, white);
+            appearance.pressed = state({.08f, .08f, .08f, .78f}, {1.f, 1.f, 1.f, .3f}, {1.f, 1.f, 1.f, .86f});
+            appearance.focused = appearance.hovered;
+            appearance.disabled = state({.12f, .12f, .12f, .52f}, {1.f, 1.f, 1.f, .14f}, {1.f, 1.f, 1.f, .55f});
+            appearance.font = PandaUI::Font(size * .56f);
+            appearance.padding = PandaUI::EdgeInsets();
+            appearance.minHeight = size;
+            appearance.cornerRadius = PandaUI::CornerRadii(size * .28f);
+            appearance.borderWidth = 1.5f;
+            button->setAppearance(appearance);
+            button->layoutSetSize({size, size});
+            button->setFocusable(false);
+            button->setTooltip(tooltip);
+            button->getTitleLabel()->setHidden(true);
+            button->surface().setShadowColor(PandaUI::Color(0.f, 0.f, 0.f, .42f));
+            button->surface().setShadowOffset({0.f, 4.f});
+            button->surface().setShadowRadius(10.f);
+            return button;
+        };
+        auto vectorButton = [&](float size, VectorIcon icon, const char *tooltip) {
+            auto button = makeButton(size, tooltip);
+            const float iconSize = size * .56f;
+            auto view = makeVectorIcon(icon, iconSize);
+            const float inset = (size - iconSize) * .5f;
+            view->layoutSetOrigin({inset, inset});
+            button->addSubview(view);
+            return button;
+        };
+        auto glyphButton = [&](float size, const char *glyph, const char *tooltip) {
+            auto button = makeButton(size, tooltip);
+            button->setText(glyph);
+            button->getTitleLabel()->setHidden(false);
+            return button;
+        };
+        auto configureGroup = [](const std::shared_ptr<ToolbarGroup> &group) {
+            group->layoutSetAbsolute();
+            group->setFocusable(false);
+            group->surface().setBackgroundColor(PandaUI::Color(0.f, 0.f, 0.f, 0.f));
+            group->surface().setBorderWidth(0.f);
+        };
+
+        constexpr float kSmallButton = 50.f;
+        auto top = std::make_shared<ToolbarGroup>(PandaUI::StackAxis::Horizontal, 10.f);
+        configureGroup(top);
+        top->layoutSetSize({5.f * kSmallButton + 40.f, kSmallButton});
+        top->layout().setPosition(PandaUI::Edge::Left, PandaUI::Length::points(20.f));
+        top->layout().setPosition(PandaUI::Edge::Top, PandaUI::Length::points(20.f));
+        for (const VectorIcon icon : {VectorIcon::Menu, VectorIcon::Camera, VectorIcon::Eye,
+                                      VectorIcon::Gravity, VectorIcon::History}) {
+            top->addSubview(vectorButton(kSmallButton, icon, "Скоро"));
+        }
+        addSubview(top);
+
+        constexpr float kLargeButton = 64.f;
+        auto tools = std::make_shared<ToolbarGroup>(PandaUI::StackAxis::Vertical, 12.f);
+        configureGroup(tools);
+        tools->layout().setWidth(PandaUI::Length::points(kLargeButton));
+        tools->layout().setPosition(PandaUI::Edge::Right, PandaUI::Length::points(20.f));
+        tools->layout().setPosition(PandaUI::Edge::Top, PandaUI::Length::points(20.f));
+        tools->layout().setPosition(PandaUI::Edge::Bottom, PandaUI::Length::points(20.f));
+        tools->setAlignment(PandaUI::Align::Center);
+        tools->setDistribution(PandaUI::Justify::Center);
+
+        auto impact = vectorButton(kLargeButton, VectorIcon::Bomb, "Impact Tool");
+        impact->setSelected(true);
+        impact->setOnClick([this](PandaUI::Button &) {
+            if (!controller) { return; }
+            window.context().setFocusedView(this);
+            controller->selectImpactTool();
+        });
+        tools->addSubview(impact);
+        tools->addSubview(vectorButton(kLargeButton, VectorIcon::Bullets, "Скоро"));
+        tools->addSubview(glyphButton(kLargeButton, "⚛", "Скоро"));
+        tools->addSubview(vectorButton(kLargeButton, VectorIcon::Leaf, "Скоро"));
+        tools->addSubview(vectorButton(kLargeButton, VectorIcon::Gamepad, "Скоро"));
+        tools->addSubview(glyphButton(kLargeButton, "⚔", "Скоро"));
+        tools->addSubview(glyphButton(kLargeButton, "⚙", "Скоро"));
+        addSubview(tools);
+
+        auto roomControls = std::make_shared<ToolbarGroup>(PandaUI::StackAxis::Vertical, 14.f);
+        configureGroup(roomControls);
+        roomControls->layoutSetSize({kLargeButton, 2.f * kLargeButton + 14.f});
+        roomControls->layout().setPosition(PandaUI::Edge::Left, PandaUI::Length::points(20.f));
+        roomControls->layout().setPosition(PandaUI::Edge::Bottom, PandaUI::Length::points(20.f));
+        roomControls->addSubview(glyphButton(kLargeButton, "⌂", "Скоро"));
+
+        auto reset = glyphButton(kLargeButton, "↻", "Reset");
+        reset->setOnClick([this](PandaUI::Button &) {
+            if (!controller) { return; }
+            window.context().setFocusedView(this);
+            controller->requestRoomReset();
+        });
+        roomControls->addSubview(reset);
+        addSubview(roomControls);
     }
 
     template<typename Event>
@@ -97,7 +358,6 @@ struct OrbitCameraController::ScrollInput final : PandaUI::View {
                 constexpr std::array<float, 3> strengths = {.8f, 1.8f, 3.6f};
                 constexpr std::array<const char *, 3> names = {"Weak", "Medium", "Strong"};
                 controller->m_impactStrength = strengths[i];
-                updateImpactLabel();
                 LOG_INFO("Impact Tool: %s (delta-v %.1f m/s); 1/2/3 selects power", names[i], strengths[i]);
             }
             event.isHandled = true;
@@ -121,13 +381,6 @@ struct OrbitCameraController::ScrollInput final : PandaUI::View {
 
     bool keyDown(PandaUI::KeyEvent &event) override { return cameraKey(event, true); }
     bool keyUp(PandaUI::KeyEvent &event) override { return cameraKey(event, false); }
-
-    void updateImpactLabel() {
-        if (!impactLabel || !controller) { return; }
-        const char *name = controller->m_impactStrength < 1.f ? "Weak (1)" :
-                           controller->m_impactStrength < 3.f ? "Medium (2)" : "Strong (3)";
-        impactLabel->setText(std::string("Impact: ") + name + "\n1 Weak   2 Medium   3 Strong   R Reset");
-    }
 
     void cancelCameraInput() {
         shortcutModifiersDown = false;
@@ -228,6 +481,8 @@ struct OrbitCameraController::ScrollInput final : PandaUI::View {
 
 void OrbitCameraController::start() {
     m_active = false;
+    m_impactToolSelected = true;
+    m_roomResetRequested = false;
     m_hasAppliedPose = false;
     m_reportedExternalMotion = false;
     m_diagnosticElapsed = 0.f;
@@ -281,20 +536,7 @@ void OrbitCameraController::start() {
         marker->surface().setBorderWidth(2.f);
         marker->surface().setCornerRadius(7.f);
         m_scrollInput->addSubview(marker);
-        // A noninteractive HUD shares the existing game root. It never takes
-        // keyboard focus or blocks picking, orbiting or scrolling underneath.
-        m_scrollInput->impactLabel = std::make_shared<PandaUI::Label>();
-        auto &impactLabel = m_scrollInput->impactLabel;
-        impactLabel->setUserInteractionEnabled(false);
-        impactLabel->layoutSetAbsolute();
-        impactLabel->layoutSetOrigin({16.f, 14.f});
-        impactLabel->layoutSetSize({390.f, 44.f});
-        impactLabel->setFont(PandaUI::Font(14.f));
-        impactLabel->setNumberOfLines(2);
-        impactLabel->setTextColor(PandaUI::Color(.9f, .96f, 1.f, 1.f));
-        impactLabel->setTextOutline(PandaUI::TextOutline(1.f, PandaUI::Color(0.f, 0.f, 0.f, .8f)));
-        m_scrollInput->updateImpactLabel();
-        m_scrollInput->addSubview(impactLabel);
+        m_scrollInput->installToolbar();
         m_scrollInput->window.setRootView(m_scrollInput);
         // Key events start at the focused view; merely installing a root does
         // not route keys to it. This is the game's context, not the editor UI.
@@ -498,6 +740,7 @@ void OrbitCameraController::shutdown() {
     m_active = false;
     m_moveVelocity = {};
     m_pendingScrollLook = {};
+    m_roomResetRequested = false;
     m_hasAppliedPose = false;
     clearKeyboardInput();
     if (m_scrollInput) {
@@ -577,6 +820,22 @@ bool OrbitCameraController::acceptsSceneKeyboard() const {
     auto *focus = context.getFocusedView();
     return context.getRootView().get() == m_scrollInput.get() && !context.modals().isPresenting() &&
            (!focus || focus == m_scrollInput.get());
+}
+
+void OrbitCameraController::selectImpactTool() {
+    m_impactToolSelected = true;
+}
+
+bool OrbitCameraController::isImpactToolSelected() const {
+    return m_impactToolSelected;
+}
+
+void OrbitCameraController::requestRoomReset() {
+    m_roomResetRequested = true;
+}
+
+bool OrbitCameraController::consumeRoomResetRequest() {
+    return std::exchange(m_roomResetRequested, false);
 }
 
 void OrbitCameraController::resetView() {

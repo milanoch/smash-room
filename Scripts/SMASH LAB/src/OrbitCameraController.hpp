@@ -33,6 +33,10 @@ public:
     void clearImpactClicks();
     void showInteractionMarker(bool available);
     bool acceptsSceneKeyboard() const;
+    void selectImpactTool();
+    bool isImpactToolSelected() const;
+    void requestRoomReset();
+    bool consumeRoomResetRequest();
     float currentImpactStrength() const { return m_impactStrength; }
     Bamboo::Vec2 getSceneViewportSize() const;
 
@@ -69,6 +73,8 @@ private:
     float m_initialDistance = 13.f;
     bool m_wasOrbiting = false;
     bool m_active = false;
+    bool m_impactToolSelected = true;
+    bool m_roomResetRequested = false;
 };
 
 REGISTER_SCRIPT(OrbitCameraController)

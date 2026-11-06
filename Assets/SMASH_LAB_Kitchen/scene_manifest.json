@@ -1,0 +1,21 @@
+{
+  "title": "SMASH LAB - Scandinavian Kitchen",
+  "format": "glTF 2.0 separate (.gltf + .bin + external PNG textures)",
+  "room_dimensions_metres": [
+    8,
+    6,
+    3
+  ],
+  "authoring_coordinates": "Blender Z-up; open front at -Y",
+  "gltf_coordinates": "Standard glTF Y-up; open front at +Z; metres",
+  "mesh_objects": 310,
+  "triangles_authoring_meshes": 24662,
+  "hierarchy": "Independent named assemblies and mesh nodes; cabinet doors use hinge pivots and drawers use slider pivots",
+  "materials": 32,
+  "interactive_objects": "Chairs, plates, cups, bowls, cutlery, utensils, small appliances, plants and cabinet moving parts remain separate",
+  "notes": "No ceiling mesh. Warm pendant diffusers are geometry. Preview cameras and area lights are excluded from glTF.",
+  "triangles": 24662,
+  "gltf_nodes": 366,
+  "extensions_used": [],
+  "validation": "Passed: cold re-import, metre scale, UVs, normals, hierarchy and external dependencies"
+}

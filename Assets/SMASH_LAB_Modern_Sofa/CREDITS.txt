@@ -1,0 +1,5 @@
+DESIGN / SOURCE NOTE
+
+Design reference: Kimi design asset library, “Modern Upholstered Lounge Sofa” (FUR-SOF-001), asset d357f682-7097-4ec6-be1f-6da0bf554427.
+
+This game asset was rebuilt as a much simpler visible-surface model: hidden slats, webbing, rails, dowels, piping, lumbar pillow, and extra legs were omitted. The rounded low-poly forms, exact 2.0 × 0.9 × 0.85 m envelope, UV mapping, and lightweight tiled PBR texture set were created for this delivery. No baked library mesh or photographic reference image is redistributed.

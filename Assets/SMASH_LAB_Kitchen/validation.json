@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "errors": [],
+  "gltf_version": "2.0",
+  "gltf_triangles": 24662,
+  "gltf_mesh_nodes": 310,
+  "gltf_nodes": 366,
+  "gltf_materials": 32,
+  "external_bin_files": [
+    "SMASH_LAB_Kitchen.bin"
+  ],
+  "external_texture_files": [
+    "textures/BeigeTile_Normal.png",
+    "textures/BeigeTile_BaseColor.png",
+    "textures/OakFloor_Normal.png",
+    "textures/OakFloor_BaseColor.png",
+    "textures/WarmPlaster_Normal.png",
+    "textures/WarmPlaster_BaseColor.png",
+    "textures/IvoryLinen_Normal.png",
+    "textures/IvoryLinen_BaseColor.png",
+    "textures/IvoryQuartz_Normal.png",
+    "textures/IvoryQuartz_BaseColor.png",
+    "textures/NaturalOak_Normal.png",
+    "textures/NaturalOak_BaseColor.png",
+    "textures/WoolRug_Normal.png",
+    "textures/WoolRug_BaseColor.png",
+    "textures/AbstractArt_02.png"
+  ],
+  "extensions_used": [],
+  "cold_blender_reimport_meshes": 310,
+  "all_imported_meshes_have_uvs": true,
+  "all_imported_scales_unit": true,
+  "floor_dimensions_after_import_m": [
+    8.0,
+    6.0,
+    0.12999999523162842
+  ]
+}

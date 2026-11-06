@@ -1,0 +1,17 @@
+ASSET CREDITS
+=============
+
+Sofa construction adapted from the Kimi design library asset:
+Modern Upholstered Lounge Sofa / FUR-SOF-001
+Asset UUID: d357f682-7097-4ec6-be1f-6da0bf554427
+
+Adaptations for SMASH LAB:
+• Reduced visible soft-surface resolution for the game triangle budget.
+• Removed hidden internal slats, webbing, dowels, welting, and dense original feet.
+• Added simplified separately selectable timber feet and accent cushions.
+• Applied new UV mapping and external image-based PBR materials.
+• Renamed parts and preserved them under an independent Sofa assembly.
+
+All other room geometry, furniture, decorations, abstract artwork, and textures
+were created procedurally for this scene. Reference photographs were used only
+for visual direction and are not embedded or redistributed in this package.

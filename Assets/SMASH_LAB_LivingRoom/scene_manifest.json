@@ -1,0 +1,77 @@
+{
+  "title": "SMASH LAB - Scandinavian Living Room",
+  "format": "glTF 2.0 separate (.gltf + .bin + external PNG textures)",
+  "room_dimensions_metres": [
+    8,
+    6,
+    3
+  ],
+  "authoring_coordinates": "Blender Z-up; open front at -Y",
+  "gltf_coordinates": "Standard glTF Y-up; open front at +Z; metres",
+  "mesh_objects": 202,
+  "vertices_before_gltf_splitting": 9380,
+  "triangles": 16836,
+  "texture_sizes": {
+    "AbstractArt_01.png": [
+      512,
+      512
+    ],
+    "AbstractArt_02.png": [
+      512,
+      512
+    ],
+    "IvoryLinen_BaseColor.png": [
+      512,
+      512
+    ],
+    "IvoryLinen_Normal.png": [
+      512,
+      512
+    ],
+    "NaturalOak_BaseColor.png": [
+      512,
+      512
+    ],
+    "NaturalOak_Normal.png": [
+      512,
+      512
+    ],
+    "OakFloor_BaseColor.png": [
+      1024,
+      1024
+    ],
+    "OakFloor_Normal.png": [
+      1024,
+      1024
+    ],
+    "TelevisionScreen_BaseColor.png": [
+      512,
+      512
+    ],
+    "WarmPlaster_BaseColor.png": [
+      512,
+      512
+    ],
+    "WarmPlaster_Normal.png": [
+      512,
+      512
+    ],
+    "WoolRug_BaseColor.png": [
+      512,
+      512
+    ],
+    "WoolRug_Normal.png": [
+      512,
+      512
+    ]
+  },
+  "hierarchy": "Independent named mesh nodes under Architecture, Sofa, CoffeeTable, TVStand, Television, Bookshelf, FloorLamp, CeilingLight and decoration roots",
+  "materials": 28,
+  "reused_asset": "Modern Upholstered Lounge Sofa / FUR-SOF-001, Kimi design library; low-resolution adaptation with new UVs, PBR images, simplified feet and removed hidden internals",
+  "notes": "No ceiling mesh, per request. Pendant canopy remains at ceiling height. Render-only area lights and inspection camera are excluded from glTF.",
+  "gltf_nodes": 220,
+  "extensions_used": [
+    "KHR_lights_punctual"
+  ],
+  "validation": "Cold re-import passed; all meshes have UVs and unit object scale"
+}

@@ -490,7 +490,8 @@ bool DestructionSystem::clearFragments() {
 }
 
 bool DestructionSystem::restore() {
-    if (!m_initialized || !m_state.beginReset()) { return false; }
+    if (!m_initialized) { return true; }
+    if (!m_state.beginReset()) { return false; }
     m_cracks.reset();
     m_sparkles.reset();
     m_pendingBreak = {};

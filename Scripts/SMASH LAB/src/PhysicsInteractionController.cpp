@@ -16,9 +16,10 @@
 
 namespace {
 
-constexpr std::array<const char *, 10> kObjectTags = {
+constexpr std::array<const char *, 11> kObjectTags = {
     "Cube_Red", "Cube_Blue", "Cube_Green", "Cube_Yellow", "Cube_Purple",
-    "Crate_Wood", "Sphere_Small", "Sphere_Large", "Platform", "Cylinder_BoxCollider"
+    "Crate_Wood", "Sphere_Small", "Sphere_Large", "Platform", "Cylinder_BoxCollider",
+    "CoffeeTable"
 };
 
 bool isDynamic(Bamboo::EntityHandle entity) {
@@ -39,6 +40,7 @@ bool hitDynamic(Bamboo::Vec3 origin, Bamboo::Vec3 direction, float distance, Bam
 
 void PhysicsInteractionController::start() {
     m_pendingImpacts.clear();
+    m_initialStates = {};
     m_pendingImpacts.reserve(kMaxPendingImpacts);
     m_reportedMissingCamera = false;
     m_camera.reset();
@@ -48,6 +50,7 @@ void PhysicsInteractionController::start() {
     // These are the authored poses, including the objects initially in the air.
     for (size_t i = 0; i < kObjectTags.size(); ++i) {
         const auto matches = Bamboo::WorldAPI::findAllByTag(kObjectTags[i]);
+        if (matches.empty()) { continue; }
         if (matches.size() != 1 || !isDynamic(matches.front())) {
             LOG_ERROR("Impact Tool: expected one dynamic object named %s; interaction is disabled.", kObjectTags[i]);
             m_ready = false;
@@ -61,10 +64,11 @@ void PhysicsInteractionController::start() {
             Bamboo::TransformComponentAPI::getScale(entity)
         };
     }
-    if (m_ready) {
+    auto definition = SmashLab::glassCubeDefinition(Bamboo::MaterialHandle(26835769));
+    if (m_ready && !Bamboo::WorldAPI::findAllByTag(definition.sourceTag).empty()) {
         // Existing editor-authored material ID, copied unchanged with its
         // sidecar to Object_Glass.mat. No published fields or guessed fieldIds.
-        m_ready = m_destruction.initialize(SmashLab::glassCubeDefinition(Bamboo::MaterialHandle(26835769)));
+        m_ready = m_destruction.initialize(std::move(definition));
     }
 }
 
@@ -101,13 +105,15 @@ void PhysicsInteractionController::lateUpdate(float deltaTime) {
     OrbitCameraController::PointerSample pointer;
     Bamboo::Vec3 direction;
     Bamboo::Physics3DAPI::RaycastHit hit;
-    const bool hovering = m_camera->getScenePointer(pointer) && rayFor(pointer, direction)
+    const bool impactSelected = m_camera->isImpactToolSelected();
+    const bool hovering = impactSelected && m_camera->getScenePointer(pointer) && rayFor(pointer, direction)
         && hitDynamic(origin, direction, kRayDistance, hit);
     m_camera->showInteractionMarker(hovering);
 
     // pointerDown produces one request per physical click, rather than one per
     // held frame. Each request retains its own pointer position and viewport.
     while (m_camera->takeImpactClick(pointer)) {
+        if (!impactSelected) { continue; }
         if (m_pendingImpacts.size() >= kMaxPendingImpacts) { continue; }
         if (rayFor(pointer, direction) && hitDynamic(origin, direction, kRayDistance, hit)) {
             m_pendingImpacts.push_back({origin, direction, pointer.impactStrength});
@@ -119,9 +125,12 @@ void PhysicsInteractionController::fixedUpdate(float stepTime) {
     if (!m_ready) { return; }
     if (!m_camera) { m_camera = Bamboo::EntityAPI::getScript<OrbitCameraController>(getEntity()); }
     // Input retains an edge until exactly one fixed step sees it, even across
-    // frames without a physics step. Read R here so reset cancels older clicks
-    // before they can fire; do not also read it in the frame callbacks.
-    if (m_camera && m_camera->acceptsSceneKeyboard() && Bamboo::Input::isKeyJustPressed(Bamboo::Key::R)) {
+    // frames without a physics step. The UI button shares the same reset path;
+    // reset cancels older clicks before they can fire.
+    const bool uiReset = m_camera && m_camera->consumeRoomResetRequest();
+    const bool keyboardReset = m_camera && m_camera->acceptsSceneKeyboard() &&
+        Bamboo::Input::isKeyJustPressed(Bamboo::Key::R);
+    if (uiReset || keyboardReset) {
         m_pendingImpacts.clear();
         if (m_camera) {
             m_camera->clearImpactClicks();
@@ -154,6 +163,7 @@ bool PhysicsInteractionController::restoreRoom() {
     // Validate the whole snapshot before making changes, so an unsupported
     // deleted/retyped object cannot leave a partially restored room.
     for (const InitialState &state : m_initialStates) {
+        if (state.entity.id == 0) { continue; }
         if (!m_destruction.isSource(state.entity) && !isDynamic(state.entity)) {
             LOG_ERROR("Impact Tool: an initial dynamic object is unavailable; reset was cancelled.");
             return false;
@@ -163,7 +173,7 @@ bool PhysicsInteractionController::restoreRoom() {
     // entity/handle is retained, so there are no deferred deletes or ID swaps.
     if (!m_destruction.restore()) { return false; }
     for (const InitialState &state : m_initialStates) {
-        if (m_destruction.isSource(state.entity)) { continue; }
+        if (state.entity.id == 0 || m_destruction.isSource(state.entity)) { continue; }
         // Scale changes rebuild the body/shapes in the existing Physics module.
         // Pose setters teleport, clear velocity and reset interpolation history.
         // This scene has no joints; no entity or input handler is recreated.

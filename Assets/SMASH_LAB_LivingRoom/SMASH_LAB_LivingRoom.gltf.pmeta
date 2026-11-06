@@ -1,0 +1,1804 @@
+{
+    "id": 315431765,
+    "type": 6,
+    "meta": {
+        "materials": [
+            {
+                "name": "Natural oak floor - oiled",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/OakFloor_BaseColor.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.4699999988079071,
+                "normalTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/OakFloor_Normal.png",
+                "normalScale": 0.6499999761581421,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 2711932748
+            },
+            {
+                "name": "Warm painted off-white",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.8299999833106995,
+                    "y": 0.8100000023841858,
+                    "z": 0.75,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.47999998927116394,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 388562794
+            },
+            {
+                "name": "Warm beige lime plaster",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/WarmPlaster_BaseColor.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.8799999952316284,
+                "normalTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/WarmPlaster_Normal.png",
+                "normalScale": 0.6499999761581421,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 112837226
+            },
+            {
+                "name": "Warm off-white curtain linen",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/IvoryLinen_BaseColor.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.9399999976158142,
+                "normalTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/IvoryLinen_Normal.png",
+                "normalScale": 0.6499999761581421,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 526568042
+            },
+            {
+                "name": "Brushed dark bronze",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.11999999731779099,
+                    "y": 0.0949999988079071,
+                    "z": 0.06499999761581421,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.7799999713897705,
+                "roughnessFactor": 0.30000001192092896,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 621694088
+            },
+            {
+                "name": "Soft daylight beyond window",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.6700000166893005,
+                    "y": 0.800000011920929,
+                    "z": 0.8600000143051147,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.800000011920929,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.43549999594688416,
+                    "y": 0.5199999809265137,
+                    "z": 0.5590000152587891,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 2311979472
+            },
+            {
+                "name": "Window glass",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.6499999761581421,
+                    "y": 0.7900000214576721,
+                    "z": 0.8399999737739563,
+                    "w": 0.1599999964237213
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.11999999731779099,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 2,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 2472427014
+            },
+            {
+                "name": "Natural oak furniture",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/NaturalOak_BaseColor.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.4300000071525574,
+                "normalTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/NaturalOak_Normal.png",
+                "normalScale": 0.6499999761581421,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 2409938533
+            },
+            {
+                "name": "Book cloth 2",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.5299999713897705,
+                    "y": 0.28999999165534973,
+                    "z": 0.20000000298023224,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.800000011920929,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 145060623
+            },
+            {
+                "name": "Book cloth 3",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.7200000286102295,
+                    "y": 0.6499999761581421,
+                    "z": 0.5099999904632568,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.800000011920929,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 1603306205
+            },
+            {
+                "name": "Book cloth 4",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.18000000715255737,
+                    "y": 0.25,
+                    "z": 0.2800000011920929,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.800000011920929,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 2480076032
+            },
+            {
+                "name": "Book cloth 5",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.46000000834465027,
+                    "y": 0.4300000071525574,
+                    "z": 0.36000001430511475,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.800000011920929,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 4214661068
+            },
+            {
+                "name": "Book cloth 6",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.6399999856948853,
+                    "y": 0.5299999713897705,
+                    "z": 0.3499999940395355,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.800000011920929,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 3040144101
+            },
+            {
+                "name": "Book cloth 1",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.2800000011920929,
+                    "y": 0.3400000035762787,
+                    "z": 0.30000001192092896,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.800000011920929,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 2440531325
+            },
+            {
+                "name": "Warm white ceramic",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.7799999713897705,
+                    "y": 0.75,
+                    "z": 0.6600000262260437,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.27000001072883606,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 2841344313
+            },
+            {
+                "name": "Terracotta ceramic",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.47999998927116394,
+                    "y": 0.23999999463558197,
+                    "z": 0.15000000596046448,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.36000001430511475,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 1307488727
+            },
+            {
+                "name": "Sandstone ceramic",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.5299999713897705,
+                    "y": 0.4699999988079071,
+                    "z": 0.36000001430511475,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.5299999713897705,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 3532992067
+            },
+            {
+                "name": "Soft charcoal",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.02500000037252903,
+                    "y": 0.029999999329447746,
+                    "z": 0.03099999949336052,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.5199999809265137,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 1516932901
+            },
+            {
+                "name": "Warm luminous diffuser",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 0.7799999713897705,
+                    "z": 0.46000000834465027,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.4000000059604645,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 1.0,
+                    "y": 0.7799999713897705,
+                    "z": 0.46000000834465027,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 3930809736
+            },
+            {
+                "name": "Sage green foliage",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.1899999976158142,
+                    "y": 0.3400000035762787,
+                    "z": 0.15000000596046448,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.6800000071525574,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 251427808
+            },
+            {
+                "name": "Original abstract artwork 01",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/AbstractArt_01.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.8600000143051147,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 3161448637
+            },
+            {
+                "name": "Original abstract artwork 02",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/AbstractArt_02.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.8600000143051147,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 808778066
+            },
+            {
+                "name": "Deep olive foliage",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.0949999988079071,
+                    "y": 0.2199999988079071,
+                    "z": 0.08500000089406967,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.699999988079071,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 105804112
+            },
+            {
+                "name": "Dark potting soil",
+                "baseColorTexturePath": "",
+                "baseColorFactor": {
+                    "x": 0.04500000178813934,
+                    "y": 0.029999999329447746,
+                    "z": 0.017999999225139618,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 2298694641
+            },
+            {
+                "name": "Soft wool diamond rug",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/WoolRug_BaseColor.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.9599999785423279,
+                "normalTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/WoolRug_Normal.png",
+                "normalScale": 0.6499999761581421,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 1241925931
+            },
+            {
+                "name": "Ivory beige woven linen",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/IvoryLinen_BaseColor.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.8999999761581421,
+                "normalTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/IvoryLinen_Normal.png",
+                "normalScale": 0.6499999761581421,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 122146624
+            },
+            {
+                "name": "Muted sage fabric",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/IvoryLinen_BaseColor.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.9100000262260437,
+                "normalTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/IvoryLinen_Normal.png",
+                "normalScale": 0.6499999761581421,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 2107703624
+            },
+            {
+                "name": "Television dark glass",
+                "baseColorTexturePath": "Assets/SMASH_LAB_LivingRoom/textures/TelevisionScreen_BaseColor.png",
+                "baseColorFactor": {
+                    "x": 1.0,
+                    "y": 1.0,
+                    "z": 1.0,
+                    "w": 1.0
+                },
+                "metallicRoughnessTexturePath": "",
+                "metallicFactor": 0.05999999865889549,
+                "roughnessFactor": 0.18000000715255737,
+                "normalTexturePath": "",
+                "normalScale": 0.0,
+                "occlusionTexturePath": "",
+                "occlusionStrength": 0.0,
+                "emissiveTexturePath": "",
+                "emissiveFactor": {
+                    "x": 0.0017999999690800905,
+                    "y": 0.002639999845996499,
+                    "z": 0.003120000008493662,
+                    "w": 1.0
+                },
+                "alphaMode": 0,
+                "alphaCutoff": 0.5,
+                "doubleSided": true,
+                "materialAssetId": 3015121950
+            }
+        ],
+        "primitiveMaterials": [
+            {
+                "submeshIndex": 0,
+                "primitiveIndex": 0,
+                "materialIndex": 0
+            },
+            {
+                "submeshIndex": 1,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 2,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 3,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 4,
+                "primitiveIndex": 0,
+                "materialIndex": 2
+            },
+            {
+                "submeshIndex": 5,
+                "primitiveIndex": 0,
+                "materialIndex": 2
+            },
+            {
+                "submeshIndex": 6,
+                "primitiveIndex": 0,
+                "materialIndex": 2
+            },
+            {
+                "submeshIndex": 7,
+                "primitiveIndex": 0,
+                "materialIndex": 2
+            },
+            {
+                "submeshIndex": 8,
+                "primitiveIndex": 0,
+                "materialIndex": 2
+            },
+            {
+                "submeshIndex": 9,
+                "primitiveIndex": 0,
+                "materialIndex": 2
+            },
+            {
+                "submeshIndex": 10,
+                "primitiveIndex": 0,
+                "materialIndex": 3
+            },
+            {
+                "submeshIndex": 11,
+                "primitiveIndex": 0,
+                "materialIndex": 3
+            },
+            {
+                "submeshIndex": 12,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 13,
+                "primitiveIndex": 0,
+                "materialIndex": 5
+            },
+            {
+                "submeshIndex": 14,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 15,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 16,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 17,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 18,
+                "primitiveIndex": 0,
+                "materialIndex": 6
+            },
+            {
+                "submeshIndex": 19,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 20,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 21,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 22,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 23,
+                "primitiveIndex": 0,
+                "materialIndex": 8
+            },
+            {
+                "submeshIndex": 24,
+                "primitiveIndex": 0,
+                "materialIndex": 9
+            },
+            {
+                "submeshIndex": 25,
+                "primitiveIndex": 0,
+                "materialIndex": 10
+            },
+            {
+                "submeshIndex": 26,
+                "primitiveIndex": 0,
+                "materialIndex": 11
+            },
+            {
+                "submeshIndex": 27,
+                "primitiveIndex": 0,
+                "materialIndex": 12
+            },
+            {
+                "submeshIndex": 28,
+                "primitiveIndex": 0,
+                "materialIndex": 13
+            },
+            {
+                "submeshIndex": 29,
+                "primitiveIndex": 0,
+                "materialIndex": 8
+            },
+            {
+                "submeshIndex": 30,
+                "primitiveIndex": 0,
+                "materialIndex": 9
+            },
+            {
+                "submeshIndex": 31,
+                "primitiveIndex": 0,
+                "materialIndex": 10
+            },
+            {
+                "submeshIndex": 32,
+                "primitiveIndex": 0,
+                "materialIndex": 11
+            },
+            {
+                "submeshIndex": 33,
+                "primitiveIndex": 0,
+                "materialIndex": 13
+            },
+            {
+                "submeshIndex": 34,
+                "primitiveIndex": 0,
+                "materialIndex": 8
+            },
+            {
+                "submeshIndex": 35,
+                "primitiveIndex": 0,
+                "materialIndex": 9
+            },
+            {
+                "submeshIndex": 36,
+                "primitiveIndex": 0,
+                "materialIndex": 10
+            },
+            {
+                "submeshIndex": 37,
+                "primitiveIndex": 0,
+                "materialIndex": 11
+            },
+            {
+                "submeshIndex": 38,
+                "primitiveIndex": 0,
+                "materialIndex": 12
+            },
+            {
+                "submeshIndex": 39,
+                "primitiveIndex": 0,
+                "materialIndex": 13
+            },
+            {
+                "submeshIndex": 40,
+                "primitiveIndex": 0,
+                "materialIndex": 8
+            },
+            {
+                "submeshIndex": 41,
+                "primitiveIndex": 0,
+                "materialIndex": 10
+            },
+            {
+                "submeshIndex": 42,
+                "primitiveIndex": 0,
+                "materialIndex": 11
+            },
+            {
+                "submeshIndex": 43,
+                "primitiveIndex": 0,
+                "materialIndex": 12
+            },
+            {
+                "submeshIndex": 44,
+                "primitiveIndex": 0,
+                "materialIndex": 13
+            },
+            {
+                "submeshIndex": 45,
+                "primitiveIndex": 0,
+                "materialIndex": 8
+            },
+            {
+                "submeshIndex": 46,
+                "primitiveIndex": 0,
+                "materialIndex": 9
+            },
+            {
+                "submeshIndex": 47,
+                "primitiveIndex": 0,
+                "materialIndex": 10
+            },
+            {
+                "submeshIndex": 48,
+                "primitiveIndex": 0,
+                "materialIndex": 12
+            },
+            {
+                "submeshIndex": 49,
+                "primitiveIndex": 0,
+                "materialIndex": 13
+            },
+            {
+                "submeshIndex": 50,
+                "primitiveIndex": 0,
+                "materialIndex": 8
+            },
+            {
+                "submeshIndex": 51,
+                "primitiveIndex": 0,
+                "materialIndex": 9
+            },
+            {
+                "submeshIndex": 52,
+                "primitiveIndex": 0,
+                "materialIndex": 10
+            },
+            {
+                "submeshIndex": 53,
+                "primitiveIndex": 0,
+                "materialIndex": 11
+            },
+            {
+                "submeshIndex": 54,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 55,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 56,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 57,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 58,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 59,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 60,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 61,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 62,
+                "primitiveIndex": 0,
+                "materialIndex": 11
+            },
+            {
+                "submeshIndex": 63,
+                "primitiveIndex": 0,
+                "materialIndex": 11
+            },
+            {
+                "submeshIndex": 64,
+                "primitiveIndex": 0,
+                "materialIndex": 14
+            },
+            {
+                "submeshIndex": 65,
+                "primitiveIndex": 0,
+                "materialIndex": 15
+            },
+            {
+                "submeshIndex": 66,
+                "primitiveIndex": 0,
+                "materialIndex": 16
+            },
+            {
+                "submeshIndex": 67,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 68,
+                "primitiveIndex": 0,
+                "materialIndex": 17
+            },
+            {
+                "submeshIndex": 69,
+                "primitiveIndex": 0,
+                "materialIndex": 18
+            },
+            {
+                "submeshIndex": 70,
+                "primitiveIndex": 0,
+                "materialIndex": 1
+            },
+            {
+                "submeshIndex": 71,
+                "primitiveIndex": 0,
+                "materialIndex": 15
+            },
+            {
+                "submeshIndex": 72,
+                "primitiveIndex": 0,
+                "materialIndex": 9
+            },
+            {
+                "submeshIndex": 73,
+                "primitiveIndex": 0,
+                "materialIndex": 13
+            },
+            {
+                "submeshIndex": 74,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 75,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 76,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 77,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 78,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 79,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 80,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 81,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 82,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 83,
+                "primitiveIndex": 0,
+                "materialIndex": 14
+            },
+            {
+                "submeshIndex": 84,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 85,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 86,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 87,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 88,
+                "primitiveIndex": 0,
+                "materialIndex": 18
+            },
+            {
+                "submeshIndex": 89,
+                "primitiveIndex": 0,
+                "materialIndex": 3
+            },
+            {
+                "submeshIndex": 90,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 91,
+                "primitiveIndex": 0,
+                "materialIndex": 20
+            },
+            {
+                "submeshIndex": 92,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 93,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 94,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 95,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 96,
+                "primitiveIndex": 0,
+                "materialIndex": 20
+            },
+            {
+                "submeshIndex": 97,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 98,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 99,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 100,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 101,
+                "primitiveIndex": 0,
+                "materialIndex": 21
+            },
+            {
+                "submeshIndex": 102,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 103,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 104,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 105,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 106,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 107,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 108,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 109,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 110,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 111,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 112,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 113,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 114,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 115,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 116,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 117,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 118,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 119,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 120,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 121,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 122,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 123,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 124,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 125,
+                "primitiveIndex": 0,
+                "materialIndex": 16
+            },
+            {
+                "submeshIndex": 126,
+                "primitiveIndex": 0,
+                "materialIndex": 23
+            },
+            {
+                "submeshIndex": 127,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 128,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 129,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 130,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 131,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 132,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 133,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 134,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 135,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 136,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 137,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 138,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 139,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 140,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 141,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 142,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 143,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 144,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 145,
+                "primitiveIndex": 0,
+                "materialIndex": 24
+            },
+            {
+                "submeshIndex": 146,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 147,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 148,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 149,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 150,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 151,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 152,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 153,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 154,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 155,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 156,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 157,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 158,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 159,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 160,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 161,
+                "primitiveIndex": 0,
+                "materialIndex": 25
+            },
+            {
+                "submeshIndex": 162,
+                "primitiveIndex": 0,
+                "materialIndex": 26
+            },
+            {
+                "submeshIndex": 163,
+                "primitiveIndex": 0,
+                "materialIndex": 15
+            },
+            {
+                "submeshIndex": 164,
+                "primitiveIndex": 0,
+                "materialIndex": 17
+            },
+            {
+                "submeshIndex": 165,
+                "primitiveIndex": 0,
+                "materialIndex": 17
+            },
+            {
+                "submeshIndex": 166,
+                "primitiveIndex": 0,
+                "materialIndex": 17
+            },
+            {
+                "submeshIndex": 167,
+                "primitiveIndex": 0,
+                "materialIndex": 27
+            },
+            {
+                "submeshIndex": 168,
+                "primitiveIndex": 0,
+                "materialIndex": 17
+            },
+            {
+                "submeshIndex": 169,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 170,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 171,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 172,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 173,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 174,
+                "primitiveIndex": 0,
+                "materialIndex": 22
+            },
+            {
+                "submeshIndex": 175,
+                "primitiveIndex": 0,
+                "materialIndex": 19
+            },
+            {
+                "submeshIndex": 176,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 177,
+                "primitiveIndex": 0,
+                "materialIndex": 16
+            },
+            {
+                "submeshIndex": 178,
+                "primitiveIndex": 0,
+                "materialIndex": 23
+            },
+            {
+                "submeshIndex": 179,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 180,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 181,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 182,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 183,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 184,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 185,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 186,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 187,
+                "primitiveIndex": 0,
+                "materialIndex": 10
+            },
+            {
+                "submeshIndex": 188,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 189,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 190,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 191,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 192,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 193,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 194,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 195,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 196,
+                "primitiveIndex": 0,
+                "materialIndex": 4
+            },
+            {
+                "submeshIndex": 197,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 198,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 199,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 200,
+                "primitiveIndex": 0,
+                "materialIndex": 7
+            },
+            {
+                "submeshIndex": 201,
+                "primitiveIndex": 0,
+                "materialIndex": 15
+            }
+        ]
+    }
+}
