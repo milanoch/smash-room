@@ -1,0 +1,915 @@
+diff --git a/Modules/Physics/engine/include/Panda/Physics/Physics3D.hpp b/Modules/Physics/engine/include/Panda/Physics/Physics3D.hpp
+index c016cc7..5799f71 100644
+--- a/Modules/Physics/engine/include/Panda/Physics/Physics3D.hpp
++++ b/Modules/Physics/engine/include/Panda/Physics/Physics3D.hpp
+@@ -14,6 +14,7 @@ namespace Panda {
+ 
+ class World;
+ struct MeshColliderCook; // the box3d geometry of a mesh collider (Physics3D.cpp)
++struct ClothRuntime;
+ 
+ // Result of a kinematic character step (Physics3D::moveCharacter).
+ struct CharacterMoveResult {
+@@ -158,6 +159,21 @@ public:
+     }
+ 
+ private:
++    // Native sheet extension; the opaque state keeps Box3D and render resources out of this header.
++    bool registerCloth(Entity entity);
++    bool removeCloth(Entity entity);
++    void shutdownCloths();
++    void beginClothStep();
++    void writeClothMeshes(float alpha);
++    bool syncCloth(Entity entity);
++    bool clothMassData(Entity entity, MassData3D &out);
++    bool clothVelocity(Entity entity, Vec3 &value, bool angular, bool set);
++    bool clothPointVelocity(Entity entity, Vec3 point, Vec3 &out);
++    bool clothPush(Entity entity, Vec3 value, Vec3 point, bool impulse, bool atPoint);
++    bool clothTorque(Entity entity, Vec3 value, bool impulse);
++    std::unordered_map<UUID, std::shared_ptr<ClothRuntime>> m_cloths;
++    bool m_changingCloth = false;
++
+     bool canUse(Entity entity);
+     bool isRegistered(Entity entity);
+     void registerEntity(Entity entity);
+diff --git a/Modules/Physics/engine/include/Panda/Physics/PhysicsComponents.hpp b/Modules/Physics/engine/include/Panda/Physics/PhysicsComponents.hpp
+index 96b9e0f..aadc03d 100644
+--- a/Modules/Physics/engine/include/Panda/Physics/PhysicsComponents.hpp
++++ b/Modules/Physics/engine/include/Panda/Physics/PhysicsComponents.hpp
+@@ -101,6 +101,22 @@ struct MeshCollider3DComponent final {
+     MeshCollider3DComponent &operator=(const MeshCollider3DComponent &other) = default;
+ };
+ 
++// A coarse deformable sheet, solved by Box3D boxes and spring weld joints in the SAME world.
++// The referenced imported primitive is skinned at runtime; no independent solver or render pass.
++// Rigidbody3D belongs to this owner. Do not add other colliders/joints to a cloth owner.
++struct Cloth3DComponent final {
++    UUID renderEntity = 0;
++    int columns = 3;
++    int rows = 12;
++    float mass = 0.55f; // total mass, including the pinned cells
++    float thickness = 0.012f; // collision backing, not the thickness of decorative folds/pile
++    float bendHertz = 1.5f;
++    float dampingRatio = 0.9f;
++    float friction = 0.7f;
++    bool horizontal = false; // XZ (rug) instead of XY (curtain), in the owner's local space
++    bool pinTop = true; // hold the highest row in place
++};
++
+ // --- Joints. Created at simulation start between this entity's body and connectedEntity;
+ // --- they capture the CURRENT relative pose of the bodies, limits are measured from it. Angles
+ // --- are in degrees.
+diff --git a/Modules/Physics/engine/include/Panda/Physics/PhysicsDtos.hpp b/Modules/Physics/engine/include/Panda/Physics/PhysicsDtos.hpp
+index 24db094..57e1cc6 100644
+--- a/Modules/Physics/engine/include/Panda/Physics/PhysicsDtos.hpp
++++ b/Modules/Physics/engine/include/Panda/Physics/PhysicsDtos.hpp
+@@ -141,6 +141,32 @@ struct MeshCollider3DComponentDto : public Rain::Codable {
+     RAIN_FIELDS_END
+ };
+ 
++struct Cloth3DComponentDto : public Rain::Codable {
++    UUID renderEntity = 0;
++    int columns = 3;
++    int rows = 12;
++    float mass = 0.55f;
++    float thickness = 0.012f;
++    float bendHertz = 1.5f;
++    float dampingRatio = 0.9f;
++    float friction = 0.7f;
++    bool horizontal = false;
++    bool pinTop = true;
++
++    RAIN_FIELDS_BEGIN(Cloth3DComponentDto)
++    RAIN_FIELD(renderEntity)
++    RAIN_FIELD(columns)
++    RAIN_FIELD(rows)
++    RAIN_FIELD(mass)
++    RAIN_FIELD(thickness)
++    RAIN_FIELD(bendHertz)
++    RAIN_FIELD(dampingRatio)
++    RAIN_FIELD(friction)
++    RAIN_FIELD(horizontal)
++    RAIN_FIELD(pinTop)
++    RAIN_FIELDS_END
++};
++
+ struct RevoluteJoint2DComponentDto : public Rain::Codable {
+     UUID connectedEntity = 0;
+     Vec2 anchor;
+diff --git a/Modules/Physics/engine/src/Panda/Physics/Physics3D.cpp b/Modules/Physics/engine/src/Panda/Physics/Physics3D.cpp
+index dfe453e..a89356f 100644
+--- a/Modules/Physics/engine/src/Panda/Physics/Physics3D.cpp
++++ b/Modules/Physics/engine/src/Panda/Physics/Physics3D.cpp
+@@ -233,6 +233,10 @@ void Physics3D::init(World *world) {
+     b3WorldDef worldDef = b3DefaultWorldDef();
+     b3WorldId worldId = b3CreateWorld(&worldDef);
+     m_physicsWorldId = b3WorldIdToInt(worldId);
++    // Cloth replaces its source leaf's static collider before the rigid-body view is built.
++    for (auto handle : world->getAllEntitiesWith<Cloth3DComponent, Rigidbody3DComponent>()) {
++        if (world->isValidEntt(handle)) { registerCloth(world->entity(handle)); }
++    }
+     // Register all entities
+     auto view = world->getAllEntitiesWith<Rigidbody3DComponent>();
+     for (auto entityHandle : view) {
+@@ -413,6 +417,7 @@ bool Physics3D::isInitialized() {
+ }
+ 
+ void Physics3D::beginStep() {
++    beginClothStep();
+     m_bodies.forEach([](RuntimeBodyData &body) {
+         const b3BodyId bodyId = bodyIdOf(body);
+         const b3Pos position = b3Body_GetPosition(bodyId);
+@@ -506,9 +511,11 @@ void Physics3D::writeTransforms(World *world, float alpha) {
+         if (!world->isValidEntt(entityHandle)) { continue; }
+         writeTransform(world->entity(entityHandle), alpha);
+     }
++    writeClothMeshes(alpha);
+ }
+ 
+ void Physics3D::writeTransform(Entity entity, float alpha) {
++    if (m_cloths.contains(entity.getId())) { return; } // sheet owner keeps its authored frame
+     RuntimeBodyData *body = m_bodies.find(entity.getId());
+     if (body != nullptr && body->writePass == m_writePass) { return; }
+     // Everything above the entity first; an entity without a body only passes the call up.
+@@ -529,7 +536,8 @@ void Physics3D::writeTransform(Entity entity, float alpha) {
+ }
+ 
+ void Physics3D::registerEntity(Entity entity) {
+-    if (!isInitialized()) { return; }
++    if (!isInitialized() || isRegistered(entity)) { return; }
++    if (entity.hasComponent<Cloth3DComponent>()) { registerCloth(entity); return; }
+     b3WorldId worldId = intToB3WorldId(m_physicsWorldId);
+     auto transform = entity.calculateWorldSpaceTransform();
+     auto &rb3d = entity.getComponent<Rigidbody3DComponent>();
+@@ -685,7 +693,12 @@ void Physics3D::setMeshColliderMesh(Entity entity, AssetId mesh, bool convex) {
+ }
+ 
+ void Physics3D::componentsUpdated(Entity entity) {
+-    if (!isInitialized()) { return; }
++    if (!isInitialized() || m_changingCloth) { return; }
++    if (m_cloths.contains(entity.getId()) || entity.hasComponent<Cloth3DComponent>()) {
++        removeCloth(entity);
++        if (canUse(entity)) { registerEntity(entity); }
++        return;
++    }
+     const RuntimeBodyData *registered = m_bodies.find(entity.getId());
+     if (registered == nullptr) {
+         if (canUse(entity)) { registerEntity(entity); }
+@@ -714,6 +727,7 @@ void Physics3D::componentsUpdated(Entity entity) {
+ 
+ void Physics3D::entityRemoved(Entity entity) {
+     if (!isInitialized()) { return; }
++    if (removeCloth(entity)) { return; }
+     if (isRegistered(entity)) { removeEntity(entity); }
+ }
+ 
+@@ -732,6 +746,7 @@ void Physics3D::propertiesUpdated(Panda::Entity entity) {
+ }
+ 
+ void Physics3D::syncTransform(Panda::Entity entity) {
++    if (syncCloth(entity)) { return; }
+     // Body teleport (position/rotation changed from outside: gizmo/script/inspector). NOT through
+     // propertiesUpdated: recreating the body would destroy the box3d joints, and a per-frame drag
+     // needs a cheap path. The velocities are zeroed ("put it down — it stays", as in 2D), wake —
+@@ -757,6 +772,7 @@ void Physics3D::syncTransform(Panda::Entity entity) {
+ 
+ void Physics3D::removeEntity(Entity entity) {
+     if (!isInitialized()) { return; }
++    if (removeCloth(entity)) { return; }
+     const RuntimeBodyData *registered = m_bodies.find(entity.getId());
+     if (registered == nullptr) { return; }
+     const b3BodyId bodyId = bodyIdOf(*registered);
+@@ -788,24 +804,29 @@ bool Physics3D::findWheelJoint(Entity entity, RuntimeJointData &outJoint) {
+ }
+ 
+ void Physics3D::applyForce(Entity entity, Vec3 force) {
++    if (clothPush(entity, force, {}, false, false)) { return; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return; }
+     b3Body_ApplyForceToCenter(bodyIdOf(body), {force.x, force.y, force.z}, true);
+ }
+ 
+ void Physics3D::applyLinearImpulse(Entity entity, Vec3 impulse) {
++    if (clothPush(entity, impulse, {}, true, false)) { return; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return; }
+     b3Body_ApplyLinearImpulseToCenter(bodyIdOf(body), {impulse.x, impulse.y, impulse.z}, true);
+ }
+ 
+ void Physics3D::setLinearVelocity(Entity entity, Vec3 velocity) {
++    if (clothVelocity(entity, velocity, false, true)) { return; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return; }
+     b3Body_SetLinearVelocity(bodyIdOf(body), {velocity.x, velocity.y, velocity.z});
+ }
+ 
+ Vec3 Physics3D::getLinearVelocity(Entity entity) {
++    Vec3 clothValue;
++    if (clothVelocity(entity, clothValue, false, false)) { return clothValue; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return Vec3(); }
+     b3Vec3 result = b3Body_GetLinearVelocity(bodyIdOf(body));
+@@ -814,6 +835,7 @@ Vec3 Physics3D::getLinearVelocity(Entity entity) {
+ 
+ MassData3D Physics3D::getMassData(Entity entity) {
+     MassData3D result;
++    if (clothMassData(entity, result)) { return result; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return result; }
+     const b3BodyId bodyId = bodyIdOf(body);
+@@ -838,36 +860,43 @@ MassData3D Physics3D::getMassData(Entity entity) {
+ }
+ 
+ void Physics3D::applyForceAtPoint(Entity entity, Vec3 force, Vec3 point) {
++    if (clothPush(entity, force, point, false, true)) { return; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return; }
+     b3Body_ApplyForce(bodyIdOf(body), {force.x, force.y, force.z}, {point.x, point.y, point.z}, true);
+ }
+ 
+ void Physics3D::applyLinearImpulseAtPoint(Entity entity, Vec3 impulse, Vec3 point) {
++    if (clothPush(entity, impulse, point, true, true)) { return; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return; }
+     b3Body_ApplyLinearImpulse(bodyIdOf(body), {impulse.x, impulse.y, impulse.z}, {point.x, point.y, point.z}, true);
+ }
+ 
+ void Physics3D::applyTorque(Entity entity, Vec3 torque) {
++    if (clothTorque(entity, torque, false)) { return; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return; }
+     b3Body_ApplyTorque(bodyIdOf(body), {torque.x, torque.y, torque.z}, true);
+ }
+ 
+ void Physics3D::applyAngularImpulse(Entity entity, Vec3 impulse) {
++    if (clothTorque(entity, impulse, true)) { return; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return; }
+     b3Body_ApplyAngularImpulse(bodyIdOf(body), {impulse.x, impulse.y, impulse.z}, true);
+ }
+ 
+ void Physics3D::setAngularVelocity(Entity entity, Vec3 velocity) {
++    if (clothVelocity(entity, velocity, true, true)) { return; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return; }
+     b3Body_SetAngularVelocity(bodyIdOf(body), {velocity.x, velocity.y, velocity.z});
+ }
+ 
+ Vec3 Physics3D::getAngularVelocity(Entity entity) {
++    Vec3 clothValue;
++    if (clothVelocity(entity, clothValue, true, false)) { return clothValue; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return Vec3(); }
+     b3Vec3 result = b3Body_GetAngularVelocity(bodyIdOf(body));
+@@ -875,6 +904,8 @@ Vec3 Physics3D::getAngularVelocity(Entity entity) {
+ }
+ 
+ Vec3 Physics3D::getPointVelocity(Entity entity, Vec3 point) {
++    Vec3 clothValue;
++    if (clothPointVelocity(entity, point, clothValue)) { return clothValue; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return Vec3(); }
+     b3Vec3 result = b3Body_GetWorldPointVelocity(bodyIdOf(body), {point.x, point.y, point.z});
+@@ -1041,12 +1072,15 @@ CharacterMoveResult Physics3D::moveCharacter(Entity entity, Vec3 translation, Ve
+ }
+ 
+ float Physics3D::getMass(Entity entity) {
++    MassData3D clothData;
++    if (clothMassData(entity, clothData)) { return clothData.mass; }
+     RuntimeBodyData body;
+     if (!findBody(entity, body)) { return 0; }
+     return b3Body_GetMass(bodyIdOf(body));
+ }
+ 
+ void Physics3D::shutdown() {
++    shutdownCloths();
+     if (m_physicsWorldId) {
+         b3WorldId id = intToB3WorldId(m_physicsWorldId);
+         b3DestroyWorld(id);
+@@ -1069,7 +1103,8 @@ bool Physics3D::isRegistered(Entity entity) {
+ bool Physics3D::canUse(Entity entity) {
+     return entity.isValid() && entity.hasComponent<Rigidbody3DComponent>() &&
+            (entity.hasComponent<BoxCollider3DComponent>() || entity.hasComponent<SphereCollider3DComponent>() ||
+-            entity.hasComponent<CapsuleCollider3DComponent>() || entity.hasComponent<MeshCollider3DComponent>());
++            entity.hasComponent<CapsuleCollider3DComponent>() || entity.hasComponent<MeshCollider3DComponent>() ||
++            entity.hasComponent<Cloth3DComponent>());
+ }
+ 
+ } // namespace Panda
+diff --git a/Modules/Physics/engine/src/Panda/Physics/PhysicsComponentTypes.cpp b/Modules/Physics/engine/src/Panda/Physics/PhysicsComponentTypes.cpp
+index 25ae401..71da30f 100644
+--- a/Modules/Physics/engine/src/Panda/Physics/PhysicsComponentTypes.cpp
++++ b/Modules/Physics/engine/src/Panda/Physics/PhysicsComponentTypes.cpp
+@@ -160,6 +160,37 @@ namespace {
+         collider.restitution = dto.restitution;
+     }
+ 
++    void encodeCloth3D(Rain::Encoder &encoder, Entity entity) {
++        const auto &c = entity.getComponent<Cloth3DComponent>();
++        Cloth3DComponentDto dto;
++        dto.renderEntity = c.renderEntity;
++        dto.columns = c.columns;
++        dto.rows = c.rows;
++        dto.mass = c.mass;
++        dto.thickness = c.thickness;
++        dto.bendHertz = c.bendHertz;
++        dto.dampingRatio = c.dampingRatio;
++        dto.friction = c.friction;
++        dto.horizontal = c.horizontal;
++        dto.pinTop = c.pinTop;
++        encoder.encode("cloth3dComponent", dto);
++    }
++    void decodeCloth3D(Rain::Decoder &decoder, Entity entity) {
++        Cloth3DComponentDto dto;
++        if (!decoder.decode("cloth3dComponent", dto)) { return; }
++        auto &c = entity.addComponent<Cloth3DComponent>();
++        c.renderEntity = dto.renderEntity;
++        c.columns = dto.columns;
++        c.rows = dto.rows;
++        c.mass = dto.mass;
++        c.thickness = dto.thickness;
++        c.bendHertz = dto.bendHertz;
++        c.dampingRatio = dto.dampingRatio;
++        c.friction = dto.friction;
++        c.horizontal = dto.horizontal;
++        c.pinTop = dto.pinTop;
++    }
++
+     // --- Joints.
+ 
+     void encodeRevoluteJoint2D(Rain::Encoder &encoder, Entity entity) {
+@@ -324,6 +355,7 @@ namespace {
+ } // namespace
+ 
+ void registerComponentTypes(ComponentTypeRegistry &registry) {
++    registry.add(componentType<Cloth3DComponent>("cloth3dComponent", encodeCloth3D, decodeCloth3D));
+     registry.add(componentType<Rigidbody2DComponent>("rigidbody2dComponent", encodeRigidbody2D, decodeRigidbody2D));
+     registry.add(componentType<BoxCollider2DComponent>("boxCollider2dComponent", encodeBoxCollider2D, decodeBoxCollider2D));
+     registry.add(componentType<Rigidbody3DComponent>("rigidbody3dComponent", encodeRigidbody3D, decodeRigidbody3D));
+diff --git a/Modules/Physics/engine/src/Panda/Physics/PhysicsSystems.cpp b/Modules/Physics/engine/src/Panda/Physics/PhysicsSystems.cpp
+index 9b5a16a..18f2072 100644
+--- a/Modules/Physics/engine/src/Panda/Physics/PhysicsSystems.cpp
++++ b/Modules/Physics/engine/src/Panda/Physics/PhysicsSystems.cpp
+@@ -77,7 +77,7 @@ namespace {
+         }
+         if (isAnyOf<
+                 Rigidbody3DComponent, BoxCollider3DComponent, SphereCollider3DComponent, CapsuleCollider3DComponent,
+-                MeshCollider3DComponent>(typeId)) {
++                MeshCollider3DComponent, Cloth3DComponent>(typeId)) {
+             if (Physics3D *physics3D = world.findContext<Physics3D>()) { physics3D->componentsUpdated(entity); }
+         }
+     }
+diff --git a/Panda/include/Panda/Assets/ImportedMeshAsset.hpp b/Panda/include/Panda/Assets/ImportedMeshAsset.hpp
+index 39b9472..d047be1 100644
+--- a/Panda/include/Panda/Assets/ImportedMeshAsset.hpp
++++ b/Panda/include/Panda/Assets/ImportedMeshAsset.hpp
+@@ -24,6 +24,8 @@ struct ImportedPrimitive {
+     // The triangles on the CPU (the positions and the indices, nothing else of the vertex): the
+     // mesh collider of the physics is built from them.
+     MeshGeometry geometry;
++    // CPU source attributes for deformable meshes (UVs, normals and colors must survive skinning).
++    ImportedPrimitiveData source;
+ };
+ 
+ struct ImportedSubmesh {
+diff --git a/Panda/src/Panda/Assets/ImportedMeshAsset.cpp b/Panda/src/Panda/Assets/ImportedMeshAsset.cpp
+index 48df25b..7ec5d7a 100644
+--- a/Panda/src/Panda/Assets/ImportedMeshAsset.cpp
++++ b/Panda/src/Panda/Assets/ImportedMeshAsset.cpp
+@@ -21,6 +21,7 @@ ImportedMeshAsset::ImportedMeshAsset(std::vector<ImportedMeshData> meshes)
+         for (const auto &primitiveData : meshData.primitives) {
+             ImportedPrimitive &primitive = submesh.primitives.emplace_back();
+             if (primitiveData.vertices.empty()) { continue; }
++            primitive.source = primitiveData;
+             glm::vec3 minPoint(FLT_MAX);
+             glm::vec3 maxPoint(-FLT_MAX);
+             primitive.geometry.positions.reserve(primitiveData.vertices.size());
+diff --git a/Modules/Physics/engine/src/Panda/Physics/PhysicsCloth3D.cpp b/Modules/Physics/engine/src/Panda/Physics/PhysicsCloth3D.cpp
+new file mode 100644
+index 0000000..f3de99b
+--- /dev/null
++++ b/Modules/Physics/engine/src/Panda/Physics/PhysicsCloth3D.cpp
+@@ -0,0 +1,523 @@
++#include "Panda/Physics/Physics3D.hpp"
++#include "Panda/Physics/Box3DHandles.hpp"
++
++#include <Panda/Assets/ImportedMeshAsset.hpp>
++#include <Panda/Assets/RuntimeMeshAsset.hpp>
++#include <Panda/Assets/StaticResources.hpp>
++#include <Panda/GameLogic/GameContext.hpp>
++#include <Panda/GameLogic/World.hpp>
++
++#include <algorithm>
++#include <array>
++#include <cmath>
++#include <limits>
++#include <optional>
++#include <unordered_map>
++
++namespace Panda {
++
++// A sheet is a grid of small, thin native Box3D bodies. Spring welds resist bending;
++// their linear constraints keep the sheet together. Only mesh skinning runs here:
++// integration, gravity, contacts, friction and all constraints run in b3World_Step.
++struct ClothRuntime {
++    struct Cell {
++        b3BodyId body = b3_nullBodyId;
++        glm::vec3 restLocal{0.f};
++        glm::vec3 restWorld{0.f};
++        glm::vec3 previousPosition{0.f};
++        glm::quat previousRotation{1.f, 0.f, 0.f, 0.f};
++        bool pinned = false;
++    };
++    struct Binding {
++        std::array<uint32_t, 4> cells;
++        std::array<float, 4> weights;
++    };
++    Entity owner;
++    Entity source;
++    ImportedSubmeshComponent originalMesh;
++    std::optional<Rigidbody3DComponent> originalBody;
++    std::optional<MeshCollider3DComponent> originalCollider;
++    bool originalStatic = false;
++    AssetRef<RuntimeMeshAsset> mesh;
++    std::vector<Vertex> restVertices; // in the owner's local space
++    std::vector<Vertex> vertices;     // in the source entity's local space
++    std::vector<uint32_t> indices;
++    std::vector<Binding> bindings;
++    std::vector<Cell> cells;
++    std::vector<b3WeldJointDef> jointDefinitions;
++    std::vector<b3JointId> joints;
++    glm::mat4 restMatrix{1.f};
++    glm::quat restRotation{1.f, 0.f, 0.f, 0.f};
++    float mass = 0.f;
++};
++
++namespace {
++    struct MutationGuard {
++        bool &flag;
++        bool was;
++        explicit MutationGuard(bool &f) : flag(f), was(f) { flag = true; }
++        ~MutationGuard() { flag = was; }
++    };
++
++    glm::vec3 positionOf(b3BodyId b) {
++        const b3Pos p = b3Body_GetPosition(b);
++        return {(float)p.x, (float)p.y, (float)p.z};
++    }
++    glm::quat rotationOf(b3BodyId b) {
++        const b3Quat q = b3Body_GetRotation(b);
++        return {q.s, q.v.x, q.v.y, q.v.z};
++    }
++    b3Vec3 vectorOf(glm::vec3 v) { return {v.x, v.y, v.z}; }
++    b3Quat quatOf(glm::quat q) { return {{q.x, q.y, q.z}, q.w}; }
++    glm::vec3 pointOf(const glm::mat4 &m, glm::vec3 v) { return glm::vec3(m * glm::vec4(v, 1.f)); }
++    glm::vec3 unit(glm::vec3 v) {
++        const float n = glm::dot(v, v);
++        return n > 1e-12f ? v / std::sqrt(n) : glm::vec3(0.f, 1.f, 0.f);
++    }
++    void warnCloth(Entity e, const char *why) {
++        LOG_ERROR("Cloth3D on '%s': %s", e.getName().c_str(), why);
++        LOG_ERROR_EDITOR("Cloth3D on '%s': %s", e.getName().c_str(), why);
++    }
++
++    // Refine the imported surface once, preserving positions, UV seams, winding and colors.
++    // The rug's original broad faces need vertices between the corners to bend.
++    bool refine(std::vector<Vertex> &vertices, std::vector<uint32_t> &indices, float edgeLength) {
++        if (vertices.empty() || indices.empty() || indices.size() % 3 != 0) { return false; }
++        std::vector<std::array<uint32_t, 3>> pending;
++        for (size_t i = 0; i < indices.size(); i += 3) {
++            for (int j = 0; j < 3; ++j) {
++                if (indices[i + j] >= vertices.size()) { return false; }
++            }
++            pending.push_back({indices[i], indices[i + 1], indices[i + 2]});
++        }
++        indices.clear();
++        std::unordered_map<uint64_t, uint32_t> midpoints;
++        while (!pending.empty()) {
++            const auto tri = pending.back();
++            pending.pop_back();
++            float longest = 0.f;
++            int edge = 0;
++            for (int i = 0; i < 3; ++i) {
++                const glm::vec3 d = vertices[tri[i]].pos - vertices[tri[(i + 1) % 3]].pos;
++                if (glm::dot(d, d) > longest) { longest = glm::dot(d, d); edge = i; }
++            }
++            if (longest <= edgeLength * edgeLength) {
++                indices.insert(indices.end(), tri.begin(), tri.end());
++                continue;
++            }
++            if (vertices.size() >= 12000 || pending.size() + indices.size() / 3 > 24000) { return false; }
++            const uint32_t a = tri[edge], b = tri[(edge + 1) % 3], c = tri[(edge + 2) % 3];
++            const uint64_t key = (uint64_t(std::min(a, b)) << 32) | std::max(a, b);
++            auto it = midpoints.find(key);
++            uint32_t m;
++            if (it != midpoints.end()) { m = it->second; }
++            else {
++                Vertex v = vertices[a];
++                const Vertex other = vertices[b];
++                v.pos = (v.pos + other.pos) * 0.5f;
++                v.normal = unit(v.normal + other.normal);
++                v.uv = (v.uv + other.uv) * 0.5f;
++                v.color = (v.color + other.color) * 0.5f;
++                v.light = (v.light + other.light) * 0.5f;
++                m = static_cast<uint32_t>(vertices.size());
++                vertices.push_back(v);
++                midpoints.emplace(key, m);
++            }
++            pending.push_back({a, m, c});
++            pending.push_back({m, b, c});
++        }
++        return true;
++    }
++
++    // Nearest four free cells share a local push. The sum of the weights is one, so a
++    // click never multiplies its impulse by the number of grid bodies.
++    std::vector<std::pair<float, b3BodyId>> localCells(ClothRuntime &c, glm::vec3 point) {
++        std::vector<std::pair<float, b3BodyId>> found;
++        for (const auto &cell : c.cells) {
++            if (cell.pinned) { continue; }
++            const glm::vec3 d = positionOf(cell.body) - point;
++            found.emplace_back(glm::dot(d, d), cell.body);
++        }
++        std::sort(found.begin(), found.end(), [](const auto &a, const auto &b) { return a.first < b.first; });
++        if (found.size() > 4) { found.resize(4); }
++        float sum = 0.f;
++        for (auto &[weight, body] : found) { weight = 1.f / (0.01f + weight); sum += weight; }
++        for (auto &[weight, body] : found) { weight /= sum; }
++        return found;
++    }
++} // namespace
++
++bool Physics3D::registerCloth(Entity entity) {
++    if (!isInitialized() || !entity.isValid() || !entity.hasComponent<Rigidbody3DComponent>() ||
++        !entity.hasComponent<Cloth3DComponent>() || m_cloths.contains(entity.getId())) { return false; }
++    const auto config = entity.getComponent<Cloth3DComponent>();
++    Entity source = m_world->getById(config.renderEntity);
++    if (!source.isValid() || !source.isDescendantOf(entity) ||
++        !source.hasComponent<ImportedSubmeshComponent>() || source.hasComponent<RuntimeMeshComponent>()) {
++        warnCloth(entity, "renderEntity must name an imported primitive below the sheet owner");
++        return false;
++    }
++    if (entity.getComponent<Rigidbody3DComponent>().type != Rigidbody3DComponent::BodyType::DYNAMIC ||
++        entity.hasComponent<BoxCollider3DComponent>() || entity.hasComponent<MeshCollider3DComponent>() ||
++        entity.hasComponent<SphereCollider3DComponent>() || entity.hasComponent<CapsuleCollider3DComponent>() ||
++        source.hasComponent<BoxCollider3DComponent>() || source.hasComponent<SphereCollider3DComponent>() ||
++        source.hasComponent<CapsuleCollider3DComponent>()) {
++        warnCloth(entity, "use a dynamic owner without rigid colliders; only the imported static source may have a mesh collider");
++        return false;
++    }
++    if (config.columns < 2 || config.rows < 2 || config.columns > 16 || config.rows > 24 ||
++        config.columns * config.rows > 256 || !std::isfinite(config.mass) || config.mass <= 0.f ||
++        !std::isfinite(config.thickness) || config.thickness < 0.003f || config.thickness > 0.1f ||
++        !std::isfinite(config.bendHertz) || config.bendHertz <= 0.f || config.bendHertz > 30.f ||
++        !std::isfinite(config.dampingRatio) || config.dampingRatio < 0.f || config.dampingRatio > 2.f ||
++        !std::isfinite(config.friction) || config.friction < 0.f || config.friction > 2.f) {
++        warnCloth(entity, "invalid cloth dimensions, mass or spring properties");
++        return false;
++    }
++    auto c = std::make_shared<ClothRuntime>();
++    c->owner = entity;
++    c->source = source;
++    c->originalMesh = source.getComponent<ImportedSubmeshComponent>();
++    auto imported = c->originalMesh.importedMesh.as<ImportedMeshAsset>();
++    if (!imported || c->originalMesh.submeshIndex >= imported->submeshCount() ||
++        c->originalMesh.primitiveIndex >= imported->submeshAt(c->originalMesh.submeshIndex).primitives.size()) {
++        warnCloth(entity, "missing imported mesh primitive");
++        return false;
++    }
++    const auto &primitive = imported->submeshAt(c->originalMesh.submeshIndex).primitives[c->originalMesh.primitiveIndex];
++    c->restVertices = primitive.source.vertices;
++    c->indices = primitive.source.indices;
++    auto ownerTransform = entity.calculateWorldSpaceTransform();
++    c->restMatrix = ownerTransform.getLocalTransform();
++    c->restRotation = ownerTransform.getRotation();
++    const glm::vec3 scale = ownerTransform.getScale();
++    if (glm::any(glm::lessThanEqual(scale, glm::vec3(0.f)))) {
++        warnCloth(entity, "cloth needs a positive nonzero owner scale");
++        return false;
++    }
++    const glm::mat4 relative = glm::inverse(c->restMatrix) * source.calculateWorldSpaceTransform().getLocalTransform();
++    const glm::mat3 normalMatrix = glm::transpose(glm::inverse(glm::mat3(relative)));
++    glm::vec3 low(std::numeric_limits<float>::max()), high(-std::numeric_limits<float>::max());
++    for (auto &v : c->restVertices) {
++        v.pos = pointOf(relative, v.pos);
++        v.normal = unit(normalMatrix * v.normal);
++        low = glm::min(low, v.pos);
++        high = glm::max(high, v.pos);
++    }
++    const int rowAxis = config.horizontal ? 2 : 1;
++    const float dx = (high.x - low.x) / config.columns;
++    const float dy = (high[rowAxis] - low[rowAxis]) / config.rows;
++    if (dx < 0.02f || dy < 0.02f || !refine(c->restVertices, c->indices, 0.65f * std::min(dx, dy))) {
++        warnCloth(entity, "source geometry cannot be refined within the sheet mesh budget");
++        return false;
++    }
++    c->vertices = c->restVertices;
++    c->bindings.reserve(c->restVertices.size());
++    for (const auto &v : c->restVertices) {
++        const float x = glm::clamp((v.pos.x - low.x) / dx - 0.5f, 0.f, float(config.columns - 1));
++        const float y = glm::clamp((v.pos[rowAxis] - low[rowAxis]) / dy - 0.5f, 0.f, float(config.rows - 1));
++        const int x0 = std::min(int(x), config.columns - 2), y0 = std::min(int(y), config.rows - 2);
++        const float tx = x - x0, ty = y - y0;
++        const uint32_t a = y0 * config.columns + x0, b = a + config.columns;
++        c->bindings.push_back({{a, a + 1, b, b + 1}, {(1-tx)*(1-ty), tx*(1-ty), (1-tx)*ty, tx*ty}});
++    }
++
++    const b3WorldId world = intToB3WorldId(m_physicsWorldId);
++    c->cells.reserve(config.columns * config.rows);
++    for (int row = 0; row < config.rows; ++row) {
++        for (int col = 0; col < config.columns; ++col) {
++            ClothRuntime::Cell cell;
++            cell.pinned = config.pinTop && row == config.rows - 1;
++            cell.restLocal = (low + high) * 0.5f;
++            cell.restLocal.x = low.x + (col + 0.5f) * dx;
++            cell.restLocal[rowAxis] = low[rowAxis] + (row + 0.5f) * dy;
++            if (config.horizontal) {
++                // Thin backing at the bottom of the visual pile. Do not lift existing table legs
++                // by the full decorative wool thickness.
++                cell.restLocal.y = low.y + config.thickness * 0.5f;
++            }
++            cell.restWorld = pointOf(c->restMatrix, cell.restLocal);
++            cell.previousPosition = cell.restWorld;
++            cell.previousRotation = c->restRotation;
++            b3BodyDef body = b3DefaultBodyDef();
++            body.type = cell.pinned ? b3_staticBody : b3_dynamicBody;
++            body.position = {cell.restWorld.x, cell.restWorld.y, cell.restWorld.z};
++            body.rotation = quatOf(c->restRotation);
++            body.linearDamping = 0.5f;
++            body.angularDamping = 0.8f;
++            cell.body = b3CreateBody(world, &body);
++            const glm::vec3 half = (config.horizontal ? glm::vec3(dx * 0.49f, config.thickness * 0.5f, dy * 0.49f)
++                                                      : glm::vec3(dx * 0.49f, dy * 0.49f, config.thickness * 0.5f)) * scale;
++            b3BoxHull hull = b3MakeBoxHull(half.x, half.y, half.z);
++            b3ShapeDef shape = b3DefaultShapeDef();
++            shape.density = config.mass / float(config.columns * config.rows) / (8.f * half.x * half.y * half.z);
++            shape.baseMaterial.friction = config.friction;
++            shape.baseMaterial.restitution = 0.f;
++            // Contacts go through the normal world, but hundreds of internal cloth contacts
++            // do not generate gameplay collision callbacks.
++            shape.enableContactEvents = false;
++            b3CreateHullShape(cell.body, &shape, &hull.base);
++            if (!cell.pinned) { c->mass += b3Body_GetMass(cell.body); }
++            m_bodyEntityMap[cell.body.index1] = entity;
++            c->cells.push_back(cell);
++        }
++    }
++    auto connect = [&](size_t a, size_t b) {
++        const auto &ca = c->cells[a], &cb = c->cells[b];
++        if (ca.pinned && cb.pinned) { return; }
++        const glm::vec3 anchor = (ca.restLocal + cb.restLocal) * 0.5f;
++        const glm::vec3 anchorA = (anchor - ca.restLocal) * scale;
++        const glm::vec3 anchorB = (anchor - cb.restLocal) * scale;
++        b3WeldJointDef joint = b3DefaultWeldJointDef();
++        joint.base.bodyIdA = ca.body;
++        joint.base.bodyIdB = cb.body;
++        joint.base.localFrameA.p = vectorOf(anchorA);
++        joint.base.localFrameB.p = vectorOf(anchorB);
++        joint.base.collideConnected = false;
++        joint.linearHertz = 0.f; // inextensible seam
++        joint.angularHertz = config.bendHertz;
++        joint.linearDampingRatio = config.dampingRatio;
++        joint.angularDampingRatio = config.dampingRatio;
++        c->jointDefinitions.push_back(joint);
++        c->joints.push_back(b3CreateWeldJoint(world, &joint));
++    };
++    for (int row = 0; row < config.rows; ++row) {
++        for (int col = 0; col < config.columns; ++col) {
++            const size_t i = row * config.columns + col;
++            if (col + 1 < config.columns) { connect(i, i + 1); }
++            if (row + 1 < config.rows) { connect(i, i + config.columns); }
++        }
++    }
++
++    MutationGuard changing(m_changingCloth);
++    if (source.hasComponent<Rigidbody3DComponent>()) {
++        c->originalBody = source.getComponent<Rigidbody3DComponent>();
++        // Usually the init prepass gets here before the static body is registered.
++        if (isRegistered(source)) { removeEntity(source); }
++        source.removeComponent<Rigidbody3DComponent>();
++    }
++    if (source.hasComponent<MeshCollider3DComponent>()) {
++        c->originalCollider = source.getComponent<MeshCollider3DComponent>();
++        source.removeComponent<MeshCollider3DComponent>();
++    }
++    c->originalStatic = source.hasComponent<IsStaticComponent>();
++    if (c->originalStatic) { source.removeComponent<IsStaticComponent>(); }
++    c->mesh = GameContext::getAssetHandler()->createRuntimeAsset<RuntimeMeshAsset>();
++    const auto material = c->originalMesh.material.getId() != 0 ? c->originalMesh.material
++        : imported->materialForPrimitive(c->originalMesh.submeshIndex, c->originalMesh.primitiveIndex);
++    source.removeComponent<ImportedSubmeshComponent>();
++    auto &render = source.addComponent<RuntimeMeshComponent>();
++    render.runtimeMesh = c->mesh.asBaseAsset();
++    render.material = material;
++    RuntimeBodyData data;
++    const b3BodyId representative = c->cells.front().body; // first row is always free
++    memcpy(data.data, &representative, sizeof(representative));
++    data.previousPosition = c->cells.front().restWorld;
++    data.previousRotation = c->restRotation;
++    m_bodies.add(entity, data); // track transform changes through the normal hierarchy
++    m_cloths.emplace(entity.getId(), c);
++    writeClothMeshes(1.f);
++    LOG_INFO("Cloth3D '%s': %zu native Box3D cells, %zu mesh vertices", entity.getName().c_str(), c->cells.size(), c->vertices.size());
++    return true;
++}
++
++bool Physics3D::removeCloth(Entity entity) {
++    const UUID id = entity.getId();
++    auto it = m_cloths.find(id);
++    if (it == m_cloths.end()) {
++        it = std::find_if(m_cloths.begin(), m_cloths.end(), [id](const auto &v) { return v.second->source.getId() == id; });
++        if (it == m_cloths.end()) { return false; }
++    }
++    const auto c = it->second;
++    m_cloths.erase(it);
++    MutationGuard changing(m_changingCloth);
++    for (const auto &cell : c->cells) {
++        m_bodyEntityMap.erase(cell.body.index1);
++        if (b3Body_IsValid(cell.body)) { b3DestroyBody(cell.body); } // joints die with bodies
++    }
++    m_bodies.remove(c->owner);
++    // Deleted entities can still have components (undo tombstones); physical destruction has
++    // no components left and must not access their stale registry handles.
++    if (c->source.hasComponent<TransformComponent>()) {
++        if (c->source.hasComponent<RuntimeMeshComponent>()) { c->source.removeComponent<RuntimeMeshComponent>(); }
++        if (!c->source.hasComponent<ImportedSubmeshComponent>()) {
++            c->source.addComponent<ImportedSubmeshComponent>(c->originalMesh);
++        }
++        if (c->originalStatic && !c->source.hasComponent<IsStaticComponent>()) { c->source.addTag<IsStaticComponent>(); }
++        if (c->originalCollider && !c->source.hasComponent<MeshCollider3DComponent>()) {
++            c->source.addComponent<MeshCollider3DComponent>(*c->originalCollider);
++        }
++        if (c->originalBody && !c->source.hasComponent<Rigidbody3DComponent>()) {
++            c->source.addComponent<Rigidbody3DComponent>(*c->originalBody);
++        }
++    }
++    // AssetRefs leave with the state and render component. The regular per-frame AssetHandler
++    // cleanup frees both GPU buffers; no new assets are created by impacts or Reset.
++    return true;
++}
++
++void Physics3D::shutdownCloths() {
++    MutationGuard changing(m_changingCloth);
++    while (!m_cloths.empty()) { removeCloth(m_cloths.begin()->second->owner); }
++}
++
++void Physics3D::beginClothStep() {
++    for (auto &[id, c] : m_cloths) {
++        for (auto &cell : c->cells) {
++            cell.previousPosition = positionOf(cell.body);
++            cell.previousRotation = rotationOf(cell.body);
++        }
++    }
++}
++
++void Physics3D::writeClothMeshes(float alpha) {
++    for (auto &[id, c] : m_cloths) {
++        if (!c->source.isValid()) { continue; }
++        const glm::mat4 sourceMatrix = c->source.calculateWorldSpaceTransform().getLocalTransform();
++        const glm::mat4 inverseSource = glm::inverse(sourceMatrix);
++        const glm::mat3 restNormal = glm::transpose(glm::inverse(glm::mat3(c->restMatrix)));
++        const glm::mat3 toLocalNormal = glm::transpose(glm::mat3(sourceMatrix));
++        std::vector<glm::vec3> positions(c->cells.size());
++        std::vector<glm::quat> rotations(c->cells.size());
++        for (size_t i = 0; i < c->cells.size(); ++i) {
++            const auto &cell = c->cells[i];
++            positions[i] = glm::mix(cell.previousPosition, positionOf(cell.body), alpha);
++            rotations[i] = glm::slerp(cell.previousRotation, rotationOf(cell.body), alpha) * glm::inverse(c->restRotation);
++        }
++        for (size_t i = 0; i < c->vertices.size(); ++i) {
++            const glm::vec3 restPosition = pointOf(c->restMatrix, c->restVertices[i].pos);
++            const glm::vec3 normal = unit(restNormal * c->restVertices[i].normal);
++            glm::vec3 p(0.f), n(0.f);
++            const auto &binding = c->bindings[i];
++            for (size_t j = 0; j < 4; ++j) {
++                const uint32_t k = binding.cells[j];
++                p += binding.weights[j] * (positions[k] + rotations[k] * (restPosition - c->cells[k].restWorld));
++                n += binding.weights[j] * (rotations[k] * normal);
++            }
++            c->vertices[i].pos = pointOf(inverseSource, p);
++            c->vertices[i].normal = unit(toLocalNormal * n);
++        }
++        MeshData mesh(StaticResources::generalVertexLayout,
++            Foundation::Memory::copying(c->vertices.data(), c->vertices.size() * sizeof(Vertex)),
++            static_cast<uint32_t>(c->vertices.size() * sizeof(Vertex)),
++            Foundation::Memory::copying(c->indices.data(), c->indices.size() * sizeof(uint32_t)),
++            static_cast<uint32_t>(c->indices.size()));
++        mesh.vertexStride = sizeof(Vertex);
++        c->mesh->update(mesh);
++    }
++}
++
++bool Physics3D::syncCloth(Entity entity) {
++    auto it = m_cloths.find(entity.getId());
++    if (it == m_cloths.end()) { return false; }
++    auto &c = *it->second;
++    const auto t = entity.calculateWorldSpaceTransform();
++    c.restMatrix = t.getLocalTransform();
++    c.restRotation = t.getRotation();
++    // Teleporting a body does not clear Box3D's cached joint impulses. Recreate just the
++    // seams at Reset so a previous blow cannot kick a freshly restored sheet.
++    for (const b3JointId joint : c.joints) {
++        if (b3Joint_IsValid(joint)) { b3DestroyJoint(joint, false); }
++    }
++    c.joints.clear();
++    for (auto &cell : c.cells) {
++        cell.restWorld = pointOf(c.restMatrix, cell.restLocal);
++        cell.previousPosition = cell.restWorld;
++        cell.previousRotation = c.restRotation;
++        b3Body_SetTransform(cell.body, {cell.restWorld.x, cell.restWorld.y, cell.restWorld.z}, quatOf(c.restRotation));
++        if (!cell.pinned) {
++            b3Body_SetLinearVelocity(cell.body, {0.f, 0.f, 0.f});
++            b3Body_SetAngularVelocity(cell.body, {0.f, 0.f, 0.f});
++            b3Body_SetAwake(cell.body, true);
++        }
++    }
++    for (const auto &joint : c.jointDefinitions) {
++        c.joints.push_back(b3CreateWeldJoint(intToB3WorldId(m_physicsWorldId), &joint));
++    }
++    return true;
++}
++
++bool Physics3D::clothMassData(Entity entity, MassData3D &out) {
++    auto it = m_cloths.find(entity.getId());
++    if (it == m_cloths.end()) { return false; }
++    const auto &c = *it->second;
++    glm::vec3 center(0.f);
++    for (const auto &cell : c.cells) {
++        if (!cell.pinned) { center += b3Body_GetMass(cell.body) * positionOf(cell.body); }
++    }
++    out.mass = c.mass;
++    if (c.mass > 0.f) { center /= c.mass; }
++    out.center = Vec3(center.x, center.y, center.z);
++    // A deformable sheet has no SINGLE rigid inverse inertia. Point pushes go to local cells.
++    out.inverseInertia = glm::mat3(0.f);
++    return true;
++}
++
++bool Physics3D::clothVelocity(Entity entity, Vec3 &value, bool angular, bool set) {
++    auto it = m_cloths.find(entity.getId());
++    if (it == m_cloths.end()) { return false; }
++    glm::vec3 sum(0.f);
++    for (const auto &cell : it->second->cells) {
++        if (cell.pinned) { continue; }
++        if (set) {
++            if (angular) { b3Body_SetAngularVelocity(cell.body, {value.x, value.y, value.z}); }
++            else { b3Body_SetLinearVelocity(cell.body, {value.x, value.y, value.z}); }
++            b3Body_SetAwake(cell.body, true);
++        } else {
++            const auto v = angular ? b3Body_GetAngularVelocity(cell.body) : b3Body_GetLinearVelocity(cell.body);
++            sum += b3Body_GetMass(cell.body) * glm::vec3(v.x, v.y, v.z);
++        }
++    }
++    if (!set && it->second->mass > 0.f) { sum /= it->second->mass; value = Vec3(sum.x, sum.y, sum.z); }
++    return true;
++}
++
++bool Physics3D::clothPointVelocity(Entity entity, Vec3 point, Vec3 &out) {
++    auto it = m_cloths.find(entity.getId());
++    if (it == m_cloths.end()) { return false; }
++    glm::vec3 sum(0.f);
++    for (const auto &[weight, body] : localCells(*it->second, {point.x, point.y, point.z})) {
++        const auto v = b3Body_GetWorldPointVelocity(body, {point.x, point.y, point.z});
++        sum += weight * glm::vec3(v.x, v.y, v.z);
++    }
++    out = Vec3(sum.x, sum.y, sum.z);
++    return true;
++}
++
++bool Physics3D::clothPush(Entity entity, Vec3 value, Vec3 point, bool impulse, bool atPoint) {
++    auto it = m_cloths.find(entity.getId());
++    if (it == m_cloths.end()) { return false; }
++    std::vector<std::pair<float, b3BodyId>> cells;
++    if (atPoint) { cells = localCells(*it->second, {point.x, point.y, point.z}); }
++    else {
++        for (const auto &cell : it->second->cells) {
++            if (!cell.pinned) { cells.emplace_back(b3Body_GetMass(cell.body) / it->second->mass, cell.body); }
++        }
++    }
++    for (const auto &[weight, body] : cells) {
++        const b3Vec3 v = {value.x * weight, value.y * weight, value.z * weight};
++        if (atPoint) {
++            if (impulse) { b3Body_ApplyLinearImpulse(body, v, {point.x, point.y, point.z}, true); }
++            else { b3Body_ApplyForce(body, v, {point.x, point.y, point.z}, true); }
++        } else {
++            if (impulse) { b3Body_ApplyLinearImpulseToCenter(body, v, true); }
++            else { b3Body_ApplyForceToCenter(body, v, true); }
++        }
++    }
++    return true;
++}
++
++bool Physics3D::clothTorque(Entity entity, Vec3 value, bool impulse) {
++    auto it = m_cloths.find(entity.getId());
++    if (it == m_cloths.end()) { return false; }
++    for (const auto &cell : it->second->cells) {
++        if (cell.pinned) { continue; }
++        const float w = b3Body_GetMass(cell.body) / it->second->mass;
++        const b3Vec3 v = {value.x * w, value.y * w, value.z * w};
++        if (impulse) { b3Body_ApplyAngularImpulse(cell.body, v, true); }
++        else { b3Body_ApplyTorque(cell.body, v, true); }
++    }
++    return true;
++}
++
++} // namespace Panda

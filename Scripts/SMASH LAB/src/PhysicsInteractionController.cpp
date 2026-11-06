@@ -2,6 +2,7 @@
 
 #include "CursorRay.hpp"
 #include "OrbitCameraController.hpp"
+#include "SdkComponentAccess.hpp"
 
 #include <Bamboo/Components/Rigidbody3DComponentAPI.hpp>
 #include <Bamboo/Components/TransformComponentAPI.hpp>
@@ -19,7 +20,7 @@
 namespace {
 
 constexpr size_t kExistingObjectCount = 25;
-constexpr std::array<const char *, 83> kObjectTags = {
+constexpr std::array<const char *, 86> kObjectTags = {
     "Cube_Red", "Cube_Blue", "Cube_Green", "Cube_Yellow", "Cube_Purple", "Crate_Wood", "Sphere_Small",
     "Sphere_Large", "Platform", "Cylinder_BoxCollider", "CoffeeTable", "Bowl_CoffeeTable",
     "CoffeeTable_Book_01", "CoffeeTable_Book_02", "Vase_CoffeeTable", "Sofa", "Sofa_BackFrame",
@@ -36,8 +37,12 @@ constexpr std::array<const char *, 83> kObjectTags = {
     "Bookshelf_Book_31", "Bookshelf_StorageBox_1", "Bookshelf_StorageBox_3", "Bookshelf_Vase_1",
     "Bookshelf_Vase_2", "Bookshelf_Decor_Ring", "TVStand", "TVStand_Book", "Vase_TVStand", "Plant_TVStand",
     "Television", "Television_Foot_L", "Television_Foot_R", "FloorLamp", "FloorLamp_Shade", "Plant_Large",
-    "Painting_Back", "Painting_Left_01", "Painting_Left_02"
+    "Painting_Back", "Painting_Left_01", "Painting_Left_02", "Curtain_Left", "Curtain_Right", "Rug_SoftWool"
 };
+
+bool isClothTag(std::string_view tag) {
+    return tag == "Curtain_Left" || tag == "Curtain_Right" || tag == "Rug_SoftWool";
+}
 
 bool isSofaFrame(Bamboo::EntityHandle entity) {
     const char *name = Bamboo::EntityAPI::getName(entity);
@@ -75,6 +80,14 @@ void PhysicsInteractionController::start() {
     for (size_t i = 0; i < kObjectTags.size(); ++i) {
         const auto matches = Bamboo::WorldAPI::findAllByTag(kObjectTags[i]);
         if (matches.empty()) { continue; }
+        if (matches.size() == 1 && isClothTag(kObjectTags[i]) &&
+            !SmashLab::Components::has(matches.front(), "cloth3dComponent")) {
+            // An older editor cannot simulate the new module component. Leave its original
+            // static curtain mesh intact and avoid an empty, falling owner body.
+            SmashLab::Components::remove(matches.front(), "rigidbody3dComponent");
+            LOG_ERROR("%s needs the cloth-enabled PandaEditor; cloth interaction is unavailable in this editor.", kObjectTags[i]);
+            continue;
+        }
         if (matches.size() != 1 || !isDynamic(matches.front())) {
             LOG_ERROR("Impact Tool: expected one dynamic object named %s; interaction is disabled.", kObjectTags[i]);
             m_ready = false;
@@ -94,6 +107,9 @@ void PhysicsInteractionController::start() {
         // Existing editor-authored material ID, copied unchanged with its
         // sidecar to Object_Glass.mat. No published fields or guessed fieldIds.
         m_ready = m_destruction.initialize(std::move(definition));
+    }
+    if (m_ready) {
+        m_ready = m_furnitureDestruction.initialize(SmashLab::livingRoomFurnitureDefinitions());
     }
 }
 
@@ -180,6 +196,7 @@ void PhysicsInteractionController::fixedUpdate(float stepTime) {
                  Bamboo::Rigidbody3DComponentAPI::getMass(hit.entity));
         if (!isDynamic(hit.entity)) { continue; }
         if (m_destruction.impact(hit.entity, hit.point, ray.direction, ray.strength)) { continue; }
+        if (m_furnitureDestruction.impact(hit.entity, hit.point, ray.direction, ray.strength)) { continue; }
         const float mass = Bamboo::Rigidbody3DComponentAPI::getMass(hit.entity);
         // One impulse budget for the whole heavy sofa assembly, regardless of
         // which frame piece was hit. Other objects retain their existing response.
@@ -194,6 +211,10 @@ void PhysicsInteractionController::fixedUpdate(float stepTime) {
                 impulseMass = 8.f; // One budget for the joined bookshelf frame.
             } else if (tag == "TVStand") {
                 impulseMass = 12.f;
+            } else if (tag == "Curtain_Left" || tag == "Curtain_Right") {
+                impulseMass = std::min(mass, 0.04f); // local push on light fabric cells
+            } else if (tag == "Rug_SoftWool") {
+                impulseMass = std::min(mass, 0.25f);
             } else {
                 impulseMass = std::min(mass, 2.f);
             }
@@ -213,16 +234,20 @@ bool PhysicsInteractionController::restoreRoom() {
     // deleted/retyped object cannot leave a partially restored room.
     for (const InitialState &state : m_initialStates) {
         if (state.entity.id == 0) { continue; }
-        if (!m_destruction.isSource(state.entity) && !isDynamic(state.entity)) {
+        if (!m_destruction.isSource(state.entity) && !m_furnitureDestruction.isSource(state.entity) &&
+            !isDynamic(state.entity)) {
             LOG_ERROR("Impact Tool: an initial dynamic object is unavailable; reset was cancelled.");
             return false;
         }
     }
     // Remove all fragment bodies before restoring the source collider. Its
     // entity/handle is retained, so there are no deferred deletes or ID swaps.
-    if (!m_destruction.restore()) { return false; }
+    if (!m_destruction.restore() || !m_furnitureDestruction.restore()) { return false; }
     for (const InitialState &state : m_initialStates) {
-        if (state.entity.id == 0 || m_destruction.isSource(state.entity)) { continue; }
+        if (state.entity.id == 0 || m_destruction.isSource(state.entity) ||
+            m_furnitureDestruction.isSource(state.entity)) {
+            continue;
+        }
         // Rebuilding an unchanged body would destroy the sofa's Box3D joints.
         // Pose setters teleport in place, clear velocity and keep those joints.
         const auto scale = Bamboo::TransformComponentAPI::getScale(state.entity);
@@ -243,6 +268,7 @@ void PhysicsInteractionController::shutdown() {
     m_pendingImpacts.clear();
     m_ready = false;
     m_destruction.shutdown();
+    m_furnitureDestruction.shutdown();
     if (m_camera) {
         m_camera->clearImpactClicks();
         m_camera->showInteractionMarker(false);

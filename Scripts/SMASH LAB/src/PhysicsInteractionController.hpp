@@ -4,6 +4,7 @@
 #include <Bamboo/Script.hpp>
 
 #include "DestructionSystem.hpp"
+#include "FurnitureDestructionSystem.hpp"
 
 #include <array>
 #include <memory>
@@ -34,7 +35,7 @@ private:
         float strength;
     };
 
-    static constexpr size_t kObjectCount = 83;
+    static constexpr size_t kObjectCount = 86;
     static constexpr size_t kMaxPendingImpacts = 16;
     static constexpr float kRayDistance = 80.f;
 
@@ -44,6 +45,7 @@ private:
     std::vector<ImpactRay> m_pendingImpacts;
     std::shared_ptr<OrbitCameraController> m_camera;
     SmashLab::DestructionSystem m_destruction;
+    SmashLab::FurnitureDestructionSystem m_furnitureDestruction;
     bool m_ready = false;
     bool m_reportedMissingCamera = false;
 };

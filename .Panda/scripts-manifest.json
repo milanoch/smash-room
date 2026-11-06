@@ -9,6 +9,10 @@
             "scriptFields": []
         },
         {
+            "name": "RgbLampController",
+            "scriptFields": []
+        },
+        {
             "name": "SampleScript",
             "scriptFields": [
                 {
