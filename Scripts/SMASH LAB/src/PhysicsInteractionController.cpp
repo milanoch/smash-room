@@ -2,6 +2,7 @@
 
 #include "CursorRay.hpp"
 #include "OrbitCameraController.hpp"
+#include "MenuNavigation.hpp"
 #include "SdkComponentAccess.hpp"
 
 #include <Bamboo/Components/Rigidbody3DComponentAPI.hpp>
@@ -73,6 +74,11 @@ void PhysicsInteractionController::start() {
     m_pendingImpacts.reserve(kMaxPendingImpacts);
     m_reportedMissingCamera = false;
     m_camera.reset();
+    m_ready = false;
+    if (!SmashLab::MenuNavigation::enterRoom(SmashLab::kTestRoomWorldAssetId)) {
+        LOG_INFO("SMASH LAB: direct Play opens MainMenu before entering the test room.");
+        return;
+    }
     m_ready = true;
 
     // start() runs after physics initialization and before the first fixed step.

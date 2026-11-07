@@ -1,0 +1,84 @@
+{
+    "inputs": [
+        {
+            "name": "baseColorTexture",
+            "type": 3,
+            "value": 0
+        },
+        {
+            "name": "baseColorFactor",
+            "type": 4,
+            "value": {
+                "x": 0.21502573788166046,
+                "y": 0.21502573788166046,
+                "z": 0.21502573788166046,
+                "w": 1.0
+            }
+        },
+        {
+            "name": "metallicRoughnessTexture",
+            "type": 3,
+            "value": 0
+        },
+        {
+            "name": "metallicFactor",
+            "type": 0,
+            "value": 0.05000000074505806
+        },
+        {
+            "name": "roughnessFactor",
+            "type": 0,
+            "value": 0.28999999165534973
+        },
+        {
+            "name": "normalTexture",
+            "type": 3,
+            "value": 0
+        },
+        {
+            "name": "normalScale",
+            "type": 0,
+            "value": 0.0
+        },
+        {
+            "name": "occlusionTexture",
+            "type": 3,
+            "value": 0
+        },
+        {
+            "name": "occlusionStrength",
+            "type": 0,
+            "value": 0.0
+        },
+        {
+            "name": "emissiveTexture",
+            "type": 3,
+            "value": 0
+        },
+        {
+            "name": "emissiveFactor",
+            "type": 4,
+            "value": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 1.0
+            }
+        },
+        {
+            "name": "alphaMode",
+            "type": 1,
+            "value": 0
+        },
+        {
+            "name": "alphaCutoff",
+            "type": 0,
+            "value": 0.5
+        },
+        {
+            "name": "doubleSided",
+            "type": 1,
+            "value": 1
+        }
+    ]
+}

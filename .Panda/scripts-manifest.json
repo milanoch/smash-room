@@ -1,6 +1,10 @@
 {
     "scripts": [
         {
+            "name": "GameMenuController",
+            "scriptFields": []
+        },
+        {
             "name": "OrbitCameraController",
             "scriptFields": []
         },

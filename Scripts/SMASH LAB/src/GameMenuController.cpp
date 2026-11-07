@@ -1,5 +1,6 @@
 #include "GameMenuController.hpp"
 #include "RoomCatalog.hpp"
+#include "MenuNavigation.hpp"
 
 #include <Bamboo/ApplicationAPI.hpp>
 #include <Bamboo/Assets/TextureAPI.hpp>
@@ -25,9 +26,15 @@ namespace {
 using namespace PandaUI;
 
 enum class Screen { Home, Rooms, Settings, PausePreview };
-enum class Action { None, Home, Rooms, Settings, Back, PausePreview, SelectRoom, Play, TextSize, Exit };
+enum class Action { None, Home, Rooms, Settings, Back, PausePreview, SelectRoom, Play, TextSize, Language, Exit };
+enum class MenuLanguage { English, Russian };
 constexpr size_t kNoRoom = std::numeric_limits<size_t>::max();
 float s_menuTextScale = 1.f; // menus in this script session; no new save subsystem
+MenuLanguage s_menuLanguage = MenuLanguage::English;
+
+const char *tr(const char *english, const char *russian) {
+    return s_menuLanguage == MenuLanguage::Russian ? russian : english;
+}
 const Color kText(.94f, .95f, .97f, 1.f);
 const Color kMuted(.57f, .60f, .65f, 1.f);
 const Color kBorder(1.f, 1.f, 1.f, .12f);
@@ -123,6 +130,7 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
                                    bool selected = false, size_t value = 0) {
         auto result = std::make_shared<Button>(title);
         result->setAppearance(buttonAppearance(selected));
+        result->setNumberOfLines(0);
         result->setSelected(selected);
         result->setEnabled(enabled);
         result->layout().setFlexShrink(0.f);
@@ -172,16 +180,16 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
             picture->addSubview(image);
         } else {
             picture->layout().setPadding(20.f);
-            picture->addSubview(label("Preview coming soon", 15.f, kMuted));
+            picture->addSubview(label(tr("Preview coming soon", "Изображение появится позже"), 15.f, kMuted));
         }
         card->addSubview(picture);
-        card->addSubview(label(ready ? "READY TO PLAY" : "IN DEVELOPMENT", 11.f,
+        card->addSubview(label(ready ? tr("READY TO PLAY", "ДОСТУПНА") : tr("IN DEVELOPMENT", "В РАЗРАБОТКЕ"), 11.f,
                                 ready ? Color(.55f, .85f, .7f, 1.f) : Color(.8f, .7f, .5f, 1.f), FontWeight::Medium));
-        card->addSubview(label(room.name, 26.f, kText, FontWeight::Bold));
-        card->addSubview(label(room.description, 15.f, kMuted));
-        auto select = button(ready ? (selected ? "Selected" : "Select room") : "Coming soon",
+        card->addSubview(label(tr(room.name, room.nameRu), 26.f, kText, FontWeight::Bold));
+        card->addSubview(label(tr(room.description, room.descriptionRu), 15.f, kMuted));
+        auto select = button(ready ? (selected ? tr("Selected", "Выбрано") : tr("Select room", "Выбрать комнату")) : tr("Coming soon", "Скоро"),
                              Action::SelectRoom, ready, selected, index);
-        if (!ready) { select->setTooltip("This room is still being created."); }
+        if (!ready) { select->setTooltip(tr("This room is still being created.", "Эта комната ещё создаётся.")); }
         card->addSubview(select);
         return card;
     }
@@ -189,16 +197,18 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
     std::shared_ptr<StackView> navigation() {
         auto row = stack(StackAxis::Horizontal, 8.f);
         row->layout().setFlexWrap(Wrap::Wrap);
-        row->addSubview(button("Main Menu", Action::Home, true, screen == Screen::Home));
-        row->addSubview(button("Rooms", Action::Rooms, true, screen == Screen::Rooms));
-        row->addSubview(button("Settings", Action::Settings, true, screen == Screen::Settings));
+        row->layout().setFlexShrink(1.f);
+        row->layout().setMaxWidth(Length::percent(100.f));
+        row->addSubview(button(tr("Main Menu", "Главное меню"), Action::Home, true, screen == Screen::Home));
+        row->addSubview(button(tr("Rooms", "Комнаты"), Action::Rooms, true, screen == Screen::Rooms));
+        row->addSubview(button(tr("Settings", "Настройки"), Action::Settings, true, screen == Screen::Settings));
         return row;
     }
 
     void home(StackView &content) {
-        content.addSubview(label("PHYSICS SANDBOX", 12.f, kMuted, FontWeight::Medium));
+        content.addSubview(label(tr("PHYSICS SANDBOX", "ФИЗИЧЕСКАЯ ПЕСОЧНИЦА"), 12.f, kMuted, FontWeight::Medium));
         content.addSubview(label("SMASH LAB", 54.f, kText, FontWeight::Bold));
-        content.addSubview(label("Choose a room. Make an impact.", 19.f, kMuted));
+        content.addSubview(label(tr("Choose a room. Make an impact.", "Выбери комнату. Испытай её на прочность."), 19.f, kMuted));
         auto row = stack(StackAxis::Horizontal, 28.f);
         row->layout().setFlexWrap(Wrap::Wrap);
         row->setAlignment(Align::Start);
@@ -207,13 +217,13 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
         controls->layout().setWidth(Length::points(240.f));
         bool hasReadyRoom = false;
         for (const auto &room : SmashLab::kRooms) { hasReadyRoom |= room.playable(); }
-        auto play = button("Play", Action::Play, hasReadyRoom);
-        if (!hasReadyRoom) { play->setTooltip("No playable rooms yet. Check Rooms for progress."); }
+        auto play = button(tr("Play", "Играть"), Action::Play, hasReadyRoom);
+        if (!hasReadyRoom) { play->setTooltip(tr("No playable rooms yet. Check Rooms for progress.", "Пока нет доступных комнат. Загляни в раздел «Комнаты».")); }
         controls->addSubview(play);
-        controls->addSubview(button("Rooms", Action::Rooms));
-        controls->addSubview(button("Settings", Action::Settings));
-        controls->addSubview(button("Exit", Action::Exit));
-        if (!hasReadyRoom) { controls->addSubview(label("Your first room is on the way.", 14.f, kMuted)); }
+        controls->addSubview(button(tr("Rooms", "Комнаты"), Action::Rooms));
+        controls->addSubview(button(tr("Settings", "Настройки"), Action::Settings));
+        controls->addSubview(button(tr("Exit", "Выход"), Action::Exit));
+        if (!hasReadyRoom) { controls->addSubview(label(tr("Your first room is on the way.", "Первая игровая комната скоро появится."), 14.f, kMuted)); }
         row->addSubview(controls);
         if (!SmashLab::kRooms.empty()) {
             auto feature = roomCard(selectedRoom < SmashLab::kRooms.size() ? selectedRoom : 0);
@@ -227,9 +237,9 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
     }
 
     void rooms(StackView &content) {
-        content.addSubview(label("THE COLLECTION", 12.f, kMuted, FontWeight::Medium));
-        content.addSubview(label("Rooms", 38.f, kText, FontWeight::Bold));
-        content.addSubview(label("Each room is its own space. More rooms will appear here as they become ready.", 16.f, kMuted));
+        content.addSubview(label(tr("THE COLLECTION", "ВЫБОР КОМНАТЫ"), 12.f, kMuted, FontWeight::Medium));
+        content.addSubview(label(tr("Rooms", "Комнаты"), 38.f, kText, FontWeight::Bold));
+        content.addSubview(label(tr("Each room is its own space. More rooms will appear here as they become ready.", "У каждой комнаты свой мир. Новые комнаты появятся здесь по мере готовности."), 16.f, kMuted));
         auto cards = stack(StackAxis::Horizontal, 20.f);
         cards->layout().setFlexWrap(Wrap::Wrap);
         cards->setAlignment(Align::Start);
@@ -244,51 +254,62 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
         }
         content.addSubview(cards);
         const bool canPlay = selectedRoom < SmashLab::kRooms.size() && SmashLab::kRooms[selectedRoom].playable();
-        auto play = button("Play selected room", Action::Play, canPlay);
+        auto play = button(tr("Play selected room", "Играть в выбранной комнате"), Action::Play, canPlay);
         play->layout().setMaxWidth(Length::points(320.f));
         content.addSubview(play);
-        if (!canPlay) { content.addSubview(label("Kitchen is in development and cannot be launched yet.", 14.f, kMuted)); }
+        if (!canPlay) { content.addSubview(label(tr("Select an available room to continue.", "Выбери доступную комнату для запуска."), 14.f, kMuted)); }
     }
 
     void settings(StackView &content) {
-        content.addSubview(label("MAKE YOURSELF COMFORTABLE", 12.f, kMuted, FontWeight::Medium));
-        content.addSubview(label("Settings", 38.f, kText, FontWeight::Bold));
+        content.addSubview(label(tr("MAKE YOURSELF COMFORTABLE", "УСТРОЙСЯ ПОУДОБНЕЕ"), 12.f, kMuted, FontWeight::Medium));
+        content.addSubview(label(tr("Settings", "Настройки"), 38.f, kText, FontWeight::Bold));
+        auto language = stack(StackAxis::Vertical, 16.f);
+        cardSurface(*language);
+        language->layout().setPadding(24.f);
+        language->addSubview(label(tr("Language / Язык", "Язык / Language"), 23.f, kText, FontWeight::Medium));
+        auto languages = stack(StackAxis::Horizontal, 10.f);
+        languages->layout().setFlexWrap(Wrap::Wrap);
+        languages->addSubview(button("English", Action::Language, true, s_menuLanguage == MenuLanguage::English, 0));
+        languages->addSubview(button("Русский", Action::Language, true, s_menuLanguage == MenuLanguage::Russian, 1));
+        language->addSubview(languages);
+        language->addSubview(label(tr("Menu language for this session.", "Язык меню в текущем сеансе."), 15.f, kMuted));
+        content.addSubview(language);
         auto panel = stack(StackAxis::Vertical, 18.f);
         cardSurface(*panel);
         panel->layout().setPadding(24.f);
-        panel->addSubview(label("Text size", 23.f, kText, FontWeight::Medium));
-        panel->addSubview(label("Applies to the menu text during this session.", 15.f, kMuted));
+        panel->addSubview(label(tr("Text size", "Размер текста"), 23.f, kText, FontWeight::Medium));
+        panel->addSubview(label(tr("Applies to the menu text during this session.", "Применяется к тексту меню в текущем сеансе."), 15.f, kMuted));
         auto sizes = stack(StackAxis::Horizontal, 10.f);
         sizes->layout().setFlexWrap(Wrap::Wrap);
         constexpr std::array<float, 3> scales = {.9f, 1.f, 1.15f};
-        constexpr std::array<const char *, 3> names = {"Small", "Default", "Large"};
+        const std::array<const char *, 3> names = {tr("Small", "Маленький"), tr("Default", "Обычный"), tr("Large", "Большой")};
         for (size_t i = 0; i < names.size(); ++i) {
             sizes->addSubview(button(names[i], Action::TextSize, true, s_menuTextScale == scales[i], i));
         }
         panel->addSubview(sizes);
         content.addSubview(panel);
-        content.addSubview(label("Room controls", 22.f, kText, FontWeight::Medium));
-        content.addSubview(label("Explore the pause-menu layout before the first playable room is ready.", 15.f, kMuted));
-        auto previewButton = button("Preview pause menu", Action::PausePreview);
+        content.addSubview(label(tr("Room controls", "Меню комнаты"), 22.f, kText, FontWeight::Medium));
+        content.addSubview(label(tr("Preview the pause-menu layout. It does not pause gameplay yet.", "Посмотри, как будет выглядеть меню паузы. Саму игру оно пока не останавливает."), 15.f, kMuted));
+        auto previewButton = button(tr("Preview pause menu", "Посмотреть меню паузы"), Action::PausePreview);
         previewButton->layout().setMaxWidth(Length::points(320.f));
         content.addSubview(previewButton);
-        auto back = button("Back", Action::Back);
+        auto back = button(tr("Back", "Назад"), Action::Back);
         back->layout().setMaxWidth(Length::points(180.f));
         content.addSubview(back);
     }
 
     void pausePreview(StackView &content) {
-        content.addSubview(label("PREVIEW ONLY", 12.f, Color(.8f, .7f, .5f, 1.f), FontWeight::Medium));
-        content.addSubview(label("Pause menu", 38.f, kText, FontWeight::Bold));
-        content.addSubview(label("No active room. Resume and restart are unavailable.", 16.f, kMuted));
+        content.addSubview(label(tr("PREVIEW ONLY", "ПРЕДПРОСМОТР"), 12.f, Color(.8f, .7f, .5f, 1.f), FontWeight::Medium));
+        content.addSubview(label(tr("Pause menu", "Меню паузы"), 38.f, kText, FontWeight::Bold));
+        content.addSubview(label(tr("No active room. Resume and restart are unavailable.", "Комната не запущена. Продолжение и перезапуск недоступны."), 16.f, kMuted));
         auto panel = stack(StackAxis::Vertical, 12.f);
         cardSurface(*panel);
         panel->layout().setPadding(24.f);
         panel->layout().setMaxWidth(Length::points(420.f));
-        panel->addSubview(button("Resume", Action::None, false));
-        panel->addSubview(button("Restart Room", Action::None, false));
-        panel->addSubview(button("Settings", Action::Settings));
-        panel->addSubview(button("Main Menu", Action::Home));
+        panel->addSubview(button(tr("Resume", "Продолжить"), Action::None, false));
+        panel->addSubview(button(tr("Restart Room", "Перезапустить комнату"), Action::None, false));
+        panel->addSubview(button(tr("Settings", "Настройки"), Action::Settings));
+        panel->addSubview(button(tr("Main Menu", "Главное меню"), Action::Home));
         content.addSubview(panel);
     }
 
@@ -335,7 +356,7 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
         }
         scroll->addContentSubview(content);
         nextRoot->addSubview(scroll);
-        nextRoot->addSubview(label("EARLY DEVELOPMENT   /   Tab to navigate   /   Esc to go back", 11.f, kMuted));
+        nextRoot->addSubview(label(tr("EARLY DEVELOPMENT   /   Tab to navigate   /   Esc to go back", "В РАЗРАБОТКЕ   /   Tab — навигация   /   Esc — назад"), 11.f, kMuted));
         root = nextRoot;
         window.setRootView(root);
         window.context().setFocusedView(firstButton ? static_cast<View *>(firstButton.get()) : root.get());
@@ -378,7 +399,7 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
                 if (selectedRoom < SmashLab::kRooms.size() && SmashLab::kRooms[selectedRoom].playable()) {
                     // Host queues a safe world transition. This callback does not destroy
                     // its own world/script, drive physics, or load files by itself.
-                    Bamboo::WorldAPI::load(Bamboo::WorldHandle(SmashLab::kRooms[selectedRoom].worldAssetId));
+                    SmashLab::MenuNavigation::openRoom(SmashLab::kRooms[selectedRoom]);
                 }
                 return;
             case Action::TextSize: {
@@ -389,6 +410,11 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
                 }
                 break;
             }
+            case Action::Language:
+                if (pendingValue < 2) {
+                    s_menuLanguage = pendingValue == 1 ? MenuLanguage::Russian : MenuLanguage::English;
+                }
+                break;
             case Action::Exit:
                 Bamboo::ApplicationAPI::quit(); // Stop in PandaEditor; quit in a standalone game
                 return;
@@ -415,6 +441,7 @@ struct GameMenuController::State final : std::enable_shared_from_this<GameMenuCo
 };
 
 void GameMenuController::start() {
+    SmashLab::MenuNavigation::menuStarted();
     m_state = std::make_shared<State>();
     m_state->attach();
 }

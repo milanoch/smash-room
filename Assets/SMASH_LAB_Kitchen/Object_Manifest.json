@@ -1,0 +1,7149 @@
+{
+  "project": "SMASH LAB \u2014 Enclosed Apartment Kitchen",
+  "format": "glTF 2.0 separate",
+  "units": "metres",
+  "gltf_up_axis": "+Y",
+  "source_up_axis": "+Z",
+  "seed": 240519,
+  "mesh_nodes": 394,
+  "triangles": 173072,
+  "material_count": 55,
+  "root_hierarchy": [
+    "Room_Architecture",
+    "Kitchen_Furniture",
+    "Loose_Props",
+    "Lighting_Fixtures"
+  ],
+  "notes": "Independent mesh nodes retained for movable props and functional parts. Suggested masses are starting values, not a physics simulation.",
+  "objects": [
+    {
+      "name": "Backsplash_Back",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        6.95,
+        0.025,
+        0.43
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Backsplash_Tile"
+      ]
+    },
+    {
+      "name": "Backsplash_Left",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.025,
+        5.35,
+        0.43
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Backsplash_Tile"
+      ]
+    },
+    {
+      "name": "Backsplash_Outlet_01",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.085,
+        0.018,
+        0.12
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Backsplash_Outlet_01_Socket_-0.018",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "triangles": 44,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Backsplash_Outlet_01_Socket_0.018",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "triangles": 44,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Backsplash_Outlet_02",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.085,
+        0.018,
+        0.12
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Backsplash_Outlet_02_Socket_-0.018",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "triangles": 44,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Backsplash_Outlet_02_Socket_0.018",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "triangles": 44,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Baseboard_Back",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        7.18,
+        0.035,
+        0.13
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Baseboard_Front_Left",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        5.0,
+        0.035,
+        0.13
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Baseboard_Front_Right",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.0,
+        0.035,
+        0.13
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Baseboard_Left",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.035,
+        5.55,
+        0.13
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Baseboard_Right",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.035,
+        5.55,
+        0.13
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Ceiling",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        7.5,
+        5.95,
+        0.18
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceiling_Chalk"
+      ]
+    },
+    {
+      "name": "Corridor_Baseboard_End",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.42,
+        0.03,
+        0.12
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Corridor_Ceiling",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.55,
+        1.75,
+        0.14
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceiling_Chalk"
+      ]
+    },
+    {
+      "name": "Corridor_Coat_Hook_01",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.03,
+        0.065,
+        0.03
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Corridor_Coat_Hook_02",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.03,
+        0.065,
+        0.03
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Corridor_Coat_Hook_03",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.03,
+        0.065,
+        0.03
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Corridor_Coat_Hook_Tip_01",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.052,
+        0.052,
+        0.052
+      ],
+      "triangles": 168,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Corridor_Coat_Hook_Tip_02",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.052,
+        0.052,
+        0.052
+      ],
+      "triangles": 168,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Corridor_Coat_Hook_Tip_03",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.052,
+        0.052,
+        0.052
+      ],
+      "triangles": 168,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Corridor_End_Wall",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.68,
+        0.14,
+        2.32
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Corridor_Floor",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.55,
+        1.75,
+        0.16
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Floor_Oak"
+      ]
+    },
+    {
+      "name": "Corridor_Light_Diffuser",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.17,
+        0.17,
+        0.025
+      ],
+      "triangles": 332,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Light_Diffuser"
+      ]
+    },
+    {
+      "name": "Corridor_Light_Trim",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.22,
+        0.22,
+        0.035
+      ],
+      "triangles": 332,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Corridor_Runner",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.72,
+        1.22,
+        0.026
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Rug_Rust"
+      ]
+    },
+    {
+      "name": "Corridor_Wall_Left",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.14,
+        1.82,
+        2.32
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Corridor_Wall_Right",
+      "parent": "Corridor_Visible",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.14,
+        1.82,
+        2.32
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Door_Frame_Header",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.23,
+        0.2,
+        0.09
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Door_Frame_Left",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.09,
+        0.2,
+        2.2
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Door_Frame_Right",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.09,
+        0.2,
+        2.2
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Door_Handle_Lever_-1",
+      "parent": "Door_Main",
+      "group": "Architecture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.1,
+      "dimensions_m_blender_z_up": [
+        0.1472,
+        0.0905,
+        0.028
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Door_Handle_Lever_1",
+      "parent": "Door_Main",
+      "group": "Architecture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.1,
+      "dimensions_m_blender_z_up": [
+        0.1472,
+        0.0905,
+        0.028
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Door_Handle_Rosette_-1",
+      "parent": "Door_Main",
+      "group": "Architecture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.1,
+      "dimensions_m_blender_z_up": [
+        0.0783,
+        0.062,
+        0.07
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Door_Handle_Rosette_1",
+      "parent": "Door_Main",
+      "group": "Architecture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.1,
+      "dimensions_m_blender_z_up": [
+        0.0783,
+        0.062,
+        0.07
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Door_Main_Leaf",
+      "parent": "Door_Main",
+      "group": "Architecture",
+      "movable": true,
+      "constraint": "hinge_Z",
+      "suggested_mass_kg": 12.0,
+      "dimensions_m_blender_z_up": [
+        0.9064,
+        0.4758,
+        2.13
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Door_Main_Panel_Lower_-1",
+      "parent": "Door_Main",
+      "group": "Architecture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.3,
+      "dimensions_m_blender_z_up": [
+        0.6592,
+        0.3357,
+        0.62
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Door_Main_Panel_Lower_1",
+      "parent": "Door_Main",
+      "group": "Architecture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.3,
+      "dimensions_m_blender_z_up": [
+        0.6592,
+        0.3357,
+        0.62
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Door_Main_Panel_Upper_-1",
+      "parent": "Door_Main",
+      "group": "Architecture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.3,
+      "dimensions_m_blender_z_up": [
+        0.6592,
+        0.3357,
+        0.88
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Door_Main_Panel_Upper_1",
+      "parent": "Door_Main",
+      "group": "Architecture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.3,
+      "dimensions_m_blender_z_up": [
+        0.6592,
+        0.3357,
+        0.88
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Door_Threshold",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.08,
+        0.24,
+        0.036
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Entrance_Light_Switch",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.08,
+        0.018,
+        0.12
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Floor",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        7.5,
+        5.95,
+        0.2
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Floor_Oak"
+      ]
+    },
+    {
+      "name": "Wall_Back_Left",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        2.95,
+        0.15,
+        2.85
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Wall_Back_Right",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        2.15,
+        0.15,
+        2.85
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Wall_Back_Window_Base",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        2.1,
+        0.15,
+        1.22
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Wall_Back_Window_Lintel",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        2.1,
+        0.15,
+        0.5
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Wall_Front_Door_Lintel",
+      "parent": "Wall_Front",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.1,
+        0.15,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Wall_Front_Left",
+      "parent": "Wall_Front",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        5.05,
+        0.15,
+        2.85
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Wall_Front_Right",
+      "parent": "Wall_Front",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.05,
+        0.15,
+        2.85
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Wall_Left",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.15,
+        5.9,
+        2.85
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Wall_Right",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.15,
+        5.9,
+        2.85
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Warm_Plaster"
+      ]
+    },
+    {
+      "name": "Window_Frame_Bottom",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.95,
+        0.16,
+        0.09
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Window_Frame_Left",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.09,
+        0.16,
+        1.2
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Window_Frame_Right",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.09,
+        0.16,
+        1.2
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Window_Frame_Top",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.95,
+        0.16,
+        0.09
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Window_Glass_Left",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.94,
+        0.018,
+        1.05
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Window_Glass"
+      ]
+    },
+    {
+      "name": "Window_Glass_Right",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.94,
+        0.018,
+        1.05
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Window_Glass"
+      ]
+    },
+    {
+      "name": "Window_Handle_Left",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.024,
+        0.024,
+        0.12
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Window_Handle_Right",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.024,
+        0.024,
+        0.12
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Window_Mullion_Center",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.05,
+        0.09,
+        1.1
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Window_Sill",
+      "parent": "Window_Back",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        2.25,
+        0.38,
+        0.065
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Quartz_Countertop"
+      ]
+    },
+    {
+      "name": "Window_Exterior_Garden",
+      "parent": "Room_Architecture",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        3.1,
+        0.04,
+        2.1
+      ],
+      "triangles": 12,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Window_Garden"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_01_Carcass",
+      "parent": "Cabinet_Lower_01",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.7,
+        0.64,
+        0.9
+      ],
+      "triangles": 1800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_01_Door_01",
+      "parent": "Cabinet_Lower_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3095,
+        0.038,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_01_Door_01_Handle",
+      "parent": "Cabinet_Lower_01_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_01_Door_01_Inset",
+      "parent": "Cabinet_Lower_01_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2125,
+        0.018,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_01_Door_02",
+      "parent": "Cabinet_Lower_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3095,
+        0.038,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_01_Door_02_Handle",
+      "parent": "Cabinet_Lower_01_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_01_Door_02_Inset",
+      "parent": "Cabinet_Lower_01_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2125,
+        0.018,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_02_Carcass",
+      "parent": "Cabinet_Lower_02",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.86,
+        0.64,
+        0.9
+      ],
+      "triangles": 1800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_02_Drawer_01",
+      "parent": "Cabinet_Lower_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "slide_local_negative_Y",
+      "suggested_mass_kg": 2.2,
+      "dimensions_m_blender_z_up": [
+        0.805,
+        0.04,
+        0.215
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_02_Drawer_01_Handle",
+      "parent": "Cabinet_Lower_02_Drawer_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.2,
+        0.018,
+        0.018
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_02_Drawer_02",
+      "parent": "Cabinet_Lower_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "slide_local_negative_Y",
+      "suggested_mass_kg": 2.2,
+      "dimensions_m_blender_z_up": [
+        0.805,
+        0.04,
+        0.215
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_02_Drawer_02_Handle",
+      "parent": "Cabinet_Lower_02_Drawer_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.2,
+        0.018,
+        0.018
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_02_Drawer_03",
+      "parent": "Cabinet_Lower_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "slide_local_negative_Y",
+      "suggested_mass_kg": 2.2,
+      "dimensions_m_blender_z_up": [
+        0.805,
+        0.04,
+        0.215
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_02_Drawer_03_Handle",
+      "parent": "Cabinet_Lower_02_Drawer_03",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.2,
+        0.018,
+        0.018
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_03_Sink_Carcass",
+      "parent": "Cabinet_Lower_03_Sink",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.52,
+        0.64,
+        0.9
+      ],
+      "triangles": 1800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_03_Sink_Door_01",
+      "parent": "Cabinet_Lower_03_Sink",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.7195,
+        0.038,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_03_Sink_Door_01_Handle",
+      "parent": "Cabinet_Lower_03_Sink_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_03_Sink_Door_01_Inset",
+      "parent": "Cabinet_Lower_03_Sink_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.6225,
+        0.018,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_03_Sink_Door_02",
+      "parent": "Cabinet_Lower_03_Sink",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.7195,
+        0.038,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_03_Sink_Door_02_Handle",
+      "parent": "Cabinet_Lower_03_Sink_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_03_Sink_Door_02_Inset",
+      "parent": "Cabinet_Lower_03_Sink_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.6225,
+        0.018,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Carcass",
+      "parent": "Cabinet_Lower_04",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.82,
+        0.64,
+        0.9
+      ],
+      "triangles": 1800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Door_01",
+      "parent": "Cabinet_Lower_04",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3695,
+        0.038,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Door_01_Handle",
+      "parent": "Cabinet_Lower_04_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Door_01_Inset",
+      "parent": "Cabinet_Lower_04_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2725,
+        0.018,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Door_02",
+      "parent": "Cabinet_Lower_04",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3695,
+        0.038,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Door_02_Handle",
+      "parent": "Cabinet_Lower_04_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Door_02_Inset",
+      "parent": "Cabinet_Lower_04_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2725,
+        0.018,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Carcass.001",
+      "parent": "Cabinet_Lower_04.001",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.64,
+        0.78,
+        0.9
+      ],
+      "triangles": 1800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Drawer_01",
+      "parent": "Cabinet_Lower_04.001",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "slide_local_negative_Y",
+      "suggested_mass_kg": 2.2,
+      "dimensions_m_blender_z_up": [
+        0.04,
+        0.725,
+        0.215
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Drawer_01_Handle",
+      "parent": "Cabinet_Lower_04_Drawer_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.2,
+        0.018
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Drawer_02",
+      "parent": "Cabinet_Lower_04.001",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "slide_local_negative_Y",
+      "suggested_mass_kg": 2.2,
+      "dimensions_m_blender_z_up": [
+        0.04,
+        0.725,
+        0.215
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Drawer_02_Handle",
+      "parent": "Cabinet_Lower_04_Drawer_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.2,
+        0.018
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Drawer_03",
+      "parent": "Cabinet_Lower_04.001",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "slide_local_negative_Y",
+      "suggested_mass_kg": 2.2,
+      "dimensions_m_blender_z_up": [
+        0.04,
+        0.725,
+        0.215
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_04_Drawer_03_Handle",
+      "parent": "Cabinet_Lower_04_Drawer_03",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.2,
+        0.018
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_05_Carcass",
+      "parent": "Cabinet_Lower_05",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.64,
+        0.78,
+        0.9
+      ],
+      "triangles": 1800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_05_Door_01",
+      "parent": "Cabinet_Lower_05",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.038,
+        0.3495,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_05_Door_01_Handle",
+      "parent": "Cabinet_Lower_05_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_05_Door_01_Inset",
+      "parent": "Cabinet_Lower_05_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.2525,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_05_Door_02",
+      "parent": "Cabinet_Lower_05",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.038,
+        0.3495,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_05_Door_02_Handle",
+      "parent": "Cabinet_Lower_05_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_05_Door_02_Inset",
+      "parent": "Cabinet_Lower_05_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.2525,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_06_Carcass",
+      "parent": "Cabinet_Lower_06",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.64,
+        0.78,
+        0.9
+      ],
+      "triangles": 1800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_06_Door_01",
+      "parent": "Cabinet_Lower_06",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.038,
+        0.3495,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_06_Door_01_Handle",
+      "parent": "Cabinet_Lower_06_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_06_Door_01_Inset",
+      "parent": "Cabinet_Lower_06_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.2525,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_06_Door_02",
+      "parent": "Cabinet_Lower_06",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.038,
+        0.3495,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_06_Door_02_Handle",
+      "parent": "Cabinet_Lower_06_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_06_Door_02_Inset",
+      "parent": "Cabinet_Lower_06_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.2525,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_07_Carcass",
+      "parent": "Cabinet_Lower_07",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.64,
+        0.78,
+        0.9
+      ],
+      "triangles": 1800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_07_Door_01",
+      "parent": "Cabinet_Lower_07",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.038,
+        0.3495,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_07_Door_01_Handle",
+      "parent": "Cabinet_Lower_07_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_07_Door_01_Inset",
+      "parent": "Cabinet_Lower_07_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.2525,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_07_Door_02",
+      "parent": "Cabinet_Lower_07",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.038,
+        0.3495,
+        0.7
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_07_Door_02_Handle",
+      "parent": "Cabinet_Lower_07_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Lower_07_Door_02_Inset",
+      "parent": "Cabinet_Lower_07_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.2525,
+        0.58
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Sage"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_01_Carcass",
+      "parent": "Cabinet_Upper_01",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.72,
+        0.36,
+        0.78
+      ],
+      "triangles": 1500,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_01_Door_01",
+      "parent": "Cabinet_Upper_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3195,
+        0.038,
+        0.69
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_01_Door_01_Handle",
+      "parent": "Cabinet_Upper_01_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_01_Door_01_Inset",
+      "parent": "Cabinet_Upper_01_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2225,
+        0.018,
+        0.57
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_01_Door_02",
+      "parent": "Cabinet_Upper_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3195,
+        0.038,
+        0.69
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_01_Door_02_Handle",
+      "parent": "Cabinet_Upper_01_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_01_Door_02_Inset",
+      "parent": "Cabinet_Upper_01_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2225,
+        0.018,
+        0.57
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_02_Carcass",
+      "parent": "Cabinet_Upper_02",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.78,
+        0.36,
+        0.78
+      ],
+      "triangles": 1500,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_02_Door_01",
+      "parent": "Cabinet_Upper_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3495,
+        0.038,
+        0.69
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_02_Door_01_Handle",
+      "parent": "Cabinet_Upper_02_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_02_Door_01_Inset",
+      "parent": "Cabinet_Upper_02_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2525,
+        0.018,
+        0.57
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_02_Door_02",
+      "parent": "Cabinet_Upper_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3495,
+        0.038,
+        0.69
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_02_Door_02_Handle",
+      "parent": "Cabinet_Upper_02_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_02_Door_02_Inset",
+      "parent": "Cabinet_Upper_02_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2525,
+        0.018,
+        0.57
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_03_Carcass",
+      "parent": "Cabinet_Upper_03",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.76,
+        0.36,
+        0.78
+      ],
+      "triangles": 1500,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_03_Door_01",
+      "parent": "Cabinet_Upper_03",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3395,
+        0.038,
+        0.69
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_03_Door_01_Handle",
+      "parent": "Cabinet_Upper_03_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_03_Door_01_Inset",
+      "parent": "Cabinet_Upper_03_Door_01",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2425,
+        0.018,
+        0.57
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_03_Door_02",
+      "parent": "Cabinet_Upper_03",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 2.0,
+      "dimensions_m_blender_z_up": [
+        0.3395,
+        0.038,
+        0.69
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_03_Door_02_Handle",
+      "parent": "Cabinet_Upper_03_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.018,
+        0.18
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Cabinet_Upper_03_Door_02_Inset",
+      "parent": "Cabinet_Upper_03_Door_02",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.2425,
+        0.018,
+        0.57
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Chair_01",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 5.5,
+      "dimensions_m_blender_z_up": [
+        0.5392,
+        0.5692,
+        0.9576
+      ],
+      "triangles": 1148,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Chair_02",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 5.5,
+      "dimensions_m_blender_z_up": [
+        0.5392,
+        0.5692,
+        0.9576
+      ],
+      "triangles": 1148,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Chair_03",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 5.5,
+      "dimensions_m_blender_z_up": [
+        0.5392,
+        0.5692,
+        0.9576
+      ],
+      "triangles": 1148,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Cooktop_Burner_Grate_01",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "removable",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.22,
+        0.22,
+        0.038
+      ],
+      "triangles": 900,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cooktop_Burner_Grate_02",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "removable",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.22,
+        0.22,
+        0.038
+      ],
+      "triangles": 900,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cooktop_Burner_Grate_03",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "removable",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.22,
+        0.22,
+        0.038
+      ],
+      "triangles": 900,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cooktop_Burner_Grate_04",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "removable",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.22,
+        0.22,
+        0.038
+      ],
+      "triangles": 900,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Cooktop_Main",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.82,
+        0.56,
+        0.035
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Glass"
+      ]
+    },
+    {
+      "name": "Countertop_LeftReturn",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.74,
+        3.55,
+        0.06
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Quartz_Countertop"
+      ]
+    },
+    {
+      "name": "Countertop_Main",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        5.77,
+        0.74,
+        0.06
+      ],
+      "triangles": 752,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Quartz_Countertop"
+      ]
+    },
+    {
+      "name": "DiningTable_Main",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 24.0,
+      "dimensions_m_blender_z_up": [
+        1.82,
+        0.98,
+        0.7825
+      ],
+      "triangles": 968,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Dishwasher_Door",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_X",
+      "suggested_mass_kg": 9.0,
+      "dimensions_m_blender_z_up": [
+        0.64,
+        0.045,
+        0.79
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Dishwasher_Control_Strip",
+      "parent": "Dishwasher_Door",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.1,
+      "dimensions_m_blender_z_up": [
+        0.52,
+        0.018,
+        0.07
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Glass"
+      ]
+    },
+    {
+      "name": "Dishwasher_Door_Handle",
+      "parent": "Dishwasher_Door",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.32,
+        0.018,
+        0.018
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Dishwasher_Main",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.66,
+        0.62,
+        0.84
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Entry_Bench_Leg_-0.4_-0.11",
+      "parent": "Entry_Bench",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.5,
+      "dimensions_m_blender_z_up": [
+        0.055,
+        0.055,
+        0.46
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Entry_Bench_Leg_-0.4_0.11",
+      "parent": "Entry_Bench",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.5,
+      "dimensions_m_blender_z_up": [
+        0.055,
+        0.055,
+        0.46
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Entry_Bench_Leg_0.4_-0.11",
+      "parent": "Entry_Bench",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.5,
+      "dimensions_m_blender_z_up": [
+        0.055,
+        0.055,
+        0.46
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Entry_Bench_Leg_0.4_0.11",
+      "parent": "Entry_Bench",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.5,
+      "dimensions_m_blender_z_up": [
+        0.055,
+        0.055,
+        0.46
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Entry_Bench_Seat",
+      "parent": "Entry_Bench",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 4.0,
+      "dimensions_m_blender_z_up": [
+        1.02,
+        0.34,
+        0.07
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Fridge_Door_Upper",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "hinge_local_Z",
+      "suggested_mass_kg": 16.0,
+      "dimensions_m_blender_z_up": [
+        0.85,
+        0.065,
+        1.48
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Fridge_Door_Upper_Handle",
+      "parent": "Fridge_Door_Upper",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.032,
+        0.032,
+        0.71
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Fridge_Water_Dispenser",
+      "parent": "Fridge_Door_Upper",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.1,
+      "dimensions_m_blender_z_up": [
+        0.29,
+        0.02,
+        0.42
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Glass"
+      ]
+    },
+    {
+      "name": "Fridge_Drawer_Lower",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "slide_local_negative_Y",
+      "suggested_mass_kg": 10.0,
+      "dimensions_m_blender_z_up": [
+        0.85,
+        0.065,
+        0.52
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Fridge_Drawer_Lower_Handle",
+      "parent": "Fridge_Drawer_Lower",
+      "group": "Furniture",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.56,
+        0.032,
+        0.032
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Fridge_Main",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.88,
+        0.8,
+        2.18
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Oven_Cabinet_Side_Left",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.055,
+        0.64,
+        0.84
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Oven_Cabinet_Side_Right",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.055,
+        0.64,
+        0.84
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Oven_Cabinet_Toe_Kick",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.82,
+        0.14,
+        0.13
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Oven_Cabinet_Top_Rail",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.86,
+        0.09,
+        0.07
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Oven_continuous_door_surround",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.595,
+        0.033,
+        0.507
+      ],
+      "triangles": 480,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_door_hinge_arm_-1",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.016,
+        0.045,
+        0.009
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_door_hinge_arm_1",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.016,
+        0.045,
+        0.009
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_handle_mount_-1",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.023,
+        0.039,
+        0.02
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_handle_mount_1",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.023,
+        0.039,
+        0.02
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_inner_door_enamel_liner",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.575,
+        0.013,
+        0.485
+      ],
+      "triangles": 480,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_inner_heat_glass",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.45,
+        0.004,
+        0.353
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_glass"
+      ]
+    },
+    {
+      "name": "Oven_inner_liner_fastener_-1",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.006,
+        0.001,
+        0.006
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_inner_liner_fastener_1",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.006,
+        0.001,
+        0.006
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_outer_smoked_glass",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.451,
+        0.004,
+        0.354
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_glass"
+      ]
+    },
+    {
+      "name": "Oven_rectangular_bridge_handle",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.405,
+        0.023,
+        0.025
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_window_black_ceramic_edge",
+      "parent": "Oven_Door_Hinge",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.457,
+        0.002,
+        0.36
+      ],
+      "triangles": 480,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_cavity_back",
+      "parent": "Oven_enamel_cavity",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.49,
+        0.016,
+        0.402
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_cavity_ceiling",
+      "parent": "Oven_enamel_cavity",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.49,
+        0.405,
+        0.018
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_cavity_floor",
+      "parent": "Oven_enamel_cavity",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.49,
+        0.405,
+        0.018
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_cavity_left_liner",
+      "parent": "Oven_enamel_cavity",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.016,
+        0.405,
+        0.427
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_cavity_right_liner",
+      "parent": "Oven_enamel_cavity",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.016,
+        0.405,
+        0.427
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_continuous_door_seal",
+      "parent": "Oven_enamel_cavity",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.509,
+        0.007,
+        0.421
+      ],
+      "triangles": 480,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_mouth_folded_flange",
+      "parent": "Oven_enamel_cavity",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.584,
+        0.021,
+        0.462
+      ],
+      "triangles": 480,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_oven_lamp_lens",
+      "parent": "Oven_enamel_cavity",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.006,
+        0.045,
+        0.027
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_emissive"
+      ]
+    },
+    {
+      "name": "Oven_black_control_fascia",
+      "parent": "Oven_fixed_control_band",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.595,
+        0.026,
+        0.095
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_control_1_dark_socket",
+      "parent": "Oven_fixed_control_band",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.022,
+        0.002,
+        0.022
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_control_1_silver_disc",
+      "parent": "Oven_fixed_control_band",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0184,
+        0.003,
+        0.0184
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_control_2_dark_socket",
+      "parent": "Oven_fixed_control_band",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.022,
+        0.002,
+        0.022
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_control_2_silver_disc",
+      "parent": "Oven_fixed_control_band",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0184,
+        0.003,
+        0.0184
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_control_3_dark_socket",
+      "parent": "Oven_fixed_control_band",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.022,
+        0.002,
+        0.022
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_control_3_silver_disc",
+      "parent": "Oven_fixed_control_band",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0184,
+        0.003,
+        0.0184
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_emissive"
+      ]
+    },
+    {
+      "name": "Oven_fine_horizontal_metal_inlay",
+      "parent": "Oven_fixed_control_band",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.3284,
+        0.0019,
+        0.009
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_continuous_folded_housing",
+      "parent": "Oven_fixed_housing",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.583,
+        0.538,
+        0.615
+      ],
+      "triangles": 480,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_body"
+      ]
+    },
+    {
+      "name": "Oven_hinge_pin_-1",
+      "parent": "Oven_fixed_housing",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.024,
+        0.014,
+        0.014
+      ],
+      "triangles": 236,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_hinge_pin_1",
+      "parent": "Oven_fixed_housing",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.024,
+        0.014,
+        0.014
+      ],
+      "triangles": 236,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_housing_rear",
+      "parent": "Oven_fixed_housing",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.583,
+        0.012,
+        0.607
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_body_001"
+      ]
+    },
+    {
+      "name": "Oven_panel_door_shadow_gap",
+      "parent": "Oven_fixed_housing",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.593,
+        0.02,
+        0.004
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_trim"
+      ]
+    },
+    {
+      "name": "Oven_separator_end_-0.2905",
+      "parent": "Oven_fixed_housing",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.014,
+        0.003,
+        0.002
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_separator_end_0.2905",
+      "parent": "Oven_fixed_housing",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.014,
+        0.003,
+        0.002
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_back_edge",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.454,
+        0.0047,
+        0.0047
+      ],
+      "triangles": 204,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_centre_brace",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.454,
+        0.0034,
+        0.0034
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_front_edge",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.454,
+        0.0047,
+        0.0047
+      ],
+      "triangles": 204,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_00",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_01",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_02",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_03",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_04",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_05",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_06",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_07",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_08",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_09",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_10",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_11",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_longitudinal_wire_12",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0025,
+        0.343,
+        0.0025
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_side_-0.227",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0048,
+        0.343,
+        0.0048
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_rack_side_0.227",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0048,
+        0.343,
+        0.0048
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_-1_0",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.005,
+        0.369,
+        0.005
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_-1_1",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.005,
+        0.369,
+        0.005
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_-1_2",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.005,
+        0.369,
+        0.005
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_1_0",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.005,
+        0.369,
+        0.005
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_1_1",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.005,
+        0.369,
+        0.005
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_1_2",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.005,
+        0.369,
+        0.005
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_-1_0_-0.211",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_-1_0_0.11400000000000002",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_-1_1_-0.211",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_-1_1_0.11400000000000002",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_-1_2_-0.211",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_-1_2_0.11400000000000002",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_1_0_-0.211",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_1_0_0.11400000000000002",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_1_1_-0.211",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_1_1_0.11400000000000002",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_1_2_-0.211",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "Oven_support_standoff_1_2_0.11400000000000002",
+      "parent": "Oven_welded_wire_shelf",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.018,
+        0.0054,
+        0.0054
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR_Oven_PBR"
+      ]
+    },
+    {
+      "name": "RangeHood_Canopy",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.0,
+        0.62,
+        0.22
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "RangeHood_Chimney",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.56,
+        0.34,
+        0.72
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "RangeHood_Oak_Trim",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        1.01,
+        0.035,
+        0.045
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "RangeHood_Task_Light",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.48,
+        0.18,
+        0.014
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Light_Diffuser"
+      ]
+    },
+    {
+      "name": "Shelf_01_Bracket_01",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.2807,
+        0.024,
+        0.1565
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Shelf_01_Bracket_02",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.2807,
+        0.024,
+        0.1565
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Shelf_02_Bracket_01",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.2807,
+        0.024,
+        0.1565
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Shelf_02_Bracket_02",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.2807,
+        0.024,
+        0.1565
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Shelf_Left_01",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.32,
+        1.65,
+        0.05
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Shelf_Left_02",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.32,
+        1.65,
+        0.05
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Sink_Drain",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.076,
+        0.076,
+        0.008
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Sink_Drain_Rim",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.1,
+      "dimensions_m_blender_z_up": [
+        0.086,
+        0.086,
+        0.008
+      ],
+      "triangles": 448,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_arch_hollow_black_tube",
+      "parent": "Sink_Faucet_fixed_mixer_body",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0284,
+        0.1803,
+        0.276
+      ],
+      "triangles": 23552,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_body"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_fixed_side_cartridge_socket",
+      "parent": "Sink_Faucet_fixed_mixer_body",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0378,
+        0.0315,
+        0.0378
+      ],
+      "triangles": 1280,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_body_001"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_flush_mount_seal",
+      "parent": "Sink_Faucet_fixed_mixer_body",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0553,
+        0.0553,
+        0.001
+      ],
+      "triangles": 480,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_rubber"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_mixer_cylindrical_shell",
+      "parent": "Sink_Faucet_fixed_mixer_body",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0575,
+        0.0575,
+        0.1294
+      ],
+      "triangles": 1920,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_body_002"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_riser_seat_ring",
+      "parent": "Sink_Faucet_fixed_mixer_body",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0292,
+        0.0292,
+        0.0009
+      ],
+      "triangles": 800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_body_003"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_cartridge_ball_joint",
+      "parent": "Sink_Faucet_handle_flow_pivot",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0276,
+        0.0276,
+        0.0276
+      ],
+      "triangles": 1440,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_body_004"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_lever_root_socket",
+      "parent": "Sink_Faucet_handle_flow_pivot",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0106,
+        0.0133,
+        0.0125
+      ],
+      "triangles": 576,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_body_005"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_moving_cartridge_cap",
+      "parent": "Sink_Faucet_handle_flow_pivot",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.036,
+        0.016,
+        0.036
+      ],
+      "triangles": 1120,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_body_006"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_slim_brushed_control_lever",
+      "parent": "Sink_Faucet_handle_flow_pivot",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0083,
+        0.0482,
+        0.0672
+      ],
+      "triangles": 768,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_trim"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_continuous_pull_out_hose",
+      "parent": "Sink_Faucet_hose_routing",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0082,
+        0.0114,
+        0.0192
+      ],
+      "triangles": 1536,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_rubber_001"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_aerator_recess_and_retainer",
+      "parent": "Sink_Faucet_spray_head_pivot",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0225,
+        0.0225,
+        0.0066
+      ],
+      "triangles": 800,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_plastic"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_aerator_woven_wire_screen",
+      "parent": "Sink_Faucet_spray_head_pivot",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0197,
+        0.0194,
+        0.0041
+      ],
+      "triangles": 360,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_metal"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_hose_end_crimp_ferrule",
+      "parent": "Sink_Faucet_spray_head_pivot",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0128,
+        0.0149,
+        0.0147
+      ],
+      "triangles": 1152,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_metal_001"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_nozzle_docking_seal",
+      "parent": "Sink_Faucet_spray_head_pivot",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0268,
+        0.0265,
+        0.0061
+      ],
+      "triangles": 640,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_rubber_002"
+      ]
+    },
+    {
+      "name": "Sink_Faucet_pull_out_brushed_steel_sleeve",
+      "parent": "Sink_Faucet_spray_head_pivot",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0277,
+        0.035,
+        0.046
+      ],
+      "triangles": 2112,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Faucet_metal_002"
+      ]
+    },
+    {
+      "name": "Sink_Main",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.8201,
+        0.5001,
+        0.1725
+      ],
+      "triangles": 860,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Towel_Rail_Sink",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.54,
+        0.024,
+        0.024
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Wall_Art_01_Frame",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.055,
+        0.58,
+        0.76
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Wall_Art_01_Print",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.012,
+        0.51,
+        0.69
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Art_01"
+      ]
+    },
+    {
+      "name": "Wall_Art_02_Frame",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.055,
+        0.58,
+        0.76
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Wall_Art_02_Print",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.012,
+        0.51,
+        0.69
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wall_Art_02"
+      ]
+    },
+    {
+      "name": "Wall_Clock_Face",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.012,
+        0.426,
+        0.426
+      ],
+      "triangles": 476,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Wall_Clock_Hour_Hand",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.016,
+        0.082,
+        0.0905
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Wall_Clock_Minute_Hand",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.01,
+        0.1336,
+        0.0593
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Wall_Clock_Pin",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.028,
+        0.028,
+        0.028
+      ],
+      "triangles": 168,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Wall_Clock_Rim",
+      "parent": "Kitchen_Furniture",
+      "group": "Furniture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.045,
+        0.46,
+        0.46
+      ],
+      "triangles": 476,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Bottle_01_Olive_Oil",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.55,
+      "dimensions_m_blender_z_up": [
+        0.096,
+        0.096,
+        0.3072
+      ],
+      "triangles": 560,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Sage",
+        "PBR_Paper_Cream"
+      ]
+    },
+    {
+      "name": "Bottle_01_Olive_Oil_Cap",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.04,
+        0.04,
+        0.0224
+      ],
+      "triangles": 236,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Bottle_02_Vinegar",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.55,
+      "dimensions_m_blender_z_up": [
+        0.096,
+        0.096,
+        0.2592
+      ],
+      "triangles": 560,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Terracotta",
+        "PBR_Paper_Cream"
+      ]
+    },
+    {
+      "name": "Bottle_02_Vinegar_Cap",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.04,
+        0.04,
+        0.0189
+      ],
+      "triangles": 236,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Bottle_03_Wine",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.55,
+      "dimensions_m_blender_z_up": [
+        0.096,
+        0.096,
+        0.3264
+      ],
+      "triangles": 560,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Glass",
+        "PBR_Paper_Cream"
+      ]
+    },
+    {
+      "name": "Bottle_03_Wine_Cap",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.04,
+        0.04,
+        0.0238
+      ],
+      "triangles": 236,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Bottle_04_Soap",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.55,
+      "dimensions_m_blender_z_up": [
+        0.096,
+        0.096,
+        0.192
+      ],
+      "triangles": 560,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory",
+        "PBR_Paper_Cream"
+      ]
+    },
+    {
+      "name": "Bottle_04_Soap_Cap",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.04,
+        0.04,
+        0.014
+      ],
+      "triangles": 236,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Bowl_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.45,
+      "dimensions_m_blender_z_up": [
+        0.32,
+        0.32,
+        0.118
+      ],
+      "triangles": 576,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Bowl_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.45,
+      "dimensions_m_blender_z_up": [
+        0.22,
+        0.22,
+        0.118
+      ],
+      "triangles": 576,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Sage"
+      ]
+    },
+    {
+      "name": "Bowl_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.45,
+      "dimensions_m_blender_z_up": [
+        0.18,
+        0.18,
+        0.118
+      ],
+      "triangles": 576,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Terracotta"
+      ]
+    },
+    {
+      "name": "Coffee_Grinder_Base",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.2,
+      "dimensions_m_blender_z_up": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Coffee_Grinder_Hopper",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.25,
+      "dimensions_m_blender_z_up": [
+        0.14,
+        0.14,
+        0.15
+      ],
+      "triangles": 192,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Glass_Clear"
+      ]
+    },
+    {
+      "name": "Container_01_Body",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.5,
+      "dimensions_m_blender_z_up": [
+        0.136,
+        0.136,
+        0.18
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Container_01_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.144,
+        0.144,
+        0.025
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Container_02_Body",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.5,
+      "dimensions_m_blender_z_up": [
+        0.136,
+        0.136,
+        0.18
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Container_02_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.144,
+        0.144,
+        0.025
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Container_03_Body",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.5,
+      "dimensions_m_blender_z_up": [
+        0.136,
+        0.136,
+        0.18
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Container_03_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.144,
+        0.144,
+        0.025
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Cup_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.22,
+      "dimensions_m_blender_z_up": [
+        0.082,
+        0.082,
+        0.083
+      ],
+      "triangles": 336,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Cup_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.22,
+      "dimensions_m_blender_z_up": [
+        0.082,
+        0.082,
+        0.083
+      ],
+      "triangles": 336,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Sage"
+      ]
+    },
+    {
+      "name": "Cup_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.22,
+      "dimensions_m_blender_z_up": [
+        0.082,
+        0.082,
+        0.083
+      ],
+      "triangles": 336,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "CuttingBoard_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.1,
+      "dimensions_m_blender_z_up": [
+        0.4833,
+        0.3458,
+        0.035
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "CuttingBoard_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.0,
+      "dimensions_m_blender_z_up": [
+        0.0688,
+        0.3418,
+        0.44
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Decor_Dried_Stem_00",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.01,
+      "dimensions_m_blender_z_up": [
+        0.0574,
+        0.0375,
+        0.3141
+      ],
+      "triangles": 220,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Decor_Dried_Stem_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.01,
+      "dimensions_m_blender_z_up": [
+        0.0055,
+        0.0055,
+        0.3029
+      ],
+      "triangles": 220,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Decor_Dried_Stem_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.01,
+      "dimensions_m_blender_z_up": [
+        0.0574,
+        0.0375,
+        0.319
+      ],
+      "triangles": 220,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Decor_Vase_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.65,
+      "dimensions_m_blender_z_up": [
+        0.15,
+        0.15,
+        0.25
+      ],
+      "triangles": 392,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Terracotta"
+      ]
+    },
+    {
+      "name": "Food_Package_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.1758,
+        0.1283,
+        0.24
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Package_Ochre"
+      ]
+    },
+    {
+      "name": "Food_Package_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.1811,
+        0.1364,
+        0.2
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Package_Sage"
+      ]
+    },
+    {
+      "name": "Food_Package_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.186,
+        0.1441,
+        0.22
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Package_Rust"
+      ]
+    },
+    {
+      "name": "Fork_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.036,
+        0.21,
+        0.01
+      ],
+      "triangles": 1176,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Fork_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.036,
+        0.21,
+        0.01
+      ],
+      "triangles": 1176,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Fork_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.036,
+        0.21,
+        0.01
+      ],
+      "triangles": 1176,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Fruit_Apple_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.16,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.1
+      ],
+      "triangles": 440,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Apple_Red"
+      ]
+    },
+    {
+      "name": "Fruit_Apple_01_Stem",
+      "parent": "Fruit_Apple_01",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.005,
+      "dimensions_m_blender_z_up": [
+        0.0115,
+        0.0056,
+        0.0254
+      ],
+      "triangles": 220,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Fruit_Apple_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.16,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.1
+      ],
+      "triangles": 440,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Apple_Red"
+      ]
+    },
+    {
+      "name": "Fruit_Apple_02_Stem",
+      "parent": "Fruit_Apple_02",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.005,
+      "dimensions_m_blender_z_up": [
+        0.0115,
+        0.0056,
+        0.0254
+      ],
+      "triangles": 220,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Fruit_Apple_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.16,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.1
+      ],
+      "triangles": 440,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Apple_Red"
+      ]
+    },
+    {
+      "name": "Fruit_Apple_03_Stem",
+      "parent": "Fruit_Apple_03",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.005,
+      "dimensions_m_blender_z_up": [
+        0.0113,
+        0.0055,
+        0.0253
+      ],
+      "triangles": 220,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Fruit_Lemon_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.12,
+      "dimensions_m_blender_z_up": [
+        0.13,
+        0.086,
+        0.086
+      ],
+      "triangles": 440,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Lemon_Yellow"
+      ]
+    },
+    {
+      "name": "Fruit_Orange_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.18,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.104
+      ],
+      "triangles": 440,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Orange_Peel"
+      ]
+    },
+    {
+      "name": "Fruit_Orange_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.18,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.104
+      ],
+      "triangles": 440,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Orange_Peel"
+      ]
+    },
+    {
+      "name": "Glass_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.18,
+      "dimensions_m_blender_z_up": [
+        0.076,
+        0.076,
+        0.135
+      ],
+      "triangles": 336,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Glass_Clear"
+      ]
+    },
+    {
+      "name": "Glass_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.18,
+      "dimensions_m_blender_z_up": [
+        0.076,
+        0.076,
+        0.135
+      ],
+      "triangles": 336,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Glass_Clear"
+      ]
+    },
+    {
+      "name": "Glass_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.18,
+      "dimensions_m_blender_z_up": [
+        0.076,
+        0.076,
+        0.135
+      ],
+      "triangles": 336,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Glass_Clear"
+      ]
+    },
+    {
+      "name": "Jar_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.14
+      ],
+      "triangles": 676,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Glass_Clear",
+        "PBR_Package_Ochre"
+      ]
+    },
+    {
+      "name": "Jar_01_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.0988,
+        0.0988,
+        0.025
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Jar_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.14
+      ],
+      "triangles": 676,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Glass_Clear",
+        "PBR_Package_Rust"
+      ]
+    },
+    {
+      "name": "Jar_02_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.0988,
+        0.0988,
+        0.025
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Jar_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.14
+      ],
+      "triangles": 676,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Glass_Clear",
+        "PBR_Package_Sage"
+      ]
+    },
+    {
+      "name": "Jar_03_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.0988,
+        0.0988,
+        0.025
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Jar_04",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.12,
+        0.12,
+        0.16
+      ],
+      "triangles": 676,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Glass_Clear",
+        "PBR_Package_Ochre"
+      ]
+    },
+    {
+      "name": "Jar_04_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.114,
+        0.114,
+        0.025
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Jar_05",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.11,
+        0.11,
+        0.15
+      ],
+      "triangles": 676,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Glass_Clear",
+        "PBR_Package_Rust"
+      ]
+    },
+    {
+      "name": "Jar_05_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.08,
+      "dimensions_m_blender_z_up": [
+        0.1045,
+        0.1045,
+        0.025
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Kettle_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.12,
+      "dimensions_m_blender_z_up": [
+        0.116,
+        0.116,
+        0.022
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Kettle_Main",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.3,
+      "dimensions_m_blender_z_up": [
+        0.3562,
+        0.21,
+        0.223
+      ],
+      "triangles": 1028,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Sage",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Kitchen_Timer",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.15,
+      "dimensions_m_blender_z_up": [
+        0.09,
+        0.055,
+        0.12
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Kitchen_Timer_Display",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.01,
+      "dimensions_m_blender_z_up": [
+        0.06,
+        0.008,
+        0.035
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_LED_Display"
+      ]
+    },
+    {
+      "name": "Knife_01",
+      "parent": "Loose_Props",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.032,
+        0.245,
+        0.014
+      ],
+      "triangles": 216,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal",
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Knife_02",
+      "parent": "Loose_Props",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.032,
+        0.245,
+        0.014
+      ],
+      "triangles": 216,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal",
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Knife_03",
+      "parent": "Loose_Props",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.032,
+        0.245,
+        0.014
+      ],
+      "triangles": 216,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal",
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Knife_04_Chef",
+      "parent": "Loose_Props",
+      "group": "Architecture",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.0985,
+        0.2443,
+        0.014
+      ],
+      "triangles": 216,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal",
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Mug_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.32,
+      "dimensions_m_blender_z_up": [
+        0.16,
+        0.094,
+        0.117
+      ],
+      "triangles": 840,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Sage"
+      ]
+    },
+    {
+      "name": "Mug_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.32,
+      "dimensions_m_blender_z_up": [
+        0.16,
+        0.094,
+        0.117
+      ],
+      "triangles": 840,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Mug_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.32,
+      "dimensions_m_blender_z_up": [
+        0.16,
+        0.094,
+        0.117
+      ],
+      "triangles": 840,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Terracotta"
+      ]
+    },
+    {
+      "name": "Pan_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.1,
+      "dimensions_m_blender_z_up": [
+        0.5355,
+        0.3904,
+        0.0698
+      ],
+      "triangles": 636,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Pan_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.1,
+      "dimensions_m_blender_z_up": [
+        0.5553,
+        0.5028,
+        0.0698
+      ],
+      "triangles": 636,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Plant_01_Window_Herb",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.0499999999999998,
+      "dimensions_m_blender_z_up": [
+        0.1985,
+        0.1841,
+        0.3477
+      ],
+      "triangles": 6732,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Terracotta",
+        "PBR_Soil",
+        "PBR_Leaf_Green",
+        "PBR_Leaf_Light"
+      ]
+    },
+    {
+      "name": "Plant_02_Shelf",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.008,
+      "dimensions_m_blender_z_up": [
+        0.1838,
+        0.186,
+        0.3304
+      ],
+      "triangles": 7508,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Terracotta",
+        "PBR_Soil",
+        "PBR_Leaf_Green",
+        "PBR_Leaf_Light"
+      ]
+    },
+    {
+      "name": "Plant_03_Floor",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 2.3099999999999996,
+      "dimensions_m_blender_z_up": [
+        0.4657,
+        0.4445,
+        0.7607
+      ],
+      "triangles": 9836,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Terracotta",
+        "PBR_Soil",
+        "PBR_Leaf_Green",
+        "PBR_Leaf_Light"
+      ]
+    },
+    {
+      "name": "Plate_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.29,
+        0.29,
+        0.036
+      ],
+      "triangles": 512,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Plate_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.29,
+        0.29,
+        0.036
+      ],
+      "triangles": 512,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Plate_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.29,
+        0.29,
+        0.036
+      ],
+      "triangles": 512,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Ivory"
+      ]
+    },
+    {
+      "name": "Plate_04",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.26,
+        0.26,
+        0.036
+      ],
+      "triangles": 512,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Sage"
+      ]
+    },
+    {
+      "name": "Plate_05",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.26,
+        0.26,
+        0.036
+      ],
+      "triangles": 512,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Sage"
+      ]
+    },
+    {
+      "name": "Pot_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.5,
+      "dimensions_m_blender_z_up": [
+        0.358,
+        0.23,
+        0.16
+      ],
+      "triangles": 1344,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Pot_01_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.45,
+      "dimensions_m_blender_z_up": [
+        0.236,
+        0.236,
+        0.034
+      ],
+      "triangles": 320,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Pot_01_Lid_Knob",
+      "parent": "Pot_01_Lid",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.05,
+      "dimensions_m_blender_z_up": [
+        0.048,
+        0.048,
+        0.036
+      ],
+      "triangles": 224,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Pot_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 1.5,
+      "dimensions_m_blender_z_up": [
+        0.358,
+        0.23,
+        0.16
+      ],
+      "triangles": 1344,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Pot_02_Lid",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.45,
+      "dimensions_m_blender_z_up": [
+        0.236,
+        0.236,
+        0.034
+      ],
+      "triangles": 320,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Pot_02_Lid_Knob",
+      "parent": "Pot_02_Lid",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.05,
+      "dimensions_m_blender_z_up": [
+        0.048,
+        0.048,
+        0.036
+      ],
+      "triangles": 224,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Soap_Dish",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.35,
+      "dimensions_m_blender_z_up": [
+        0.15,
+        0.15,
+        0.036
+      ],
+      "triangles": 512,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Sage"
+      ]
+    },
+    {
+      "name": "Spoon_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.05,
+        0.218,
+        0.013
+      ],
+      "triangles": 412,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Spoon_02",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.05,
+        0.218,
+        0.013
+      ],
+      "triangles": 412,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Spoon_03",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.04,
+      "dimensions_m_blender_z_up": [
+        0.05,
+        0.218,
+        0.013
+      ],
+      "triangles": 412,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Spoon_05_Handle",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.06,
+      "dimensions_m_blender_z_up": [
+        0.029,
+        0.014,
+        0.2309
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Spoon_05_Head",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.03,
+      "dimensions_m_blender_z_up": [
+        0.05,
+        0.024,
+        0.08
+      ],
+      "triangles": 224,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Spoon_06_Handle",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.06,
+      "dimensions_m_blender_z_up": [
+        0.029,
+        0.014,
+        0.2309
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Spoon_06_Head",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.03,
+      "dimensions_m_blender_z_up": [
+        0.05,
+        0.024,
+        0.08
+      ],
+      "triangles": 224,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel"
+      ]
+    },
+    {
+      "name": "Spoon_07_Handle",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.06,
+      "dimensions_m_blender_z_up": [
+        0.029,
+        0.014,
+        0.2309
+      ],
+      "triangles": 188,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Spoon_07_Head",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.03,
+      "dimensions_m_blender_z_up": [
+        0.05,
+        0.024,
+        0.08
+      ],
+      "triangles": 224,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Wood_Oak"
+      ]
+    },
+    {
+      "name": "Toaster_Lever",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "slide_Z",
+      "suggested_mass_kg": 0.06,
+      "dimensions_m_blender_z_up": [
+        0.025,
+        0.055,
+        0.035
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Toaster_Main",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 2.4,
+      "dimensions_m_blender_z_up": [
+        0.34,
+        0.23,
+        0.229
+      ],
+      "triangles": 324,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brushed_Steel",
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Towel_01",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.18,
+      "dimensions_m_blender_z_up": [
+        0.301,
+        0.048,
+        0.3702
+      ],
+      "triangles": 880,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Fabric_Linen"
+      ]
+    },
+    {
+      "name": "Towel_02_Folded",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.2,
+      "dimensions_m_blender_z_up": [
+        0.3,
+        0.23,
+        0.065
+      ],
+      "triangles": 108,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Fabric_Linen"
+      ]
+    },
+    {
+      "name": "Utensil_Crock",
+      "parent": "Loose_Props",
+      "group": "Loose_Props",
+      "movable": true,
+      "constraint": "none",
+      "suggested_mass_kg": 0.65,
+      "dimensions_m_blender_z_up": [
+        0.14,
+        0.14,
+        0.15
+      ],
+      "triangles": 336,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Ceramic_Terracotta"
+      ]
+    },
+    {
+      "name": "Pendant_01_Bulb",
+      "parent": "Pendant_01",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.144
+      ],
+      "triangles": 288,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Light_Diffuser"
+      ]
+    },
+    {
+      "name": "Pendant_01_Ceiling_Rose",
+      "parent": "Pendant_01",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.17,
+        0.17,
+        0.035
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Pendant_01_Cord",
+      "parent": "Pendant_01",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.012,
+        0.012,
+        0.66
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Pendant_01_Shade",
+      "parent": "Pendant_01",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.41,
+        0.41,
+        0.215
+      ],
+      "triangles": 384,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Pendant_02_Bulb",
+      "parent": "Pendant_02",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.144
+      ],
+      "triangles": 288,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Light_Diffuser"
+      ]
+    },
+    {
+      "name": "Pendant_02_Ceiling_Rose",
+      "parent": "Pendant_02",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.17,
+        0.17,
+        0.035
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Pendant_02_Cord",
+      "parent": "Pendant_02",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.012,
+        0.012,
+        0.66
+      ],
+      "triangles": 140,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Black_Metal"
+      ]
+    },
+    {
+      "name": "Pendant_02_Shade",
+      "parent": "Pendant_02",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.41,
+        0.41,
+        0.215
+      ],
+      "triangles": 384,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Brass_Satin"
+      ]
+    },
+    {
+      "name": "Recessed_Light_01_Diffuser",
+      "parent": "Lighting_Fixtures",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.012
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Light_Diffuser"
+      ]
+    },
+    {
+      "name": "Recessed_Light_01_Trim",
+      "parent": "Lighting_Fixtures",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.144,
+        0.144,
+        0.022
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Recessed_Light_02_Diffuser",
+      "parent": "Lighting_Fixtures",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.012
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Light_Diffuser"
+      ]
+    },
+    {
+      "name": "Recessed_Light_02_Trim",
+      "parent": "Lighting_Fixtures",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.144,
+        0.144,
+        0.022
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Recessed_Light_03_Diffuser",
+      "parent": "Lighting_Fixtures",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.012
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Light_Diffuser"
+      ]
+    },
+    {
+      "name": "Recessed_Light_03_Trim",
+      "parent": "Lighting_Fixtures",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.144,
+        0.144,
+        0.022
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    },
+    {
+      "name": "Recessed_Light_04_Diffuser",
+      "parent": "Lighting_Fixtures",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.104,
+        0.104,
+        0.012
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Light_Diffuser"
+      ]
+    },
+    {
+      "name": "Recessed_Light_04_Trim",
+      "parent": "Lighting_Fixtures",
+      "group": "Lighting",
+      "movable": false,
+      "constraint": "none",
+      "suggested_mass_kg": 0.0,
+      "dimensions_m_blender_z_up": [
+        0.144,
+        0.144,
+        0.022
+      ],
+      "triangles": 284,
+      "uv_channels": 1,
+      "materials": [
+        "PBR_Cabinet_Cream"
+      ]
+    }
+  ]
+}

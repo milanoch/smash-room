@@ -1,0 +1,10 @@
+SMASH LAB KITCHEN — ASSET CREDITS
+
+Original scene architecture, cabinetry, layout, refrigerator, dishwasher, table, props, textures and materials were created for this deliverable.
+
+Adapted reusable assets from the Kimi design asset library:
+- Built-in oven, asset ID 01-L1-0210: integrated at the cooktop station; material names and hierarchy adapted for the scene.
+- Solid Wood Dining Chair (slatted back), asset ID 01-L1-0133: consolidated into one shared chair mesh with three independent object nodes; orientation corrected and oak material unified.
+- High-arch pull-out kitchen mixer, asset ID 01-L1-0222: integrated at the sink with retained functional hierarchy and scene-specific naming.
+
+Reference photographs were used for visual direction only and are not included in the model or texture set.
